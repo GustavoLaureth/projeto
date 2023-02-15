@@ -1,0 +1,73 @@
+{% extends 'base.html' %}
+{% load widget_tweaks %}
+
+{% block conteudo %}
+    <div class="col-lg-12 center">
+        <div class="card card-primary">
+            <div class="card-header">
+                <div class="card-title">
+                    Cadastrar cliente
+                </div>
+            </div>            
+            <form action="{% if cliente %}/cliente/update/{{cliente.id}}/{% else %}/cliente/create/{% endif %}" method="POST">
+                {% csrf_token %}
+                
+                <div class="input-group mb-2">
+                    {% render_field form.nome name="nome" placeholder="Nome Completo" autocomplete="off"%}
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-user"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group mb-2">
+                    {% render_field form.telefone name="telefone" id="telefone" placeholder="Telefone" autocomplete="off"%}
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-address-card"></span>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group col-12 m-0 p-0">
+                    <div class="input-group col-7 p-0" >
+                      {% render_field form.email type="email" name="email" placeholder="E-mail" autocomplete="off"%}
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <span class="fas fa-envelope"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-group col-5 pr-0">
+                        {% render_field form.descricao name="descricao" placeholder="Características do morador de rua, pontos de referência, etc..." %}
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <span class="fas fa-phone"></span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="input-group col-5 pr-0">
+                      {% render_field form.categoria name="categoria" id="categoria" placeholder="Categoria" autocomplete="off"%}
+                      <div class="input-group-append">
+                        <div class="input-group-text">
+                          <span class="fas fa-phone"></span>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+
+                  {% render_field form.data_criacao name="data_criacao" class="d-none" %}
+
+                <div class="row">
+                    <div class="col-2 mr-auto ml-0">
+                      <a class="btn btn-danger btn-block" href="{% url 'cliente' %}">Cancelar</a>
+                    </div>
+                    <div class="col-2 ml-auto mr-0">
+                      <button type="submit" class="btn btn-success btn-block" id="submit_button" >Cadastrar</button>
+                    </div>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+{% endblock %}
