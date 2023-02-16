@@ -36,10 +36,10 @@
             <table class="table">
                 <thead>
                     <tr>
-                        <th scope="col">Nome</th>
-                        <th scope="col">E-mail</th>
-                        <th scope="col">Telefone</th>
-                        <th scope="col">Status</th>
+                        <th scope="col" class="text-center">Numero</th>
+                        <th scope="col" class="text-center">Nome</th>
+                        <th scope="col" class="text-center">CNPJ</th>
+                        <th scope="col" class="text-center">Status</th>
                         <th scope="col" class="text-center">Ações</th>
                     </tr>
                 </thead>
@@ -47,11 +47,11 @@
 
                     {% for cliente in clientes %}
                     <tr>
-                        <td>{{ cliente.nome }}</td>
-                        <td>{{ cliente.email }}</td>
-                        <td>{{ cliente.telefone }}</td>
-                        <td>{{ cliente.categoria }}</td>
-                        <td>
+                        <td class="text-center">{{ cliente.numero }}</td>
+                        <td class="text-center">{{ cliente.nome }}</td>
+                        <td class="text-center">{{ cliente.cnpj }}</td>
+                        <td class="text-center">{{ cliente.categoria }}</td>
+                        <td class="text-center">
                             <a href="/cliente/detalhe/{{ cliente.id }}" class="btn btn-outline-secondary">Visualizar</a>
                             <a href="/cliente/edit/{{ cliente.id }}/" class="btn btn-outline-primary">Editar</a>
                             <a href="/cliente/delete/{{ cliente.id }}/" class="btn btn-outline-danger">Excluir</a>

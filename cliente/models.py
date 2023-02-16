@@ -8,11 +8,10 @@ class Categoria(models.Model):
         return self.nome
 
 class Cliente(models.Model):
+    numero = models.CharField(max_length=255)
     nome = models.CharField(max_length=255)
-    telefone = models.CharField(max_length=255)
-    email = models.CharField(max_length=255, blank=True)
+    cnpj = models.CharField(max_length=255, blank=True)
     data_criacao = models.DateTimeField(default=timezone.now)
-    descricao = models.TextField(blank=True)
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)
 
     def __str__(self):
