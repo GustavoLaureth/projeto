@@ -27,11 +27,14 @@ def form(request):
     return render(request, 'cliente/form.html', data)
 
 def create(request):
-    form = ClienteForm(request.POST)
-    if form.is_valid():
-        form.save()
-        messages.add_message(request, messages.SUCCESS, 'Cliente cadastrado com sucesso.')
-        return redirect('cliente')
+    if request.method == 'POST':
+        form = ClienteForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.add_message(request, messages.SUCCESS, 'Cliente cadastrado com sucesso.')
+            return redirect('cliente')
+    else:
+        form = ClienteForm()
 
 def edit(request, pk):
     cliente = Cliente.objects.get(pk=pk)

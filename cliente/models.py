@@ -20,6 +20,7 @@ class Cliente(models.Model):
     data_criacao = models.DateTimeField(default=timezone.now)
     categoria = models.ForeignKey(Categoria, on_delete=models.DO_NOTHING)
     empresa = models.ForeignKey(Empresa, on_delete=models.DO_NOTHING)
+    empenho = models.FileField(upload_to='empenhos/')
 
     def __str__(self):
         return self.nome

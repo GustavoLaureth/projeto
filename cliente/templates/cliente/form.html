@@ -9,7 +9,7 @@
                     Cadastrar Emepnho
                 </div>
             </div>            
-            <form action="{% if cliente %}/cliente/update/{{cliente.id}}/{% else %}/cliente/create/{% endif %}" method="POST">
+            <form action="{% if cliente %}/cliente/update/{{cliente.id}}/{% else %}/cliente/create/{% endif %}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
                 
                   <div class="input-group col-12 p-15 my-2">
@@ -53,6 +53,14 @@
                         <div class="input-group-text">
                           <span class="fas fa-phone"></span>
                         </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="input-group col-4 p-0" >
+                    {% render_field form.empenho name="empenho" type="file" placeholder="Empenho" autocomplete="off"%}
+                    <div class="input-group-append">
+                      <div class="input-group-text">
+                        <span class="fas fa-envelope"></span>
                       </div>
                     </div>
                   </div>
