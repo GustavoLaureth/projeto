@@ -48,8 +48,8 @@
                         <th scope="col" class="text-center">Nome</th>
                         <th scope="col" class="text-center">CNPJ</th>
                         <th scope="col" class="text-center">Status</th>
+                        <th scope="col" class="text-center">Empresa</th>
                         <th scope="col" class="text-center">Ações</th>
-                        <th scope="col" class="text-center">Download</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -60,12 +60,13 @@
                         <td class="text-center">{{ cliente.nome }}</td>
                         <td class="text-center">{{ cliente.cnpj }}</td>
                         <td class="text-center">{{ cliente.categoria }}</td>
+                        <td class="text-center">{{ cliente.empresa }}</td>
                         <td class="text-center">
-                            <a href="/cliente/detalhe/{{ cliente.id }}" class="btn btn-outline-secondary">Visualizar</a>
-                            <a href="/cliente/edit/{{ cliente.id }}/" class="btn btn-outline-primary">Editar</a>
-                            <a href="/cliente/delete/{{ cliente.id }}/" class="btn btn-outline-danger">Excluir</a>
+                            <a href="/cliente/detalhe/{{ cliente.id }}" class="btn btn-outline-secondary"><i class="bi bi-eye"></i></a>
+                            <a href="/cliente/edit/{{ cliente.id }}/" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i></a>
+                            <a href="/cliente/delete/{{ cliente.id }}/" class="btn btn-outline-danger"><i class="bi bi-trash"></i></a>
+                            <a href="{{ cliente.empenho.url }}" download class="btn btn-outline-warning" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
                         </td>
-                        <td class="text-center"><a href="{{ cliente.empenho.url }}" download class="btn btn-primary btn-sm" target="_blank">Download</a></td>
                     </tr>
                     {% endfor %}
                 </tbody>
