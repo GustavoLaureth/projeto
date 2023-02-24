@@ -24,3 +24,7 @@ class Cliente(models.Model):
 
     def __str__(self):
         return self.nome
+
+    def delete(self, *args, **kwargs):
+        self.empenho.delete()
+        super().delete(*args, **kwargs)
