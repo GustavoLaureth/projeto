@@ -7,4 +7,4 @@ class ClienteFilter(django_filters.FilterSet):
         model = Cliente
         fields = '__all__'
 
-        exclude = ['data_cricao', 'empenho']
+        exclude = ['data_criacao', 'empenho']
