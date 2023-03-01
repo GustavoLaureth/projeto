@@ -32,7 +32,7 @@
                   </div>
                   <div class="input-group col-12 mb-2 p-15">
                     <div class="input-group col-4 p-0" >
-                      {% render_field form.cnpj type="cnpj" name="cnpj" type="name" placeholder="CNPJ" autocomplete="off"%}
+                      {% render_field form.cnpj type="text" id="cpfcnpj" placeholder="CNPJ" autocomplete="off"%}
                       <div class="input-group-append">
                         <div class="input-group-text">
                           <span class="fas fa-envelope"></span>
@@ -88,4 +88,13 @@
 
         </div>
     </div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+
+<script>
+$('#cpfcnpj').mask('00.000.000/0000-00');
+</script>
+
 {% endblock %}

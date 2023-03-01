@@ -55,25 +55,6 @@
                 <tbody>
 
                     {% for cliente in clientes %}
-                    <!-- Modal -->
-                    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                        <div class="modal-dialog">
-                          <div class="modal-content">
-                            <div class="modal-header">
-                              <h1 class="modal-title fs-5" id="exampleModalLabel">Cuidado!!!</h1>
-                              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                              Tem certeza que deseja excluir este empenho?<br>
-                              Você nunca mais terá acesso a ele!
-                            </div>
-                            <div class="modal-footer">
-                              <button type="button" class="btn btn-primary" data-bs-dismiss="modal">Fechar</button>
-                              <a class="btn btn-danger" href="/cliente/delete/{{ cliente.id }}/">Excluir</a>
-                            </div>
-                          </div>
-                        </div>
-                    </div>
                     <tr>
                         <td class="text-center">{{ cliente.numero }}</td>
                         <td class="text-center">{{ cliente.nome }}</td>
@@ -83,9 +64,8 @@
                         <td class="text-center">
                             <a href="/cliente/detalhe/{{ cliente.id }}" class="btn btn-outline-secondary"><i class="bi bi-eye"></i></a>
                             <a href="/cliente/edit/{{ cliente.id }}/" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i></a>
-                            <button type="button" class="btn btn-outline-danger" data-bs-toggle="modal" data-bs-target="#exampleModal"><i class="bi bi-trash"></i></button>
+                            <a href="/cliente/delete/{{ cliente.id }}/" class="btn btn-outline-danger"><i class="bi bi-trash"></i></a>  
                             <a href="{{ cliente.empenho.url }}" download class="btn btn-outline-warning" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
-                            
                         </td>
                     </tr>
                     {% endfor %}
@@ -110,4 +90,12 @@
         </div>
     </div>
 </div>
+
+<script>
+function relatoDelete(id){
+var link = document.querySelector("#id_delete");
+link.setAttribute("href", "delete/" + id + "/");
+}
+</script>
+
 {% endblock %}
