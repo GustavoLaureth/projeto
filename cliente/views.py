@@ -17,8 +17,6 @@ def cliente(request):
 
 def detalhe(request, pk):
     cliente = Cliente.objects.get(pk=pk)
-    print('--- Detalhe do Cliente ---')
-    print(cliente)
     return render(request, 'cliente/detalhe.html', {'cliente': cliente})
 
 def form(request):

@@ -1,4 +1,5 @@
 {% extends 'base.html' %}
+{% load widget_tweaks %}
 
 {% block conteudo %}
 
@@ -6,26 +7,22 @@
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Empenhos</h5>
-            <h6 class="card-subtitle mb-2 text-muted">Listagem de Empenhos</h6>
             <a class="btn btn-outline-primary mb-3" href="{% url 'form' %}">Cadastrar Empenho</a>
             <div class="row">
                 <div class="col">
+                    <h6 class="card-subtitle mb-2 text-muted">Pesquisar por Empenhos:</h6>
                     <form method="get" class="form-inline">
-                        <div class="form-group mb-3">
-                            <label for="nome">Número</label>
-                            {{myFilter.form.numero}}
+                        <div class="form-group mb-3 mr-2">
+                            {% render_field myFilter.form.numero placeholder="Número" class="form-control" id="id_numero" autocomplete="off" %}
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="nome">Nome</label>
-                            {{myFilter.form.nome}}
+                        <div class="form-group mb-3 mr-2">
+                            {% render_field myFilter.form.nome placeholder="Nome" class="form-control" id="id_nome" autocomplete="off" %}
                         </div>
-                        <div class="form-group mb-3">
-                            <label for="nome">CNPJ</label>
-                            {{myFilter.form.cnpj}}
+                        <div class="form-group mb-3 mr-2">
+                            {% render_field myFilter.form.cnpj placeholder="CNPJ" class="form-control" id="id_cnpj" autocomplete="off" %}
                         </div>
-                        <div class="form-group mb-3 ml-2">
-                            <label for="categoria">Categoria</label>
-                            {{myFilter.form.categoria}}
+                        <div class="form-group mb-3 mr-2">
+                            {% render_field myFilter.form.categoria class="form-control" id="id_categoria" autocomplete="off" %}
                         </div>
                         <button class="btn btn-primary ml-2 mb-3" type="submit">Pesquisar</button>
                     </form>
@@ -91,11 +88,12 @@
     </div>
 </div>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js"crossorigin="anonymous"></script>
+
 <script>
-function relatoDelete(id){
-var link = document.querySelector("#id_delete");
-link.setAttribute("href", "delete/" + id + "/");
-}
+$('#id_cnpj').mask('00.000.000/0000-00');
 </script>
 
 {% endblock %}
