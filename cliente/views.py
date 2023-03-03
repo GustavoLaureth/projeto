@@ -29,7 +29,7 @@ def create(request):
         form = ClienteForm(request.POST, request.FILES)
         if form.is_valid():
             form.save()
-            messages.add_message(request, messages.SUCCESS, 'Cliente cadastrado com sucesso.')
+            messages.add_message(request, messages.SUCCESS, 'Empenho cadastrado com sucesso.')
             return redirect('cliente')
     else:
         form = ClienteForm()
@@ -41,14 +41,14 @@ def edit(request, pk):
 
 def update(request, pk):
     cliente = Cliente.objects.get(pk=pk)
-    form = ClienteForm(request.POST, instance=cliente)
+    form = ClienteForm(request.POST, request.FILES, instance=cliente)
     if form.is_valid():
         form.save()
-        messages.add_message(request, messages.SUCCESS, 'Cliente atualizado com sucesso.')
+        messages.add_message(request, messages.SUCCESS, 'Empenho atualizado com sucesso.')
         return redirect('cliente')
 
 def delete(request, pk):
     cliente = Cliente.objects.get(pk=pk)
     cliente.delete()
-    messages.add_message(request, messages.SUCCESS, 'Cliente excluido com sucesso.')
+    messages.add_message(request, messages.SUCCESS, 'Empenho excluido com sucesso.')
     return redirect('cliente')
