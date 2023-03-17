@@ -3,11 +3,11 @@
 
 {% block conteudo %}
 
-<div class="container mt-5">
+<div class="content mt-3">
     <div class="card">
         <div class="card-body">
             <h5 class="card-title">Empenhos</h5>
-            <a class="btn btn-outline-primary mb-3" href="{% url 'form' %}">Cadastrar Empenho</a>
+            <a class="btn btn-outline-primary mb-3" id="btn-cadastrar" href="{% url 'form' %}">Cadastrar Empenho</a>
             <div class="row">
                 <div class="col">
                     <h6 class="card-subtitle mb-2 text-muted">Pesquisar por Empenhos:</h6>
@@ -22,9 +22,12 @@
                             {% render_field myFilter.form.cnpj placeholder="CNPJ" class="form-control" id="id_cnpj" autocomplete="off" %}
                         </div>
                         <div class="form-group mb-3 mr-2">
+                            {% render_field myFilter.form.valor placeholder="Valor" class="form-control" id="valor" autocomplete="off" %}
+                        </div>
+                        <div class="form-group mb-3 mr-2">
                             {% render_field myFilter.form.categoria class="form-control" id="id_categoria" autocomplete="off" %}
                         </div>
-                        <button class="btn btn-primary ml-2 mb-3" type="submit">Pesquisar</button>
+                        <button class="btn btn-primary ml-2 mb-3" id="btn-pesquisar" type="submit">Pesquisar</button>
                     </form>
                 </div>
             </div>
@@ -38,12 +41,13 @@
             </div>
             {% endfor %}
             {% endif %}
-            <table class="table">
+            <table class="table table-striped ">
                 <thead>
                     <tr>
                         <th scope="col" class="text-center">Numero</th>
                         <th scope="col" class="text-center">Nome</th>
                         <th scope="col" class="text-center">CNPJ</th>
+                        <th scope="col" class="text-center">Valor</th>
                         <th scope="col" class="text-center">Status</th>
                         <th scope="col" class="text-center">Empresa</th>
                         <th scope="col" class="text-center">Ações</th>
@@ -56,6 +60,7 @@
                         <td class="text-center">{{ cliente.numero }}</td>
                         <td class="text-center">{{ cliente.nome }}</td>
                         <td class="text-center">{{ cliente.cnpj }}</td>
+                        <td class="text-center">R$ {{ cliente.valor }}</td>
                         <td class="text-center">{{ cliente.categoria }}</td>
                         <td class="text-center">{{ cliente.empresa }}</td>
                         <td class="text-center">
@@ -93,6 +98,8 @@
 
 <script>
 $('#id_cnpj').mask('00.000.000/0000-00');
+
+$('#valor').mask('000.000.000.000.000,00', {reverse: true});
 </script>
 
 {% endblock %}

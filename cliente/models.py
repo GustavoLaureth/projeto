@@ -22,6 +22,7 @@ class Cliente(models.Model):
     empresa = models.ForeignKey(Empresa, on_delete=models.DO_NOTHING)
     empenho = models.FileField(upload_to='empenhos/')
     descricao = models.TextField(blank=True)
+    valor = models.CharField(max_length=255)
 
     def __str__(self):
         return self.nome

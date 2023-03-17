@@ -1,15 +1,16 @@
 {% extends 'base.html' %}
 
 {% block conteudo %}
-<div class="content">
+<div class="contents">
     <h1>Detalhes do empenho</h1>
-    <div class="content-info">
+    <div class="contents-info">
         <p>Empenho: {{ cliente.numero }}</p>
         <p>Nome: {{ cliente.nome }}</p>
         <p>CNPJ: {{ cliente.cnpj }}</p>
         <p>Status: {{ cliente.categoria }}</p>
-        <p>Data: {{ cliente.data_criacao }}</p>
         <p>Empresa: {{ cliente.empresa }}</p>
+        <p>Valor do empenho: R$ {{ cliente.valor }}</p>
+        <p>Data: {{ cliente.data_criacao }}</p>
         <p>Observações: {{ cliente.descricao }}</p>
         <a href="{% url 'cliente' %}" class="btn btn-outline-secondary" style="width: 100%">Voltar</a>
     </div>

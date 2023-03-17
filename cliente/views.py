@@ -7,7 +7,7 @@ from .filters import ClienteFilter
 
 def cliente(request):
     # list_clientes = Cliente.objects.all()
-    list_clientes = Cliente.objects.order_by('data_criacao')
+    list_clientes = Cliente.objects.order_by('numero')
     myFilter = ClienteFilter(request.GET, queryset=list_clientes)
     list_clientes = myFilter.qs
     paginator = Paginator(list_clientes, 8)

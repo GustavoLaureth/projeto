@@ -3,11 +3,11 @@
 
 {% block conteudo %}
     <div class="container col-lg-12 center mt-5 w-75">
-        <div class="card card-primary">
+        <div class="card card-primary card-formulario">
             <div class="card-header">
-                <div class="card-title mb-0">
+                <h5 class="card-title mb-0">
                     Cadastrar Empenho
-                </div>
+                </h5>
             </div>            
             <form action="{% if cliente %}/cliente/update/{{cliente.id}}/{% else %}/cliente/create/{% endif %}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
@@ -15,53 +15,29 @@
                   <div class="input-group col-12 p-15 my-2">
                     <div class="input-group col-3 p-0">
                       {% render_field form.numero name="numero" type="number" placeholder="Número do empenho" autocomplete="off"%}
-                      <div class="input-group-append">
-                        <div class="input-group-text">
-                          <span class="fas fa-user"></span>
-                        </div>
-                      </div>
                     </div>
                     <div class="input-group col-9 pr-0">
                       {% render_field form.nome name="nome" id="nome" type="name" placeholder="Nome do cliente" autocomplete="off"%}
-                      <div class="input-group-append">
-                        <div class="input-group-text">
-                          <span class="fas fa-address-card"></span>
-                        </div>
-                      </div>
                     </div>
                   </div>
                   <div class="input-group col-12 mb-2 p-15">
                     <div class="input-group col-4 p-0" >
                       {% render_field form.cnpj type="text" id="cpfcnpj" placeholder="CNPJ" autocomplete="off"%}
-                      <div class="input-group-append">
-                        <div class="input-group-text">
-                          <span class="fas fa-envelope"></span>
-                        </div>
-                      </div>
                     </div>
                     <div class="input-group col-4 pr-0">
                       {% render_field form.categoria name="categoria" id="categoria" placeholder="Categoria" autocomplete="off"%}
-                      <div class="input-group-append">
-                        <div class="input-group-text">
-                          <span class="fas fa-phone"></span>
-                        </div>
-                      </div>
                     </div>
                     <div class="input-group col-4 pr-0">
                       {% render_field form.empresa name="empresa" id="empresa" placeholder="Empresa" autocomplete="off"%}
-                      <div class="input-group-append">
-                        <div class="input-group-text">
-                          <span class="fas fa-phone"></span>
-                        </div>
-                      </div>
                     </div>
                   </div>
-                  <div class="input-group col-6 p-15 mb-2" >
-                    {% render_field form.empenho name="empenho" type="file" placeholder="Empenho" autocomplete="off"%}
-                    <div class="input-group-append">
-                      <div class="input-group-text">
-                        <span class="fas fa-envelope"></span>
-                      </div>
+                  <div class="input-group col-12 p-0">
+                    <div class="input-group col-6 p-15 mb-2" >
+                      {% render_field form.empenho name="empenho" type="file" placeholder="Empenho" autocomplete="off"%}
+                    </div>
+                    <div class="input-group col-5 p-15 mb-2" >
+                      <span class="input-group-text valor" id="span-valor">R$</span>
+                      {% render_field form.valor name="valor" type="text" id="valor" placeholder="Valor do empenho" autocomplete="off"%}
                     </div>
                   </div>
                   <div class="input-group col-8 p-15 mb-2" >
@@ -95,6 +71,9 @@
 
 <script>
 $('#cpfcnpj').mask('00.000.000/0000-00');
+
+$('#valor').mask('000.000.000.000.000,00', {reverse: true});
+
 </script>
 
 {% endblock %}
