@@ -1,6 +1,7 @@
 {% extends 'base.html' %}
 {% load widget_tweaks %}
 
+
 {% block conteudo %}
 
 <div class="content mt-3">
@@ -13,16 +14,19 @@
                     <h6 class="card-subtitle mb-2 text-muted">Pesquisar por Empenhos:</h6>
                     <form method="get" class="form-inline">
                         <div class="form-group mb-3 mr-2">
-                            {% render_field myFilter.form.numero placeholder="Número" class="form-control" id="id_numero" autocomplete="off" %}
+                            {% render_field myFilter.form.numero placeholder="Nº Empenho" class="form-control" id="id_numero" autocomplete="off" %}
                         </div>
                         <div class="form-group mb-3 mr-2">
-                            {% render_field myFilter.form.nome placeholder="Nome" class="form-control" id="id_nome" autocomplete="off" %}
+                            {% render_field myFilter.form.nome placeholder="Cliente" class="form-control" id="id_nome" autocomplete="off" %}
                         </div>
                         <div class="form-group mb-3 mr-2">
                             {% render_field myFilter.form.cnpj placeholder="CNPJ" class="form-control" id="id_cnpj" autocomplete="off" %}
                         </div>
                         <div class="form-group mb-3 mr-2">
-                            {% render_field myFilter.form.valor placeholder="Valor" class="form-control" id="valor" autocomplete="off" %}
+                            {% render_field myFilter.form.valor placeholder="Valor do Empenho" class="form-control" id="valor" autocomplete="off" %}
+                        </div>
+                        <div class="form-group mb-3 mr-2">
+                            {% render_field myFilter.form.n_nfe class="form-control" placeholder="Nº Nota" id="nfe" autocomplete="off" %}
                         </div>
                         <div class="form-group mb-3 mr-2">
                             {% render_field myFilter.form.categoria class="form-control" id="id_categoria" autocomplete="off" %}
@@ -67,6 +71,10 @@
                             <a href="/cliente/detalhe/{{ cliente.id }}" class="btn btn-outline-secondary"><i class="bi bi-eye"></i></a>
                             <a href="/cliente/edit/{{ cliente.id }}/" class="btn btn-outline-primary"><i class="bi bi-pencil-square"></i></a>
                             <a href="{{ cliente.empenho.url }}" download class="btn btn-outline-warning" target="_blank"><i class="bi bi-file-earmark-arrow-down"></i></a>
+                            {% if cliente.nfe != '0' %}
+                                <a href="{{ cliente.nfe.url }}" class="btn btn-outline-success" target="_blank"><i class="bi bi-receipt"></i></a>
+                            {% else %}
+                            {% endif %}
                         </td>
                     </tr>
                     {% endfor %}
@@ -78,11 +86,11 @@
                     <!--  -->
                     {% if clientes.number == pagina %}
                     <li class="page-item active">
-                        <a class="page-link" href="?page={{pagina}}">{{pagina}}</a>
+                        <a class="page-link" href="{{ request.get_full_path }}?&page={{pagina}}">{{pagina}}</a>
                     </li>
                     {% else %}
                     <li class="page-item">
-                        <a class="page-link" href="?page={{pagina}}">{{pagina}}</a>
+                        <a class="page-link" href="{{ request.get_full_path }}?&page={{pagina}}">{{pagina}}</a>
                     </li>
                     {% endif %}
                     {% endfor %}

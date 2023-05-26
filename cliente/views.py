@@ -7,7 +7,7 @@ from .filters import ClienteFilter
 
 def cliente(request):
     # list_clientes = Cliente.objects.all()
-    list_clientes = Cliente.objects.order_by('numero')
+    list_clientes = Cliente.objects.order_by('-data_criacao')
     myFilter = ClienteFilter(request.GET, queryset=list_clientes)
     list_clientes = myFilter.qs
     paginator = Paginator(list_clientes, 8)
@@ -44,11 +44,11 @@ def update(request, pk):
     form = ClienteForm(request.POST, request.FILES, instance=cliente)
     if form.is_valid():
         form.save()
-        messages.add_message(request, messages.SUCCESS, 'Empenho atualizado com sucesso.')
+        messages.add_message(request, messages.INFO, 'Empenho atualizado com sucesso.')
         return redirect('cliente')
 
 def delete(request, pk):
     cliente = Cliente.objects.get(pk=pk)
     cliente.delete()
-    messages.add_message(request, messages.SUCCESS, 'Empenho excluido com sucesso.')
+    messages.add_message(request, messages.ERROR, 'Empenho excluido com sucesso.')
     return redirect('cliente')
