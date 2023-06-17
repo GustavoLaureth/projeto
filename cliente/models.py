@@ -25,6 +25,7 @@ class Cliente(models.Model):
     n_nfe = models.CharField(max_length=255, blank=True)
     descricao = models.TextField(blank=True)
     valor = models.CharField(max_length=255)
+    email = models.CharField(max_length=100)
 
     def __str__(self):
         return self.nome
