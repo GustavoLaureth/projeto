@@ -14,7 +14,7 @@
                 
                   <div class="input-group col-12 p-15 my-2">
                     <div class="input-group col-3 p-0">
-                      {% render_field form.numero name="numero" type="number" placeholder="Nº Empenho" autocomplete="off"%}
+                      {% render_field form.numero name="numero" type="name" placeholder="Nº Empenho" autocomplete="off"%}
                     </div>
                     <div class="input-group col-9 pr-0">
                       {% render_field form.nome name="nome" id="nome" type="name" placeholder="Nome do cliente" autocomplete="off"%}
@@ -22,7 +22,7 @@
                   </div>
                   <div class="input-group col-12 mb-2 p-15">
                     <div class="input-group col-4 p-0" >
-                      {% render_field form.cnpj type="text" id="cpfcnpj" placeholder="CNPJ" autocomplete="off"%}
+                      {% render_field form.cnpj type="text" onblur="checkCnpj(this.value)" id="cpfcnpj" placeholder="CNPJ" autocomplete="off"%}
                     </div>
                     <div class="input-group col-4 pr-0">
                       {% render_field form.categoria name="categoria" id="categoria" placeholder="Categoria" autocomplete="off"%}
@@ -73,14 +73,28 @@
         </div>
     </div>
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.min.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.0/jquery.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.16/jquery.mask.js"></script>
 
 <script>
 $('#cpfcnpj').mask('00.000.000/0000-00');
 
 $('#valor').mask('000.000.000.000.000,00', {reverse: true});
+
+function checkCnpj(cnpj) {
+    $.ajax({
+        'url': 'https://www.receitaws.com.br/v1/cnpj/' + cnpj.replace(/[^\d]+/g,''),
+        'type': 'GET',
+        'dataType': 'jsonp',
+        'success': function(dado){
+            if(dado.nome == undefined){
+                alert(dado.status + '' + dado.message)
+            } else {
+                document.getElementById('nome').value = dado.nome
+            }
+        }
+    })
+}
 
 </script>
 
