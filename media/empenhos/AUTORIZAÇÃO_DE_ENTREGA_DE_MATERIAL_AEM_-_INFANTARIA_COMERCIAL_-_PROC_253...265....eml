@@ -1,0 +1,1178 @@
+From - Thu Nov 16 07:57:50 2023
+X-Account-Key: account5
+X-UIDL: UID78223-1472754033
+X-Mozilla-Status: 0000
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Return-Path: <amanda.mateus@bio.fiocruz.br>
+Delivered-To: infantaria@infantariacomercial.com.br
+Received: from cpanel10-idc.redeunifique.com.br
+	by cpanel10-idc.redeunifique.com.br with LMTP
+	id 0DKUNkL0VGXZxwEA8ex2Ag
+	(envelope-from <amanda.mateus@bio.fiocruz.br>)
+	for <infantaria@infantariacomercial.com.br>; Wed, 15 Nov 2023 13:39:30 -0300
+Return-path: <amanda.mateus@bio.fiocruz.br>
+Envelope-to: infantaria@infantariacomercial.com.br
+Delivery-date: Wed, 15 Nov 2023 13:39:30 -0300
+Received: from mail-dm6nam12on2069.outbound.protection.outlook.com ([40.107.243.69]:26502 helo=NAM12-DM6-obe.outbound.protection.outlook.com)
+	by cpanel10-idc.redeunifique.com.br with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.96.2)
+	(envelope-from <amanda.mateus@bio.fiocruz.br>)
+	id 1r3IvA-000V1j-0Z
+	for infantaria@infantariacomercial.com.br;
+	Wed, 15 Nov 2023 13:39:30 -0300
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=MmEtOdeRNKsxkU+O6rf2MLiM5fw7hvy/DotxxmeUPz2LdVGrGg3uNtVqiBnjBuoZa+4DsQsmwijgNZHZxSOCRT3ivIHkhtt+J65cHEl/OUwVnCdpTQ4kaoU1Epdn1Tve/TmwNjp8+IqThSOXYrnZf7INhdrFa4Ep6yzUGEvuuOlZcyNsZ4/QuFboVmHvEW7elUQZUDLXXr023ZFyO72Sv9V7OiJWecC3u6YoH0khs+kEPqoOFObDfHwLEqFUoOxpcw80Q1IUmIhOcSDXqbHsNeOI6a47F/qQN157lVR4kNIvTx+fqmkvSnfARVipDAIe3AJ9k96n9sE2sCbKtnkUgQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=xGHHW3RKbPiFQIIK6g+Ai0pWrXCD6OC5RCyW3w3ZySI=;
+ b=cnhH/UcSUCG3YmFxxZeAcjaBFux782y7kLefPDqCbjuKLXLev4v30PJnY+6xCXHOh7jjhjtd0GG/IQeidUXNdC0wLVwVWBDwO22Th3KOGIRA0fIBfxf9kX73L0uhfJ28ZikObHCwBJHof8Dy7oFDtTtc6JUVW+HR+pWfC1IaxRry3oOGGeQ1jWcxK0/6SY1UAugadlQ53jjaslh4y5+YZgjJlpMocs1bkV57i/FrCKK8X6PW3f3rJM5ik4kyMYdLeTmP7RlY0d3tkdY6Eq5pxQnaTZqI1ATBNsQ37MZTnLz6rR7RLqhlGw4NCq8zfQLxT5mpgSrH53VPYIhSufU8eA==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=bio.fiocruz.br; dmarc=pass action=none
+ header.from=bio.fiocruz.br; dkim=pass header.d=bio.fiocruz.br; arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=fiocruzbr.onmicrosoft.com; s=selector1-fiocruzbr-onmicrosoft-com;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=xGHHW3RKbPiFQIIK6g+Ai0pWrXCD6OC5RCyW3w3ZySI=;
+ b=CnTFXf5yy7Fs/2MZPsakdMAfDJrVudn0csHNmQmJDbzg6tuDGPVorOKLaZpsRBNA/uEqkEEcmJJ0Vws6ZaCNR6xrdaTLnL6iSgNMi+FvoiPSpgFthXPdTrkTv+Z4xGE20ohQU7r6ejM9h9cJvj6SXOOxg/5wytkU6xerSiW/pCxPurwmWwZypjNKtEomeJ8+qh9erR97JKgBV6f+BUmmxfwSVnyDusdnU4Jzb5hGKHpexFV3TzTs5P7pcuBpCBOSHTkco5FAbbMtThSIyrQVVz7CKWpRa5bXyQt6pR/g2cReVYeUK9wlksa1i7+h9mrwAfx8aoooeCNA9njU4/7iwg==
+Received: from CPUP152MB4402.LAMP152.PROD.OUTLOOK.COM (2603:10d6:103:d0::7) by
+ SCZP152MB5708.LAMP152.PROD.OUTLOOK.COM (2603:10d6:300:5a::8) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7002.17; Wed, 15 Nov 2023 16:38:47 +0000
+Received: from CPUP152MB4402.LAMP152.PROD.OUTLOOK.COM
+ ([fe80::393f:a6af:e323:7e5a]) by CPUP152MB4402.LAMP152.PROD.OUTLOOK.COM
+ ([fe80::393f:a6af:e323:7e5a%4]) with mapi id 15.20.7002.019; Wed, 15 Nov 2023
+ 16:38:47 +0000
+From: Amanda da Silva Mateus <amanda.mateus@bio.fiocruz.br>
+To: "infantaria@infantariacomercial.com.br"
+	<infantaria@infantariacomercial.com.br>
+CC: Bruno Jardim de Oliveira Lima <bruno.jardim@bio.fiocruz.br>, Felipe Cenzi
+ do Rego <felipe.rego@bio.fiocruz.br>, Marcelo Gomes Paes
+	<Mgomes@bio.fiocruz.br>, Luiz Felipe Carvalho de Oliveira
+	<luiz.carvalho@bio.fiocruz.br>, agendarecebimento
+	<agendarecebimento@bio.fiocruz.br>
+Subject:
+ =?iso-8859-1?Q?AUTORIZA=C7=C3O_DE_ENTREGA_DE_MATERIAL_(AEM)_-_INFANTARIA_?=
+ =?iso-8859-1?Q?COMERCIAL_-_PROC_25386.000518/2023-910-000_-_AEM_0001_-_20?=
+ =?iso-8859-1?Q?23ne002650_-_Resp.:_[DEPEM-iago.fonseca=5Fwengenharia]?=
+Thread-Topic:
+ =?iso-8859-1?Q?AUTORIZA=C7=C3O_DE_ENTREGA_DE_MATERIAL_(AEM)_-_INFANTARIA_?=
+ =?iso-8859-1?Q?COMERCIAL_-_PROC_25386.000518/2023-910-000_-_AEM_0001_-_20?=
+ =?iso-8859-1?Q?23ne002650_-_Resp.:_[DEPEM-iago.fonseca=5Fwengenharia]?=
+Thread-Index: AdoX4bhvb0kr+neyRSWiYobnaL3E/g==
+Disposition-Notification-To: Amanda da Silva Mateus
+	<amanda.mateus@bio.fiocruz.br>
+Return-Receipt-To: <amanda.mateus@bio.fiocruz.br>
+Date: Wed, 15 Nov 2023 16:38:47 +0000
+Message-ID:
+ <CPUP152MB4402B5F62F1CC9326A4D3118C3B1A@CPUP152MB4402.LAMP152.PROD.OUTLOOK.COM>
+Accept-Language: pt-BR, en-US
+Content-Language: pt-BR
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=bio.fiocruz.br;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: CPUP152MB4402:EE_|SCZP152MB5708:EE_
+x-ms-office365-filtering-correlation-id: d7ba58bf-7765-48b1-38f3-08dbe5f956fe
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ XuirTEuwhwHJubzCe4KXU2DtOUELgZyvk93sm0KA9F1IuFq09m3khSI0xubN3int5kuIIRaT3FNQDETbg9mg35nMfkbOoAVGbmIla38X82Iz3n2IeuPbs6xkkUSkHapYFit62b9I6q/Kh8sLXNnn8baIjxy6r/oj7IpL2dQhacgBRmc3vcrWrHP78RIoE0VKx1J/FrHbHz1EsQG4tALMwYDJTCKijZQia5RSwPR6NNA259/X2EVrvEChEzzyQkjyJyo1O4PI8woVdPBh6Uwfk+kOQ2g4P4MufsAzudSyBCVSUUVvndy0/fPdncQWmGk7SH9DNZYcXzvzjXy98WzTKm9Z/4tsCETOw1OjEaA8wPoLdOn38nqg1+I1lYcnILMiWt0XLCQLSarmJRzK6KzEDdHPwf8HzCBzBOt9GI0x7P1qpGt6AxfcyyTfxD88XmS3h2dvRoCSh6Wf1c69CXjaFtN0R8qKFAVc3VsE5pKUfUoFeMteFOuBngONxSW+i3C9+pW/48PdiaVdZgvj95aNMnpuVj22iN5MUsxyzWFNQrx4ipUd8ovTJiS8C5Xp9GDaOaut8S5XjwVKN+jvXUhxmohj1JuYDYuEGk0kChV4PVM=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:pt;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:CPUP152MB4402.LAMP152.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230031)(136003)(346002)(376002)(396003)(366004)(39860400002)(230922051799003)(64100799003)(451199024)(186009)(1800799009)(38100700002)(55016003)(7696005)(6506007)(41320700001)(71200400001)(83380400001)(122000001)(166002)(26005)(107886003)(66899024)(9686003)(33656002)(41300700001)(2906002)(40140700001)(5660300002)(4326008)(8936002)(86362001)(52536014)(38070700009)(6916009)(76116006)(66946007)(64756008)(66446008)(66476007)(66556008)(54906003)(224303003)(316002)(786003)(478600001)(19627235002)(66574015)(579004);DIR:OUT;SFP:1101;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?iso-8859-1?Q?QUlxWOKGdolLDuhAEGgGr2CSgPGKaSip1Baidyzpact3anKHFWsC3TuIjr?=
+ =?iso-8859-1?Q?J6mfND4g5peRvGB6ZLJ4GR1FNUEBN/mNgDETawXeAofuzzD2ImOrfbiz96?=
+ =?iso-8859-1?Q?iI4iTIZIJR9aw8mjDsII8EDvmFWjpMn7Ex4cQ97k7O2i04rDz6D7bZaBcQ?=
+ =?iso-8859-1?Q?goBDxah26bc6f1PNvHlJaAIZzeXYaQGT0BxSRKGJAMktIs+2+iCWzOhBdI?=
+ =?iso-8859-1?Q?0n2QbobvLPc0YQIyLIGWFuUOF3ZfdERwtGwLnX+fo5/jqhT7V0obz2Q1v/?=
+ =?iso-8859-1?Q?5++NLeT6daVUdk8n1UTTUkqMwiSKdmQKc2FZS5cyvFa8tzC5ODbzrq30pL?=
+ =?iso-8859-1?Q?NoEHtQivqbMOToVnrCj0eoOujxxrGvcSBuHU4DXDQ6lwdSQNLF/RChhLzx?=
+ =?iso-8859-1?Q?PaC5Tu/wMW7tZR9f4Tmg29HUjoRMolCC2tESbBpozboFlQ0qmzdJTxV0tE?=
+ =?iso-8859-1?Q?dbgtSkLc4cEpmce6la0githRvJ7VRqPH0M7JUu3L5jDSm89qyoquaMWY5+?=
+ =?iso-8859-1?Q?IL3ahS2eYNQUZHl1rcZDx1c/PvqhuRsKCfmVJJwec/RdX5q9y/3FrpsDcm?=
+ =?iso-8859-1?Q?utgYcArZepRDjSNYXhRlV1JqKA50omtj7at3lSwFTGHz1ITPpVTk6Iyths?=
+ =?iso-8859-1?Q?p4gKI4FZp67Uo2X7r+n19YEzR8ob3hvuvI+Y0MfZcu6Kko6hmSC3mLP8/C?=
+ =?iso-8859-1?Q?TaL8Rcjt1Dj3j+DIymiNmtZP+PscW7ZRVsFRu+PJHcvjhhHx0Rv0oEGEg1?=
+ =?iso-8859-1?Q?nQyBe6fmjL2NfyiC916HUgKuT5MuiJhX365q/0I+nydBosiBvyv1ESordp?=
+ =?iso-8859-1?Q?WnyZwRE7ETjX6wXe2MIwIJ07KuM73ZsDQimu6K/APwYkXaC1tfZmPM0F40?=
+ =?iso-8859-1?Q?s3pbiaBf43lkIOWcH2Wxt4R2mnIjlYizUyvazp294jnFM0qOCcCx1Ab0jU?=
+ =?iso-8859-1?Q?C6OpK+mcReU4Cm6cIFlto2aQrKROfGDKPfqwVNYvBwDVRKU3Wy5I+sTHz8?=
+ =?iso-8859-1?Q?eKvxLptdX8GPMI84iC9MttUjo7yqifCE3zs9/ZWK3ZGygQuAMFeS4dJMqV?=
+ =?iso-8859-1?Q?3WFcCMHIgMPQkbroYBPgaH7+uCKG3Tl1hkkBfGYd76rVh9gC3xaKRB8FC5?=
+ =?iso-8859-1?Q?tftOU020ubw8juQFxknmKJCT5uXpdSrJ16HQ+PnfTpnG2Zn0pkKeVdcqzc?=
+ =?iso-8859-1?Q?Zu/0G0HxNcGklMBLqPHSVnw/5QKIcjPaYc6J6MaCb5A5jCS0NikF4P4ts3?=
+ =?iso-8859-1?Q?h7JPsPTlj36ftkvSVMcYriGazCbaXYfP+QoJ2SdEMVxrFP2CxVedhm05IM?=
+ =?iso-8859-1?Q?C37JPs/ntIgpg3p/jXVFvGsSbozEj3f0hEpC5pYJqFbl4KL78lyZ0XfN9G?=
+ =?iso-8859-1?Q?sSHYb/3lh+VxQZ7oK4JykTyKoTOv/X5fHpSBGjlFTIaN53Q/uR61bVktWd?=
+ =?iso-8859-1?Q?vkPmVkMQHdC2iezfnGV8E1PP8IMZr8DkN/s0c761sDTF3PZAT9oXcMY7ne?=
+ =?iso-8859-1?Q?YCIvZEpYTPoUsYsjYQjRWWoGxxKUyVvwRdB2aIn8MAqQmlQMJg76C28cEr?=
+ =?iso-8859-1?Q?nqgYWsKz3L+j6i29HNUNONZQQuI+PjRKinpWt8IZCDgnZkhs5Esd0cWER/?=
+ =?iso-8859-1?Q?Yey0dx6WgAILovSrYdjJsEWnV9G+X4oTmo7Uvuxs2eKkc0F0v+scg6uw?=
+ =?iso-8859-1?Q?=3D=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_CPUP152MB4402B5F62F1CC9326A4D3118C3B1ACPUP152MB4402LAMP_"
+MIME-Version: 1.0
+X-OriginatorOrg: bio.fiocruz.br
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: CPUP152MB4402.LAMP152.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: d7ba58bf-7765-48b1-38f3-08dbe5f956fe
+X-MS-Exchange-CrossTenant-originalarrivaltime: 15 Nov 2023 16:38:47.2095
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: bc3721a6-8061-4e19-a3b4-31e2093e209a
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: Fo0b11hfkT9xfEYNX5tzqsAORaMTc2sdcIiQdllSnuofQwcdGd7PkShKF+c6UDFXXCnKNo3ZzdU9PAt4lSO+TnWvujy+Fi1n12+TfiaginA=
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: SCZP152MB5708
+
+--_000_CPUP152MB4402B5F62F1CC9326A4D3118C3B1ACPUP152MB4402LAMP_
+Content-Type: text/plain; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+(Favor acusar o recebimento (responder a todos).
+
+AEM: 0001
+DATA: 15/11/23
+REGISTRO DE PRE=C7OS N=BA: 0131/2023-BM
+CONTRATO: 202350633
+T=C9RMINO DO CONTRATO: 12/07/2024
+AUTORIZA=C7=C3O DE ENTREGA DE MATERIAL
+
+Autorizamos a empresa, INFANTARIA COMERCIAL EIRELI, inscrita sob o CNPJ n=
+=BA 20.795.155/0001-79 , a entregar o seguinte material:
+
+ITEM
+C.Q
+parcela
+C=D3D
+DESCRI=C7=C3O
+UN.
+QTD.
+VL. UN.
+VL. TOTAL
+DATA LIMITE DE ENTREGA
+
+3
+N
+1
+10929
+VALVULA;ESFERA;TRIPARTIDA;CORPO BRONZE;ESF EM AI;1.1/4"BSP
+UN
+2
+R$     327,06
+R$     654,12
+15/12/2023
+
+
+
+
+
+
+
+TOTAL
+
+
+
+R$     654,12
+
+
+IMPORTANTE:
+=B7         Processo n=BA 25386.000518/2023-910-000
+=B7         OF n=BA 20230926
+=B7         Empenho: 2023NE002650
+=B7         Resp.: [DEPEM-iago.fonseca_wengenharia]
+=B7         As seguintes informa=E7=F5es abaixo dever=E3o constar no corpo =
+da Nota Fiscal e no
+E-mail de agendamento.
+=B7         N=FAmero do Processo, N=FAmero da OF, N=FAmero do Empenho e N=
+=FAmero da AEM, Telefone de contato do respons=E1vel pela entrega.
+
+=B7         Caso o item possua certificado de an=E1lise, o mesmo dever=E1 s=
+er encaminhado junto =E0 nota fiscal e no ato de agendamento da entrega pel=
+o e-mail.
+
+=B7         Ficha de Informa=E7=E3o de Seguran=E7a para Produtos Qu=EDmicos=
+ (FISPQ), para materiais qu=EDmicos;
+=B7         O produto dever=E1 ser entregue contendo em sua embalagem exter=
+na etiquetas mencionando o nome da empresa fornecedora, telefone/fax, n=FAm=
+ero da nota fiscal, n=FAmero do processo, e n=FAmero do empenho.
+
+=B7         "N=C3O EMITIR NF com CFOP (6107,6108, 5201, 5202, 6201 e 6202.)=
+ com a descri=E7=E3o de venda de mercadoria ou de produ=E7=E3o destinadas a=
+ N=C3O CONTRIBUINTES".
+
+=B7         O ALMOXARIFADO N=C3O RECEBE MATERIAIS NOS =DALTIMOS 3 DIAS =DAT=
+EIS DE CADA M=CAS.
+
+
+=B7          A ENTREGA DE MATERIAL DEVER=C1 SER AGENDADA PELO E-MAIL: agend=
+arecebimento@bio.fiocruz.br<mailto:agendarecebimento@bio.fiocruz.br>, com a=
+ DANFE e a Autoriza=E7=E3o de Entrega de Material em anexo, lembrando que o=
+ agendamento funciona em hor=E1rio comercial (08:00 =E0s 17:00), solicita=
+=E7=F5es ap=F3s este hor=E1rio s=F3 ser=E3o processadas no dia posterior.
+
+=B7         Recep=E7=E3o de DANFES, XML e carta de corre=E7=E3o : nfe@bio.f=
+iocruz.br<https://webmail.totvs.com.br/owa/redir.aspx?C=3DRjx4ErtGqkalG6Izc=
+AyizQ7C4uPNWdEI2e8In8CjZ7bGBnaZHlSxYGv_8_EvBztd175matpugbU.&URL=3Dmailto%3a=
+nfe%40bio.fiocruz.br>
+
+=B7         DEMAIS ASSUNTOS REFERENTE AO ALMOXARIFADO:TELEFONES (21) 3882 7=
+186.
+
+
+
+Endere=E7o para entrega:
+
+* Instituto de Tecnologia em Imunobiol=F3gicos - Bio-Manguinhos.
+* CNPJ 33.781.055/0015-30
+* Insc. Estadual 77.036.512
+* Avenida Brasil, 4365 - Manguinhos - Rio de Janeiro - RJ.
+* Ponto de refer=EAncia: ao lado da portaria do CTV, em frente ao antigo ca=
+mpo de futebol e atual novo hospital do INI.
+
+
+
+
+
+Att,
+Amanda Mateus
+Se=E7=E3o De Gest=E3o De Fornecedores e Sourcing - SEFOR
+Divis=E3o De Intelig=EAncia e Estrat=E9gia Log=EDstica - DIELO
+Bio-Manguinhos / Fiocruz
+Tel: (21) 3882-7000 - Ramal +3967
+Bio-Manguinhos | Fiocruz
+www.bio.fiocruz.br<http://www.bio.fiocruz.br/>
+
+Envie e-mails somente quando necess=E1rio.
+
+"Esta =E9 uma mensagem autom=E1tica gerada pelo sistema. Por favor, n=E3o r=
+esponda"
+
+Este e-mail, incluindo seus anexos, pode conter informa=E7=F5es confidencia=
+is e/ou privilegiadas, protegidas por lei. Caso voc=EA n=E3o seja o destina=
+t=E1rio ou tenha recebido esta mensagem por engano, por favor, avise imedia=
+tamente o remetente, exclua-a e n=E3o divulgue ou use seu conte=FAdo de nen=
+huma forma. A Fiocruz esclarece que o conte=FAdo deste e-mail representa ex=
+clusivamente a opini=E3o do autor, n=E3o tendo Fiocruz qualquer responsabil=
+idade sobre seu teor. Ademais, ressaltamos que a transmiss=E3o de informa=
+=E7=F5es via internet pode n=E3o ser totalmente segura e livre de erros. Es=
+te e-mail est=E1 em conformidade com a Lei Geral de Prote=E7=E3o de Dados P=
+essoais (LGPD) e demais normas aplic=E1veis =E0 privacidade e prote=E7=E3o =
+de dados no Brasil. A Fiocruz informa que =E9 proibida a reprodu=E7=E3o tot=
+al ou parcial do conte=FAdo deste e-mail sem autoriza=E7=E3o pr=E9via e exp=
+ressa.
+
+This email, including its attachments, may contain confidential and/or priv=
+ileged information protected by law. If you are not the intended recipient =
+or have received this message in error, please notify the sender immediatel=
+y, delete it and do not divulge or use its contents in any way. Fiocruz cla=
+rifies that the content of this email exclusively represents the author's o=
+pinion, and Fiocruz has no responsibility for its content. Furthermore, we =
+point out that the transmission of information via the Internet may not be =
+completely secure and error-free. This email complies with the General Law =
+for the Protection of Personal Data (LGPD) and other rules applicable to pr=
+ivacy and data protection in Brazil. Fiocruz informs that the total or part=
+ial reproduction of the content of this email without prior and express aut=
+horization is prohibited.
+
+--_000_CPUP152MB4402B5F62F1CC9326A4D3118C3B1ACPUP152MB4402LAMP_
+Content-Type: text/html; charset="iso-8859-1"
+Content-Transfer-Encoding: quoted-printable
+
+<html xmlns:v=3D"urn:schemas-microsoft-com:vml" xmlns:o=3D"urn:schemas-micr=
+osoft-com:office:office" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+xmlns:x=3D"urn:schemas-microsoft-com:office:excel" xmlns:m=3D"http://schema=
+s.microsoft.com/office/2004/12/omml" xmlns=3D"http://www.w3.org/TR/REC-html=
+40">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Diso-8859-=
+1">
+<meta name=3D"Generator" content=3D"Microsoft Word 15 (filtered medium)">
+<style><!--
+/* Font Definitions */
+@font-face
+	{font-family:Helvetica;
+	panose-1:2 11 6 4 2 2 2 2 2 4;}
+@font-face
+	{font-family:Wingdings;
+	panose-1:5 0 0 0 0 0 0 0 0 0;}
+@font-face
+	{font-family:"Cambria Math";
+	panose-1:2 4 5 3 5 4 6 3 2 4;}
+@font-face
+	{font-family:Calibri;
+	panose-1:2 15 5 2 2 2 4 3 2 4;}
+@font-face
+	{font-family:Verdana;
+	panose-1:2 11 6 4 3 5 4 4 2 4;}
+/* Style Definitions */
+p.MsoNormal, li.MsoNormal, div.MsoNormal
+	{margin:0cm;
+	font-size:11.0pt;
+	font-family:"Calibri",sans-serif;
+	mso-ligatures:standardcontextual;
+	mso-fareast-language:EN-US;}
+h2
+	{mso-style-link:"T=EDtulo 2 Char";
+	margin-top:12.0pt;
+	margin-right:0cm;
+	margin-bottom:3.0pt;
+	margin-left:0cm;
+	page-break-after:avoid;
+	font-size:14.0pt;
+	font-family:"Arial",sans-serif;
+	font-style:italic;}
+p.MsoHeader, li.MsoHeader, div.MsoHeader
+	{mso-style-priority:99;
+	mso-style-link:"Cabe=E7alho Char";
+	margin:0cm;
+	font-size:10.0pt;
+	font-family:"Times New Roman",serif;}
+a:link, span.MsoHyperlink
+	{mso-style-priority:99;
+	color:#0563C1;
+	text-decoration:underline;}
+p.MsoListParagraph, li.MsoListParagraph, div.MsoListParagraph
+	{mso-style-priority:34;
+	margin-top:0cm;
+	margin-right:0cm;
+	margin-bottom:0cm;
+	margin-left:35.4pt;
+	font-size:12.0pt;
+	font-family:"Times New Roman",serif;}
+span.EstiloDeEmail17
+	{mso-style-type:personal-compose;
+	font-family:"Calibri",sans-serif;
+	color:windowtext;}
+span.Ttulo2Char
+	{mso-style-name:"T=EDtulo 2 Char";
+	mso-style-link:"T=EDtulo 2";
+	font-family:"Arial",sans-serif;
+	mso-ligatures:none;
+	mso-fareast-language:PT-BR;
+	font-weight:bold;
+	font-style:italic;}
+span.CabealhoChar
+	{mso-style-name:"Cabe=E7alho Char";
+	mso-style-priority:99;
+	mso-style-link:Cabe=E7alho;
+	font-family:"Times New Roman",serif;
+	mso-ligatures:none;
+	mso-fareast-language:PT-BR;}
+.MsoChpDefault
+	{mso-style-type:export-only;
+	font-family:"Calibri",sans-serif;
+	mso-fareast-language:EN-US;}
+@page WordSection1
+	{size:612.0pt 792.0pt;
+	margin:70.85pt 3.0cm 70.85pt 3.0cm;}
+div.WordSection1
+	{page:WordSection1;}
+/* List Definitions */
+@list l0
+	{mso-list-id:439185387;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-752423882 68550657 68550659 68550661 68550657 68550=
+659 68550661 68550657 68550659 68550661;}
+@list l0:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l0:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l0:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";
+	mso-bidi-font-family:"Times New Roman";}
+@list l0:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:none;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1
+	{mso-list-id:1530795885;
+	mso-list-type:hybrid;
+	mso-list-template-ids:-1170547296 68550657 68550659 68550661 68550657 6855=
+0659 68550661 68550657 68550659 68550661;}
+@list l1:level1
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:36.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level2
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:72.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l1:level3
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:108.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1:level4
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:144.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level5
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:180.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l1:level6
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:216.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+@list l1:level7
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0B7;
+	mso-level-tab-stop:252.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Symbol;}
+@list l1:level8
+	{mso-level-number-format:bullet;
+	mso-level-text:o;
+	mso-level-tab-stop:288.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:"Courier New";}
+@list l1:level9
+	{mso-level-number-format:bullet;
+	mso-level-text:\F0A7;
+	mso-level-tab-stop:324.0pt;
+	mso-level-number-position:left;
+	text-indent:-18.0pt;
+	font-family:Wingdings;}
+ol
+	{margin-bottom:0cm;}
+ul
+	{margin-bottom:0cm;}
+--></style><!--[if gte mso 9]><xml>
+<o:shapedefaults v:ext=3D"edit" spidmax=3D"1026" />
+</xml><![endif]--><!--[if gte mso 9]><xml>
+<o:shapelayout v:ext=3D"edit">
+<o:idmap v:ext=3D"edit" data=3D"1" />
+</o:shapelayout></xml><![endif]-->
+</head>
+<body lang=3D"PT-BR" link=3D"#0563C1" vlink=3D"#954F72" style=3D"word-wrap:=
+break-word">
+<div class=3D"WordSection1">
+<p class=3D"MsoNormal"><b><i><span style=3D"font-size:13.5pt;color:darkgray=
+">(Favor acusar o recebimento (responder a todos).<o:p></o:p></span></i></b=
+></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-family:&quot;Arial&quot;,sans=
+-serif">AEM:</span></b><b><span style=3D"font-family:&quot;Arial&quot;,sans=
+-serif">
+</span></b><span style=3D"mso-bookmark:nrprog"><b><span style=3D"font-famil=
+y:&quot;Arial&quot;,sans-serif"><a name=3D"nrprog"></a>0001</span></b></spa=
+n><span style=3D"mso-bookmark:nrprog"></span><span style=3D"mso-bookmark:nr=
+prog"></span><span style=3D"mso-bookmark:nrprog"></span><b><span style=3D"f=
+ont-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-family:&quot;Arial&quot;,sans=
+-serif">DATA:</span></b><b><span style=3D"font-family:&quot;Arial&quot;,san=
+s-serif">
+</span></b><span style=3D"mso-bookmark:data1"><b><span style=3D"font-family=
+:&quot;Arial&quot;,sans-serif"><a name=3D"data1"></a>15/11/23</span></b></s=
+pan><span style=3D"mso-bookmark:data1"></span><span style=3D"mso-bookmark:d=
+ata1"></span><span style=3D"mso-bookmark:data1"></span><b><span style=3D"fo=
+nt-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-family:&quot;Arial&quot;,sans=
+-serif">REGISTRO DE PRE=C7OS N=BA:</span></b><b><span style=3D"font-family:=
+&quot;Arial&quot;,sans-serif">
+</span></b><span style=3D"mso-bookmark:nregprecos"><b><span style=3D"font-f=
+amily:&quot;Arial&quot;,sans-serif"><a name=3D"nregprecos"></a>0131/2023-BM=
+</span></b></span><span style=3D"mso-bookmark:nregprecos"></span><span styl=
+e=3D"mso-bookmark:nregprecos"></span><span style=3D"mso-bookmark:nregprecos=
+"></span><b><span style=3D"font-family:&quot;Arial&quot;,sans-serif"><o:p><=
+/o:p></span></b></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-family:&quot;Arial&quot;,sans=
+-serif">CONTRATO: </span>
+</b><a name=3D"nrcontrato"></a><span style=3D"mso-bookmark:nrcontrato"></sp=
+an><span style=3D"mso-bookmark:nrcontrato"><b><span style=3D"font-family:&q=
+uot;Arial&quot;,sans-serif">202350633</span></b></span><span style=3D"mso-b=
+ookmark:nrcontrato"></span><span style=3D"mso-bookmark:nrcontrato"></span><=
+b><span style=3D"font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></spa=
+n></b></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-family:&quot;Arial&quot;,sans=
+-serif">T=C9RMINO DO CONTRATO:
+</span></b><a name=3D"TXTdatatermino"></a><span style=3D"mso-bookmark:TXTda=
+tatermino"></span><span style=3D"mso-bookmark:TXTdatatermino"><b><span styl=
+e=3D"font-family:&quot;Arial&quot;,sans-serif">12/07/2024</span></b></span>=
+<span style=3D"mso-bookmark:TXTdatatermino"></span><span style=3D"mso-bookm=
+ark:TXTdatatermino"></span><b><span style=3D"font-family:&quot;Arial&quot;,=
+sans-serif"><o:p></o:p></span></b></p>
+<h2 align=3D"center" style=3D"text-align:center"><u><span style=3D"font-siz=
+e:12.0pt;font-style:normal">AUTORIZA=C7=C3O DE ENTREGA DE MATERIAL<o:p></o:=
+p></span></u></h2>
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:10.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>=
+&nbsp;</o:p></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif">Autorizamos a empresa,
+</span><span style=3D"mso-bookmark:nomabrev"><b><span style=3D"font-family:=
+&quot;Arial&quot;,sans-serif"><a name=3D"nomabrev"></a>INFANTARIA COMERCIAL=
+ EIRELI</span></b></span><span style=3D"mso-bookmark:nomabrev"></span><span=
+ style=3D"mso-bookmark:nomabrev"></span><span style=3D"mso-bookmark:nomabre=
+v"></span><span style=3D"font-family:&quot;Arial&quot;,sans-serif">,
+ inscrita sob o CNPJ n=BA </span><span style=3D"mso-bookmark:cnpj"><b><span=
+ style=3D"font-family:&quot;Arial&quot;,sans-serif"><a name=3D"cnpj"></a>20=
+.795.155/0001-79</span></b></span><span style=3D"mso-bookmark:cnpj"></span>=
+<span style=3D"mso-bookmark:cnpj"></span><span style=3D"mso-bookmark:cnpj">=
+</span><span style=3D"font-family:&quot;Arial&quot;,sans-serif">
+ , a entregar o seguinte material:<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif"><o:p>&nbsp;</o:p></span></p>
+<table class=3D"MsoNormalTable" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" width=3D"747" style=3D"margin-left:-1.7pt;border-collapse:collapse">
+<tbody>
+<tr>
+<td width=3D"47" style=3D"width:35.45pt;border:solid windowtext 1.0pt;backg=
+round:#008078;padding:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:w=
+hite">ITEM<o:p></o:p></span></b></p>
+</td>
+<td width=3D"38" style=3D"width:1.0cm;border:solid windowtext 1.0pt;border-=
+left:none;background:#008078;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:w=
+hite">C.Q<o:p></o:p></span></b></p>
+</td>
+<td width=3D"47" style=3D"width:35.45pt;border:solid windowtext 1.0pt;borde=
+r-left:none;background:#008078;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:w=
+hite">parcela<o:p></o:p></span></b></p>
+</td>
+<td width=3D"47" style=3D"width:35.45pt;border:solid windowtext 1.0pt;borde=
+r-left:none;background:#008078;padding:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:w=
+hite">C=D3D<o:p></o:p></span></b></p>
+</td>
+<td width=3D"227" style=3D"width:6.0cm;border:solid windowtext 1.0pt;border=
+-left:none;background:#008078;padding:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:w=
+hite">DESCRI=C7=C3O<o:p></o:p></span></b></p>
+</td>
+<td width=3D"47" style=3D"width:35.45pt;border:solid windowtext 1.0pt;borde=
+r-left:none;background:#008078;padding:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:w=
+hite">UN.</span></b><span style=3D"font-size:9.0pt;font-family:&quot;Times =
+New Roman&quot;,serif"><o:p></o:p></span></p>
+</td>
+<td width=3D"47" style=3D"width:35.45pt;border:solid windowtext 1.0pt;borde=
+r-left:none;background:#008078;padding:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:w=
+hite">QTD.</span></b><span style=3D"font-size:9.0pt"><o:p></o:p></span></p>
+</td>
+<td width=3D"66" style=3D"width:49.65pt;border:solid windowtext 1.0pt;borde=
+r-left:none;background:#008078;padding:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:w=
+hite">VL. UN.</span></b><span style=3D"font-size:9.0pt"><o:p></o:p></span><=
+/p>
+</td>
+<td width=3D"76" style=3D"width:2.0cm;border:solid windowtext 1.0pt;border-=
+left:none;background:#008078;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:w=
+hite">VL. TOTAL</span></b><span style=3D"font-size:9.0pt"><o:p></o:p></span=
+></p>
+</td>
+<td width=3D"104" colspan=3D"2" valign=3D"top" style=3D"width:77.95pt;borde=
+r:solid windowtext 1.0pt;border-left:none;background:#008078;padding:0cm 5.=
+4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;color:w=
+hite">DATA LIMITE DE ENTREGA<o:p></o:p></span></b></p>
+</td>
+<td style=3D"border:none;padding:0cm 0cm 0cm 0cm" width=3D"2">
+<p class=3D"MsoNormal">&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width=3D"47" style=3D"width:35.45pt;border:solid windowtext 1.0pt;borde=
+r-top:none;padding:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"mso-bookmark:sequencia"><span style=3D"font-size:8.0pt;font-family:=
+&quot;Arial&quot;,sans-serif"><a name=3D"sequencia"></a>3</span></span><spa=
+n style=3D"mso-bookmark:sequencia"></span><span style=3D"mso-bookmark:seque=
+ncia"></span><span style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,s=
+ans-serif"><o:p></o:p></span></p>
+</td>
+<td width=3D"38" style=3D"width:1.0cm;border-top:none;border-left:none;bord=
+er-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;paddin=
+g:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><a name=
+=3D"contrquali"></a><span style=3D"mso-bookmark:contrquali"></span><span st=
+yle=3D"mso-bookmark:contrquali"><span style=3D"font-size:8.0pt;font-family:=
+&quot;Arial&quot;,sans-serif">N</span></span><span style=3D"mso-bookmark:co=
+ntrquali"></span><span style=3D"font-size:8.0pt;font-family:&quot;Arial&quo=
+t;,sans-serif"><o:p></o:p></span></p>
+</td>
+<td width=3D"47" style=3D"width:35.45pt;border-top:none;border-left:none;bo=
+rder-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padd=
+ing:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"mso-bookmark:parcela"><span style=3D"font-size:8.0pt;font-family:&q=
+uot;Arial&quot;,sans-serif"><a name=3D"parcela"></a>1</span></span><span st=
+yle=3D"mso-bookmark:parcela"></span><span style=3D"mso-bookmark:parcela"></=
+span><span style=3D"font-size:8.0pt;font-family:&quot;Times New Roman&quot;=
+,serif"><o:p></o:p></span></p>
+</td>
+<td width=3D"47" style=3D"width:35.45pt;border-top:none;border-left:none;bo=
+rder-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padd=
+ing:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><a name=
+=3D"itcodigo"></a><span style=3D"mso-bookmark:itcodigo"></span><span style=
+=3D"mso-bookmark:itcodigo"><span style=3D"font-size:8.0pt;font-family:&quot=
+;Arial&quot;,sans-serif">10929</span></span><span style=3D"mso-bookmark:itc=
+odigo"></span><span style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,=
+sans-serif"><o:p></o:p></span></p>
+</td>
+<td width=3D"227" style=3D"width:6.0cm;border-top:none;border-left:none;bor=
+der-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;paddi=
+ng:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"mso-bookmark:descitem"><span style=3D"font-size:8.0pt;font-family:&=
+quot;Arial&quot;,sans-serif"><a name=3D"descitem"></a>VALVULA;ESFERA;TRIPAR=
+TIDA;CORPO BRONZE;ESF EM AI;1.1/4&quot;BSP</span></span><span style=3D"mso-=
+bookmark:descitem"></span><span style=3D"mso-bookmark:descitem"></span><spa=
+n style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p><=
+/o:p></span></p>
+</td>
+<td width=3D"47" style=3D"width:35.45pt;border-top:none;border-left:none;bo=
+rder-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padd=
+ing:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"mso-bookmark:unid"><span style=3D"font-size:8.0pt;font-family:&quot=
+;Arial&quot;,sans-serif"><a name=3D"unid"></a>UN</span></span><span style=
+=3D"mso-bookmark:unid"></span><span style=3D"mso-bookmark:unid"></span><spa=
+n style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p><=
+/o:p></span></p>
+</td>
+<td width=3D"47" style=3D"width:35.4pt;border-top:none;border-left:none;bor=
+der-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;paddi=
+ng:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"mso-bookmark:qtd"><span style=3D"font-size:8.0pt;font-family:&quot;=
+Arial&quot;,sans-serif"><a name=3D"qtd"></a>2</span></span><span style=3D"m=
+so-bookmark:qtd"></span><span style=3D"mso-bookmark:qtd"></span><span style=
+=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></=
+span></p>
+</td>
+<td width=3D"66" valign=3D"top" style=3D"width:49.6pt;border-top:none;borde=
+r-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowt=
+ext 1.0pt;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"mso-bookmark:valorunit"><span style=3D"font-size:8.0pt;font-family:=
+&quot;Arial&quot;,sans-serif"><a name=3D"valorunit"></a>R$&nbsp;&nbsp;&nbsp=
+;&nbsp; 327,06</span></span><span style=3D"mso-bookmark:valorunit"></span><=
+span style=3D"mso-bookmark:valorunit"></span><span style=3D"font-size:8.0pt=
+;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+</td>
+<td width=3D"76" style=3D"width:56.75pt;border-top:none;border-left:none;bo=
+rder-bottom:solid windowtext 1.0pt;border-right:solid windowtext 1.0pt;padd=
+ing:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"mso-bookmark:valortotal"><span style=3D"font-size:8.0pt;font-family=
+:&quot;Arial&quot;,sans-serif"><a name=3D"valortotal"></a>R$&nbsp;&nbsp;&nb=
+sp;&nbsp; 654,12</span></span><span style=3D"mso-bookmark:valortotal"></spa=
+n><span style=3D"mso-bookmark:valortotal"></span><span style=3D"font-size:8=
+.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></p>
+</td>
+<td width=3D"104" colspan=3D"2" style=3D"width:77.95pt;border-top:none;bord=
+er-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid window=
+text 1.0pt;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"mso-bookmark:dtentrega"><b><span style=3D"font-size:8.0pt;font-fami=
+ly:&quot;Arial&quot;,sans-serif;color:red"><a name=3D"dtentrega"></a>15/12/=
+2023</span></b></span><span style=3D"mso-bookmark:dtentrega"></span><span s=
+tyle=3D"mso-bookmark:dtentrega"></span><b><span style=3D"font-size:8.0pt;fo=
+nt-family:&quot;Arial&quot;,sans-serif;color:red"><o:p></o:p></span></b></p=
+>
+</td>
+<td style=3D"border:none;border-bottom:solid windowtext 1.0pt;padding:0cm 0=
+cm 0cm 0cm" width=3D"2">
+<p class=3D"MsoNormal">&nbsp;</p>
+</td>
+</tr>
+<tr>
+<td width=3D"47" style=3D"width:35.45pt;border-top:none;border-left:solid w=
+indowtext 1.0pt;border-bottom:solid windowtext 1.0pt;border-right:none;padd=
+ing:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal"><span style=3D"font-size:8.0pt"><o:p>&nbsp;</o:p></s=
+pan></p>
+</td>
+<td width=3D"38" valign=3D"top" style=3D"width:1.0cm;border:none;border-bot=
+tom:solid windowtext 1.0pt;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbs=
+p;</o:p></span></p>
+</td>
+<td width=3D"47" style=3D"width:35.45pt;border:none;border-bottom:solid win=
+dowtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif">&nbsp;</s=
+pan><span style=3D"font-size:8.0pt;font-family:&quot;Times New Roman&quot;,=
+serif"><o:p></o:p></span></p>
+</td>
+<td width=3D"47" valign=3D"top" style=3D"width:35.45pt;border:none;border-b=
+ottom:solid windowtext 1.0pt;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoHeader" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&=
+nbsp;</o:p></span></b></p>
+</td>
+<td width=3D"227" style=3D"width:6.0cm;border:none;border-bottom:solid wind=
+owtext 1.0pt;padding:0cm 5.4pt 0cm 5.4pt">
+<p class=3D"MsoHeader" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif">TOTAL<=
+/span></b><span style=3D"font-size:8.0pt"><o:p></o:p></span></p>
+</td>
+<td width=3D"47" valign=3D"top" style=3D"width:35.45pt;border:none;border-b=
+ottom:solid windowtext 1.0pt;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&=
+nbsp;</o:p></span></b></p>
+</td>
+<td width=3D"47" valign=3D"top" style=3D"width:35.4pt;border:none;border-bo=
+ttom:solid windowtext 1.0pt;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&=
+nbsp;</o:p></span></b></p>
+</td>
+<td width=3D"66" valign=3D"top" style=3D"width:49.65pt;border:none;border-b=
+ottom:solid windowtext 1.0pt;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p>&=
+nbsp;</o:p></span></b></p>
+</td>
+<td width=3D"94" colspan=3D"2" style=3D"width:70.85pt;border:none;border-bo=
+ttom:solid windowtext 1.0pt;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><b><spa=
+n style=3D"font-size:8.0pt;font-family:&quot;Arial&quot;,sans-serif">R$
+</span></b><span style=3D"mso-bookmark:vtot"><b><span style=3D"font-size:8.=
+0pt;font-family:&quot;Arial&quot;,sans-serif"><a name=3D"vtot"></a>&nbsp;&n=
+bsp;&nbsp;&nbsp;654,12</span></b></span><span style=3D"mso-bookmark:vtot"><=
+/span><span style=3D"mso-bookmark:vtot"></span><b><span style=3D"font-size:=
+8.0pt;font-family:&quot;Arial&quot;,sans-serif"><o:p></o:p></span></b></p>
+</td>
+<td width=3D"85" colspan=3D"2" style=3D"width:63.75pt;border-top:none;borde=
+r-left:none;border-bottom:solid windowtext 1.0pt;border-right:solid windowt=
+ext 1.0pt;padding:0cm 0cm 0cm 0cm">
+<p class=3D"MsoNormal" align=3D"center" style=3D"text-align:center"><span s=
+tyle=3D"font-size:8.0pt;font-family:&quot;Times New Roman&quot;,serif"><o:p=
+>&nbsp;</o:p></span></p>
+</td>
+</tr>
+<tr height=3D"0">
+<td width=3D"47" style=3D"border:none"></td>
+<td width=3D"38" style=3D"border:none"></td>
+<td width=3D"47" style=3D"border:none"></td>
+<td width=3D"47" style=3D"border:none"></td>
+<td width=3D"227" style=3D"border:none"></td>
+<td width=3D"47" style=3D"border:none"></td>
+<td width=3D"47" style=3D"border:none"></td>
+<td width=3D"66" style=3D"border:none"></td>
+<td width=3D"75" style=3D"border:none"></td>
+<td width=3D"19" style=3D"border:none"></td>
+<td width=3D"85" style=3D"border:none"></td>
+<td width=3D"2" style=3D"border:none"></td>
+</tr>
+</tbody>
+</table>
+<p class=3D"MsoNormal"><b><u><span style=3D"font-size:10.0pt;font-family:&q=
+uot;Arial&quot;,sans-serif"><o:p><span style=3D"text-decoration:none">&nbsp=
+;</span></o:p></span></u></b></p>
+<p class=3D"MsoNormal"><b><u><span style=3D"font-family:&quot;Arial&quot;,s=
+ans-serif">IMPORTANTE:<o:p></o:p></span></u></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-indent:-18.0pt;mso-=
+list:l1 level1 lfo1">
+<![if !supportLists]><span style=3D"font-size:9.5pt;font-family:Symbol"><sp=
+an style=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New R=
+oman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"font-size:9.5pt;font-family:&=
+quot;Arial&quot;,sans-serif">Processo n=BA
+</span><span style=3D"mso-bookmark:codprocesso"><b><span style=3D"font-size=
+:9.5pt;font-family:&quot;Arial&quot;,sans-serif"><a name=3D"codprocesso"></=
+a>25386.000518/2023-910-000</span></b></span><span style=3D"mso-bookmark:co=
+dprocesso"></span><span style=3D"mso-bookmark:codprocesso"></span><span sty=
+le=3D"mso-bookmark:codprocesso"></span><span style=3D"font-size:9.5pt;font-=
+family:&quot;Arial&quot;,sans-serif">
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-indent:-18.0pt;mso-=
+list:l1 level1 lfo1">
+<![if !supportLists]><span style=3D"font-size:9.5pt;font-family:Symbol"><sp=
+an style=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New R=
+oman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"font-size:9.5pt;font-family:&=
+quot;Arial&quot;,sans-serif">OF n=BA
+</span><span style=3D"mso-bookmark:numof"><b><span style=3D"font-size:9.5pt=
+;font-family:&quot;Arial&quot;,sans-serif"><a name=3D"numof"></a>20230926</=
+span></b></span><span style=3D"mso-bookmark:numof"></span><span style=3D"ms=
+o-bookmark:numof"></span><span style=3D"mso-bookmark:numof"></span><span st=
+yle=3D"font-size:9.5pt;font-family:&quot;Arial&quot;,sans-serif">
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-indent:-18.0pt;mso-=
+list:l1 level1 lfo1">
+<![if !supportLists]><span style=3D"font-size:9.5pt;font-family:Symbol"><sp=
+an style=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New R=
+oman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"font-size:9.5pt;font-family:&=
+quot;Arial&quot;,sans-serif">Empenho:
+</span><span style=3D"mso-bookmark:nrempenho"><b><span style=3D"font-size:9=
+.5pt;font-family:&quot;Arial&quot;,sans-serif"><a name=3D"nrempenho"></a>20=
+23NE002650</span></b></span><span style=3D"mso-bookmark:nrempenho"></span><=
+span style=3D"mso-bookmark:nrempenho"></span><span style=3D"mso-bookmark:nr=
+empenho"></span><span style=3D"font-size:9.5pt;font-family:&quot;Arial&quot=
+;,sans-serif">
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-indent:-18.0pt;mso-=
+list:l1 level1 lfo1">
+<![if !supportLists]><span style=3D"font-size:9.5pt;font-family:Symbol"><sp=
+an style=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New R=
+oman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"font-size:9.5pt;font-family:&=
+quot;Arial&quot;,sans-serif">Resp.: [DEPEM-iago.fonseca_wengenharia]<o:p></=
+o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-align:justify;text-=
+indent:-18.0pt;mso-list:l1 level1 lfo1">
+<![if !supportLists]><span style=3D"font-size:9.5pt;font-family:Symbol"><sp=
+an style=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New R=
+oman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"font-size:9.5pt;font-family:&=
+quot;Arial&quot;,sans-serif">As seguintes informa=E7=F5es abaixo dever=E3o =
+constar no corpo da Nota Fiscal e no
+<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-align:justify"><spa=
+n style=3D"font-size:9.5pt;font-family:&quot;Arial&quot;,sans-serif">E-mail=
+ de agendamento.<span style=3D"color:black;background:yellow">
+</span><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;mso-add-space:auto;text-=
+align:justify;text-indent:-18.0pt;line-height:105%;mso-list:l0 level1 lfo2"=
+>
+<![if !supportLists]><span style=3D"font-size:10.0pt;line-height:105%;font-=
+family:Symbol"><span style=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt=
+ &quot;Times New Roman&quot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nb=
+sp;
+</span></span></span><![endif]><span style=3D"font-family:&quot;Arial&quot;=
+,sans-serif">N=FAmero do Processo, N=FAmero da OF, N=FAmero do Empenho e N=
+=FAmero da AEM, Telefone de contato do respons=E1vel pela entrega.</span><s=
+pan style=3D"font-size:10.0pt;line-height:105%;font-family:&quot;Arial&quot=
+;,sans-serif"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;mso-add-space:auto;text-=
+align:justify;line-height:105%">
+<span style=3D"font-family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p><=
+/span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;mso-add-space:auto;text-=
+align:justify;text-indent:-18.0pt;line-height:105%;mso-list:l0 level1 lfo2"=
+>
+<![if !supportLists]><span style=3D"font-family:Symbol"><span style=3D"mso-=
+list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New Roman&quot;">&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"font-family:&quot;Arial&quot;=
+,sans-serif">Caso o item possua certificado de an=E1lise, o mesmo dever=E1 =
+ser encaminhado junto =E0 nota fiscal e no ato de agendamento da entrega pe=
+lo e-mail.<o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;mso-add-space:auto;line-=
+height:105%">
+<o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;mso-add-space:auto;text-=
+indent:-18.0pt;line-height:105%;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-family:Symbol"><span style=3D"mso-=
+list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New Roman&quot;">&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"font-family:&quot;Arial&quot;=
+,sans-serif">Ficha de Informa=E7=E3o de Seguran=E7a para Produtos Qu=EDmico=
+s (FISPQ), para materiais</span> qu=EDmicos;<o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-align:justify;text-=
+indent:-18.0pt;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-family:Symbol"><span style=3D"mso-=
+list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New Roman&quot;">&nbs=
+p;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"font-family:&quot;Arial&quot;=
+,sans-serif">O produto dever=E1 ser entregue contendo em sua embalagem exte=
+rna etiquetas mencionando o nome da empresa fornecedora, telefone/fax, n=FA=
+mero da nota fiscal, n=FAmero do processo, e n=FAmero
+ do empenho.</span><o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-align:justify"><o:p=
+>&nbsp;</o:p></p>
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:0cm;margin-right:7.05pt;=
+margin-bottom:0cm;margin-left:18.0pt;margin-bottom:.0001pt;text-align:justi=
+fy;text-indent:-18.0pt;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-family:Symbol;color:red"><span sty=
+le=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New Roman&q=
+uot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><span style=3D"font-size:9.0pt;font-famil=
+y:&quot;Arial&quot;,sans-serif;color:red">&#8220;N=C3O EMITIR NF com CFOP (=
+6107,6108, 5201, 5202, 6201 e 6202.) com a descri=E7=E3o de venda de mercad=
+oria ou de produ=E7=E3o destinadas a N=C3O CONTRIBUINTES&#8221;.</span></b>=
+<b><span style=3D"color:red"><o:p></o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:0cm;margin-right:7.05pt;=
+margin-bottom:0cm;margin-left:18.0pt;margin-bottom:.0001pt;text-align:justi=
+fy">
+<b><span style=3D"color:red"><o:p>&nbsp;</o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-indent:-18.0pt;mso-=
+list:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-family:Symbol;color:red"><span sty=
+le=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New Roman&q=
+uot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><u><span style=3D"font-size:9.0pt;font-fa=
+mily:&quot;Arial&quot;,sans-serif;color:red">O ALMOXARIFADO N=C3O RECEBE MA=
+TERIAIS NOS =DALTIMOS 3 DIAS =DATEIS DE CADA M=CAS.
+</span></u></b><b><span style=3D"color:red"><o:p></o:p></span></b></p>
+<p class=3D"MsoListParagraph" style=3D"margin-left:0cm"><b><span style=3D"f=
+ont-family:&quot;Calibri&quot;,sans-serif;color:red"><o:p>&nbsp;</o:p></spa=
+n></b></p>
+<p class=3D"MsoNormal" style=3D"mso-margin-top-alt:0cm;margin-right:7.05pt;=
+margin-bottom:0cm;margin-left:18.0pt;margin-bottom:.0001pt;text-align:justi=
+fy;text-indent:-18.0pt;mso-list:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-family:Symbol;color:red"><span sty=
+le=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New Roman&q=
+uot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><span style=3D"font-size:10.5pt;font-family:=
+&quot;Helvetica&quot;,sans-serif;color:#428BCA;background:white">&nbsp;</sp=
+an><b><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quot;,sans-ser=
+if;color:red">A ENTREGA DE MATERIAL DEVER=C1 SER AGENDADA PELO
+ E-MAIL: <a href=3D"mailto:agendarecebimento@bio.fiocruz.br">agendarecebime=
+nto@bio.fiocruz.br</a>, com a DANFE e a Autoriza=E7=E3o de Entrega de Mater=
+ial em anexo, lembrando que o agendamento funciona em hor=E1rio comercial (=
+08:00 =E0s 17:00), solicita=E7=F5es ap=F3s este
+ hor=E1rio s=F3 ser=E3o processadas no dia posterior.</span></b><span style=
+=3D"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;color:#42=
+8BCA;background:white">&nbsp;</span><b><span style=3D"color:red"><o:p></o:p=
+></span></b></p>
+<p class=3D"MsoNormal" style=3D"margin-right:2.45pt"><b><span style=3D"colo=
+r:red"><o:p>&nbsp;</o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-indent:-18.0pt;mso-=
+list:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-family:Symbol;color:red"><span sty=
+le=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New Roman&q=
+uot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><u><span style=3D"font-size:9.0pt;font-fa=
+mily:&quot;Arial&quot;,sans-serif;color:red">Recep=E7=E3o de DANFES, XML e =
+carta de corre=E7=E3o :&nbsp;</span></u></b><a href=3D"https://webmail.totv=
+s.com.br/owa/redir.aspx?C=3DRjx4ErtGqkalG6IzcAyizQ7C4uPNWdEI2e8In8CjZ7bGBna=
+ZHlSxYGv_8_EvBztd175matpugbU.&amp;URL=3Dmailto%3anfe%40bio.fiocruz.br" targ=
+et=3D"_blank"><b><span style=3D"font-size:9.0pt;font-family:&quot;Arial&quo=
+t;,sans-serif;color:red">nfe@bio.fiocruz.br</span></b></a><b><span style=3D=
+"color:red"><o:p></o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt"><b><span style=3D"color=
+:red"><o:p>&nbsp;</o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:18.0pt;text-indent:-18.0pt;mso-=
+list:l0 level1 lfo2">
+<![if !supportLists]><span style=3D"font-family:Symbol;color:red"><span sty=
+le=3D"mso-list:Ignore">=B7<span style=3D"font:7.0pt &quot;Times New Roman&q=
+uot;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+</span></span></span><![endif]><b><u><span style=3D"font-size:9.0pt;font-fa=
+mily:&quot;Arial&quot;,sans-serif;color:red">DEMAIS ASSUNTOS REFERENTE AO A=
+LMOXARIFADO:TELEFONES (21) 3882 7186.</span></u></b><b><span style=3D"color=
+:red"><o:p></o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"margin-left:36.0pt;text-align:justify"><b><=
+span style=3D"font-size:9.0pt">&nbsp;</span></b><o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:36.0pt;text-align:justify"><b><=
+span style=3D"font-size:9.0pt">&nbsp;</span></b><o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"margin-left:35.4pt"><span style=3D"font-siz=
+e:9.0pt;font-family:&quot;Arial&quot;,sans-serif">&nbsp;</span><o:p></o:p><=
+/p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+size:9.0pt;font-family:&quot;Arial&quot;,sans-serif;background:yellow;mso-h=
+ighlight:yellow">Endere=E7o para entrega:</span></b><o:p></o:p></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+size:9.0pt;font-family:&quot;Arial&quot;,sans-serif">&nbsp;</span></b><o:p>=
+</o:p></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an style=3D"font-family:&quot;Helvetica&quot;,sans-serif;color:black;backgr=
+ound:white">&#8226; Instituto de Tecnologia em Imunobiol=F3gicos - Bio-Mang=
+uinhos.
+</span><span style=3D"font-family:&quot;Helvetica&quot;,sans-serif;backgrou=
+nd:white"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an style=3D"font-family:&quot;Helvetica&quot;,sans-serif;color:black;backgr=
+ound:white">&#8226; CNPJ 33.781.055/0015-30
+</span><span style=3D"font-family:&quot;Helvetica&quot;,sans-serif;backgrou=
+nd:white"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an style=3D"font-family:&quot;Helvetica&quot;,sans-serif;color:black;backgr=
+ound:white">&#8226; Insc. Estadual 77.036.512
+</span><span style=3D"font-family:&quot;Helvetica&quot;,sans-serif;backgrou=
+nd:white"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify;text-indent:35.45pt"><sp=
+an style=3D"font-family:&quot;Helvetica&quot;,sans-serif;color:black;backgr=
+ound:white">&#8226; Avenida Brasil, 4365 - Manguinhos - Rio de Janeiro &#82=
+11; RJ.
+</span><span style=3D"font-family:&quot;Helvetica&quot;,sans-serif;backgrou=
+nd:white"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"margin-left:35.4pt;text-align:justify;text-=
+indent:.05pt">
+<span style=3D"font-family:&quot;Helvetica&quot;,sans-serif;color:black;bac=
+kground:white">&#8226; Ponto de refer=EAncia: ao lado da portaria do CTV, e=
+m frente ao antigo campo de futebol e atual novo hospital do INI</span><spa=
+n style=3D"font-size:10.5pt;font-family:&quot;Helvetica&quot;,sans-serif;co=
+lor:#428BCA;background:white">.</span><b><span style=3D"font-family:&quot;A=
+rial&quot;,sans-serif"><o:p></o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><b><span style=3D"font-=
+family:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></b></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-fam=
+ily:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-fam=
+ily:&quot;Arial&quot;,sans-serif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-family:&quot;Arial&quot;,sans-se=
+rif"><o:p>&nbsp;</o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:8.0pt;font-family:&quot;=
+Verdana&quot;,sans-serif;color:#1F497D;mso-fareast-language:PT-BR">Att,</sp=
+an></b><span style=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-=
+serif;color:#1F497D;mso-fareast-language:PT-BR"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><b><span style=3D"font-size:8.0pt;font-family:&quot;=
+Verdana&quot;,sans-serif;color:#1F497D;mso-fareast-language:PT-BR">Amanda M=
+ateus<o:p></o:p></span></b></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;font-family:&quot;Ver=
+dana&quot;,sans-serif;color:gray;mso-fareast-language:PT-BR">Se=E7=E3o De G=
+est=E3o De Fornecedores e Sourcing</span><span style=3D"font-size:8.0pt;fon=
+t-family:&quot;Verdana&quot;,sans-serif;color:black;mso-fareast-language:PT=
+-BR">
+</span><span style=3D"font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-=
+serif;color:gray;mso-fareast-language:PT-BR">&#8211; SEFOR<o:p></o:p></span=
+></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;font-family:&quot;Ver=
+dana&quot;,sans-serif;color:gray;mso-fareast-language:PT-BR">Divis=E3o De I=
+ntelig=EAncia e Estrat=E9gia Log=EDstica &#8211; DIELO<o:p></o:p></span></p=
+>
+<p class=3D"MsoNormal"><span style=3D"font-size:8.0pt;font-family:&quot;Ver=
+dana&quot;,sans-serif;color:gray;mso-fareast-language:PT-BR">Bio-Manguinhos=
+ / Fiocruz</span><span style=3D"font-size:8.0pt;font-family:&quot;Verdana&q=
+uot;,sans-serif;color:#212121;mso-fareast-language:PT-BR"><o:p></o:p></span=
+></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:gray;mso-fareast-l=
+anguage:PT-BR">Tel: (21) 3882-7000 &#8211; Ramal +3967</span><span style=3D=
+"font-size:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:#1F497D;m=
+so-fareast-language:PT-BR"><o:p></o:p></span></p>
+<p class=3D"MsoNormal" style=3D"text-align:justify"><span style=3D"font-siz=
+e:8.0pt;font-family:&quot;Verdana&quot;,sans-serif;color:gray;mso-fareast-l=
+anguage:PT-BR">Bio-Manguinhos | Fiocruz<o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt;font-family:&quot;Ver=
+dana&quot;,sans-serif;color:gray;mso-fareast-language:PT-BR"><a href=3D"htt=
+p://www.bio.fiocruz.br/"><span style=3D"color:blue">www.bio.fiocruz.br</spa=
+n></a><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"font-size:7.5pt;font-family:&quot;Ver=
+dana&quot;,sans-serif;color:gray;mso-fareast-language:PT-BR"><o:p>&nbsp;</o=
+:p></span></p>
+<p class=3D"MsoNormal"><span style=3D"color:#0070C0;mso-fareast-language:PT=
+-BR">Envie e-mails somente quando necess=E1rio.</span><span style=3D"color:=
+#1F497D;mso-fareast-language:PT-BR"><o:p></o:p></span></p>
+<p class=3D"MsoNormal"><o:p>&nbsp;</o:p></p>
+</div>
+<i><b>&quot;Esta =E9 uma mensagem autom=E1tica gerada pelo sistema. Por fav=
+or, n=E3o responda&quot;
+</b><br>
+<br>
+Este e-mail, incluindo seus anexos, pode conter informa=E7=F5es confidencia=
+is e/ou privilegiadas, protegidas por lei. Caso voc=EA n=E3o seja o destina=
+t=E1rio ou tenha recebido esta mensagem por engano, por favor, avise imedia=
+tamente o remetente, exclua-a e n=E3o divulgue
+ ou use seu conte=FAdo de nenhuma forma. A Fiocruz esclarece que o conte=FA=
+do deste e-mail representa exclusivamente a opini=E3o do autor, n=E3o tendo=
+ Fiocruz qualquer responsabilidade sobre seu teor. Ademais, ressaltamos que=
+ a transmiss=E3o de informa=E7=F5es via internet
+ pode n=E3o ser totalmente segura e livre de erros. Este e-mail est=E1 em c=
+onformidade com a Lei Geral de Prote=E7=E3o de Dados Pessoais (LGPD) e dema=
+is normas aplic=E1veis =E0 privacidade e prote=E7=E3o de dados no Brasil. A=
+ Fiocruz informa que =E9 proibida a reprodu=E7=E3o total
+ ou parcial do conte=FAdo deste e-mail sem autoriza=E7=E3o pr=E9via e expre=
+ssa. <br>
+<br>
+This email, including its attachments, may contain confidential and/or priv=
+ileged information protected by law. If you are not the intended recipient =
+or have received this message in error, please notify the sender immediatel=
+y, delete it and do not divulge
+ or use its contents in any way. Fiocruz clarifies that the content of this=
+ email exclusively represents the author's opinion, and Fiocruz has no resp=
+onsibility for its content. Furthermore, we point out that the transmission=
+ of information via the Internet
+ may not be completely secure and error-free. This email complies with the =
+General Law for the Protection of Personal Data (LGPD) and other rules appl=
+icable to privacy and data protection in Brazil. Fiocruz informs that the t=
+otal or partial reproduction of
+ the content of this email without prior and express authorization is prohi=
+bited.
+</i>
+</body>
+</html>
+
+--_000_CPUP152MB4402B5F62F1CC9326A4D3118C3B1ACPUP152MB4402LAMP_--
