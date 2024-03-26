@@ -1,0 +1,1071 @@
+From - Wed Mar 13 12:05:34 2024
+X-Account-Key: account9
+X-UIDL: UID23396-1633437133
+X-Mozilla-Status: 0000
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Return-Path: <ordemdecompra@sistemafiep.org.br>
+Delivered-To: front@frontcomercial.com.br
+Received: from cpanel19.unifique.cloud
+	by cpanel19.unifique.cloud with LMTP
+	id MKeeB6vA8WWLHgoA7lOeTQ
+	(envelope-from <ordemdecompra@sistemafiep.org.br>)
+	for <front@frontcomercial.com.br>; Wed, 13 Mar 2024 12:05:15 -0300
+Return-path: <ordemdecompra@sistemafiep.org.br>
+Envelope-to: front@frontcomercial.com.br
+Delivery-date: Wed, 13 Mar 2024 12:05:15 -0300
+Received: from mail-mw2nam10on2091.outbound.protection.outlook.com ([40.107.94.91]:2032 helo=NAM10-MW2-obe.outbound.protection.outlook.com)
+	by cpanel19.unifique.cloud with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384
+	(Exim 4.96.2)
+	(envelope-from <ordemdecompra@sistemafiep.org.br>)
+	id 1rkQAJ-00352n-0r
+	for front@frontcomercial.com.br;
+	Wed, 13 Mar 2024 12:05:15 -0300
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector9901; d=microsoft.com; cv=none;
+ b=e5WaVSz0PWMqm0+yxrrSSwf06oD/dGXr6duNfTQhNHQdEajMLA2YRP/19S6XjJKdGU0PAj5HAqelSD012rkNopgcqy5tPherK78BWmlERFMjKc+xzrRzViosLTiH0WBhN+Z8iMsJFixJR+mVnqAlLILEjqNEVLel5u8cUYT1Qiz87+3JmU/Nb+zmNFS3fblEdRGyrR/TnJhTugFlBHRByk/yspwbPvWNgn+B6dxc7+WiK/zPb3DqRXjuXKamU69xywf3NFW2Dnw65s7H/eF6M4uTTd9rL103Z0paHktu9JqgQLk8S1MHQH1d+341Ww+gJEMzLGUZbEYEC9E+KGYWLQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector9901;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=JUUM411J35pC5F2LzYaf5qPTAPiCR8EuHiw0UWj2Pzg=;
+ b=Ep8NjArwSkmAGF+FO5WDLej5iLam2QPYZ0Ka+HJ8T4PvhFAMtiau6TzuZtej5TN910o+OMFsByuVRMVmPEt1QGvZ94qJi/imQ3Y8wevAzauzTtUAxxtkpxy/sIF51nUg82bBO2afr+FRDlFwQ/0AnUSURpDKixIv8Vr59hRrP0LrNhBNGKuJcI0/PPKmj51T52PwYhR2l2pU3qVPIoGCO6rtxewwLrS7qmSIa5UDmNR00TflKsrHESUzzyhQSg68mawCkKLvfnjYVMUrkR4W28fERzVoVmFpJnIyrNoyqpxreznpbzSbfR26pYk4/Swlm1WwDA0UcX20Y0gFlpTHWg==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=pass
+ smtp.mailfrom=sistemafiep.org.br; dmarc=pass action=none
+ header.from=sistemafiep.org.br; dkim=pass header.d=sistemafiep.org.br;
+ arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sistemafiep.org.br;
+ s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=JUUM411J35pC5F2LzYaf5qPTAPiCR8EuHiw0UWj2Pzg=;
+ b=Kjilt0eUkn1PD0RVgKhvzLR2c9e0n2R2i0rpo0uIprWtR03d3sKM0JwH51oQz7XsJNwhkg+9SFqBks8IILfc+f8/iAQqlw4dh7jzt+2mT/QqxtLnlte6t4T+gS2AJa0awex04u25kh8/Pzma7wCi4v/Apkq45asVvM50dGHOq5JTs07i2M9V+MQVcoGrkifqI9AHBFp8wmvQEx4MC2jOip82P77eFtp2vrSMZnX8FlJedt6Ww4JOxAxr9yr/G4VtpvzlteoPJ1jnUfj937rzyZltpnpbiFKIfzNfTNxlpibuZrBPnu52eSLw+CBESIvHN7RRMZ/ghSAZK8f2rHpAqA==
+Received: from CPWP152MB7045.LAMP152.PROD.OUTLOOK.COM (2603:10d6:103:21e::13)
+ by RO2P152MB5813.LAMP152.PROD.OUTLOOK.COM (2603:10d6:10:e3::7) with Microsoft
+ SMTP Server (version=TLS1_2, cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id
+ 15.20.7386.18; Wed, 13 Mar 2024 15:04:25 +0000
+Received: from CPWP152MB7045.LAMP152.PROD.OUTLOOK.COM
+ ([fe80::d677:f2cd:a99a:d62e]) by CPWP152MB7045.LAMP152.PROD.OUTLOOK.COM
+ ([fe80::d677:f2cd:a99a:d62e%5]) with mapi id 15.20.7386.017; Wed, 13 Mar 2024
+ 15:04:25 +0000
+From: Compras Sistema Fiep <ordemdecompra@sistemafiep.org.br>
+To: "front@frontcomercial.com.br" <front@frontcomercial.com.br>
+Subject: [OC-2.081747] [SFIEP] ORDEM DE COMPRAS
+Thread-Topic: [OC-2.081747] [SFIEP] ORDEM DE COMPRAS
+Thread-Index: AQHadVe45qhgVVHCvUCF6WoRC8i/Rw==
+Date: Wed, 13 Mar 2024 15:04:17 +0000
+Message-ID:
+ <CPWP152MB70451A3775806D182702B8D48C2A2@CPWP152MB7045.LAMP152.PROD.OUTLOOK.COM>
+Accept-Language: pt-BR, en-US
+Content-Language: en-US
+X-MS-Has-Attach:
+X-MS-TNEF-Correlator:
+authentication-results: dkim=none (message not signed)
+ header.d=none;dmarc=none action=none header.from=sistemafiep.org.br;
+x-ms-publictraffictype: Email
+x-ms-traffictypediagnostic: CPWP152MB7045:EE_|RO2P152MB5813:EE_
+x-ms-office365-filtering-correlation-id: ab3a7d35-c374-44b9-1f3b-08dc436edf53
+x-ms-exchange-senderadcheck: 1
+x-ms-exchange-antispam-relay: 0
+x-microsoft-antispam: BCL:0;
+x-microsoft-antispam-message-info:
+ B9HxSy6jFg+kdH88unyXQoHeLfFd69mGknurdnbbpcR8ciTKXAeU/hCeT5AZt5f4U+ffpXNJBIw+gP0IFTzff2AzELLr7BybVY7YUNRg7lrle0A+DssfYQFmyaAy+F2MTc32rC2XCsilO3gW0bcW5RMQOfa/sCgrs37G9+8S38k4tNXqPVHmWiFs3FUuK8bb40WkLjfy2v9HbpWNIYsJJEyGVIEHCSkd2LUPCRpZQ7adJKQruuSK0weWWLzSSJyYSDvRbE40ZpYUye4LRz9P9VAmr+ZwAN8JzoTj+doEzncRXJYbpRFTj8kkwV3ZoE2e8FXNuRf4p9wG/tDksyYcwFEOXUY8hi8saXFmJgkV0Dmnn2p61nixZpJdla1UGm0GltNGUUzxSMPYicSJ/6WaTHZq9Fm/gu7XlDB2MENkVfkpwfwnMgvRikU9SzACWIuwM8TQeINOzesc5tIUN7XiI72fMY3AmuFWcUcwztERF/AgQxfdU2XLVXg8oUrwoN+6vAK2zbyXLwth4YykLXVNj0KMe+ybqzZi1S8IULPzA81V0LVMu0+yhqaVd8Aw3MxqsYrlfHUAFeEru3pBs9P+Wt3DVAvpEP0OjTplFoNGRpIrEwPeWncvlcZoKqhMcDO2sGcySMfJggyxYmnkNmnRmzcDHXoUGqRu4EqsT/6OX4w=
+x-forefront-antispam-report:
+ CIP:255.255.255.255;CTRY:;LANG:pt;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:CPWP152MB7045.LAMP152.PROD.OUTLOOK.COM;PTR:;CAT:NONE;SFS:(13230031)(1800799015)(376005)(41320700004)(38070700009);DIR:OUT;SFP:1102;
+x-ms-exchange-antispam-messagedata-chunkcount: 1
+x-ms-exchange-antispam-messagedata-0:
+ =?Windows-1252?Q?1D/sv89zjROdAOlAtdeX5nnvHyC9dNZN2Uvu9nZ2nFc5QiQ4s4UtIP0I?=
+ =?Windows-1252?Q?d9T1FGdY0vFD1TpXsRe83/y7dj8h3zm0NXdiroQ/ggYf88bpvA5quabS?=
+ =?Windows-1252?Q?2d363RjvmZGprknEqq6PzqMOPDVmsv8TySIV8R9EIEn5TeAd0H3WLsQR?=
+ =?Windows-1252?Q?xq+36tdOEgJZiBhTnNuE59cf/Rg48xqDY0s3qzvUOJ7DeHgi2x+ccCtJ?=
+ =?Windows-1252?Q?W9+lELLMTXpvhKCBY48flM1nCIxNJr4UbXMNctZpAJsFxIAm0aUAnOyx?=
+ =?Windows-1252?Q?JkzoQigVbeLMBL3X1CETHjduGyylQn39OJlWQdjdMmlg7ByA+TR5yjCc?=
+ =?Windows-1252?Q?GKahx+3PiQMuT0RL6lDv24D7ik4nGoRBvnyWUf3tcgyX/f2Oc53U5NdN?=
+ =?Windows-1252?Q?L1dpk+CBH57uRaIRAGkWzcj16COkkdVIZ5ThKWYr/LmgUHFgnRRWS+DI?=
+ =?Windows-1252?Q?FwZW0ayvohWouZkoztGizxMh6AC5BCfVqQ4hp+LYtHuNOuF1CJ9Z9AhI?=
+ =?Windows-1252?Q?IMJZRMugx62bS7ewLdl7/gfHkdUN1q8E50gfJlYiu39v2RsnjKVCmzSF?=
+ =?Windows-1252?Q?0JGBkgAeqC1S/xfBPOR9rkb9oB4Mvp6AYv6nntHF168/RA4Z1hkitFiQ?=
+ =?Windows-1252?Q?v/LrzOb18wQ5gpKcY4RueQdbz3N/FnTaus9Fd9VWgPf4+Iw9XLweZQ9r?=
+ =?Windows-1252?Q?YOvaAdXudz06nn3e/AtXIbZP2N7rx5Y4eTy466UxlKttUpgQN+Aw27SY?=
+ =?Windows-1252?Q?z6XGh50Ky963EFSvXl/G6uJIhB4nLMmBcbeV324CZvUjPtDbGD6Utlk6?=
+ =?Windows-1252?Q?dfDAOSFyZ7NeOGBlkL5P5KlTKN5PVCDLCQdeggrRFZwdXJECu6DXZpZZ?=
+ =?Windows-1252?Q?Qoev3uHRFsDl3iNv9JSe83F3HgAmnZjs400zMc1dAwGs/ho8RaBsVwyk?=
+ =?Windows-1252?Q?4sjjq0ybGfV5vZ9YMtW+Vd5JA/ALg1W0FhZ7xHf+yk7oNm9elFHiRQj2?=
+ =?Windows-1252?Q?aGwlGm87kA4WRhqX1MJDyhgfViBCbkAH1c1KFR+Pet4dpGStrkZyMOLx?=
+ =?Windows-1252?Q?3M3AXUaL5nP6g8gcCrvzhymPeAeIJUeJzhaG13tAjSEob9VAiQ8Okbn/?=
+ =?Windows-1252?Q?COMmGkYf6p6sJK0X29yH/xHmE/yqNjWVpMjqNZkK0UqarkK3echO9UFG?=
+ =?Windows-1252?Q?EACKi+rDm3lx/mYe7wzDTJ40o/gkyfBrwhhjPPSn4/R4OWxbK4+/+EWo?=
+ =?Windows-1252?Q?8Nm+IaJfQ7vrYUGGRX6TfvxuFhOA2guuegwJ+ZdBQiG/s9bESEA6kCZf?=
+ =?Windows-1252?Q?HHdgQ4vL8rfeepAIvqR5MSN/11wnauUq8ZpQN991vSm2ehokyMLFpbOo?=
+ =?Windows-1252?Q?Lpe9UIKVLcW8+ENQhQOsfyQixq2tjM8yJ7M9L7SzSX8sO/TCDW/U142I?=
+ =?Windows-1252?Q?rIfzfQu+IdtFqAmXEbIwCLoJafHNLsRainEgdL8ZNut/38tp4RZVgSZi?=
+ =?Windows-1252?Q?bGxt5rbSeJZvicSJG7a7GR5k5yhOV2xY4Dpy6AOUTahnveEzsFovrsvV?=
+ =?Windows-1252?Q?4TaGUzmJcZbJ1RTRhJ0DfmD03bETM4L3wPjbpQsv4NRdiAAs8Evyqk0Z?=
+ =?Windows-1252?Q?vdjmxX9rg7kFeYkbNYubx+TNgcG+/tVyTUwIgrTB0X4X4i2412f11HLF?=
+ =?Windows-1252?Q?R7StofKrwJDvX7XuGeZEhQY1jArHfm73DKGK/eru7B6j5aY9WWByOQ?=
+ =?Windows-1252?Q?=3D=3D?=
+Content-Type: multipart/alternative;
+	boundary="_000_CPWP152MB70451A3775806D182702B8D48C2A2CPWP152MB7045LAMP_"
+MIME-Version: 1.0
+X-OriginatorOrg: sistemafiep.org.br
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: CPWP152MB7045.LAMP152.PROD.OUTLOOK.COM
+X-MS-Exchange-CrossTenant-Network-Message-Id: ab3a7d35-c374-44b9-1f3b-08dc436edf53
+X-MS-Exchange-CrossTenant-originalarrivaltime: 13 Mar 2024 15:04:17.9467
+ (UTC)
+X-MS-Exchange-CrossTenant-fromentityheader: Hosted
+X-MS-Exchange-CrossTenant-id: 64f0195a-b61d-46c4-af77-423ea2026692
+X-MS-Exchange-CrossTenant-mailboxtype: HOSTED
+X-MS-Exchange-CrossTenant-userprincipalname: CQFz7CoqZCD++tly5g8+lH9h8rz+gwPKr9edTmWfgaTzc/QhPRvT4eMCx646R0kafZ1vx4zZW09Z8WQe0R7iG2UgxDYFW5hwagulKW5aHH+YsWHnNTCuU0cbND0CYY08
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: RO2P152MB5813
+X-Spam-Status: No, score=1.1
+X-Spam-Score: 11
+X-Spam-Bar: +
+X-Ham-Report: Spam detection software, running on the system "cpanel19.unifique.cloud",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  [X] Ordem de Compra: OC-2.081747 Emissão: 13/03/2024 Dados
+    para Faturamento: Fornecedor: SERVICO SOCIAL DA INDUSTRIA SESI AVENIDA CANDIDO
+    DE ABREU,200- CENTRO CIVICO CURITIBA-PR 80530-902 TELEFONE: CN [...] 
+ Content analysis details:   (1.1 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.8 BAYES_50               BODY: Bayes spam probability is 40 to 60%
+                             [score: 0.5000]
+  0.5 SUBJ_ALL_CAPS          Subject is all capitals
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.0 SPF_HELO_PASS          SPF: HELO matches SPF record
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from
+                             author's domain
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+ -0.0 T_SCC_BODY_TEXT_LINE   No description available.
+X-Spam-Flag: NO
+
+--_000_CPWP152MB70451A3775806D182702B8D48C2A2CPWP152MB7045LAMP_
+Content-Type: text/plain; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+[X]
+Ordem de Compra: OC-2.081747
+Emiss=E3o:        13/03/2024
+Dados para Faturamento:                 Fornecedor:
+SERVICO SOCIAL DA INDUSTRIA SESI
+AVENIDA CANDIDO DE ABREU,200- CENTRO CIVICO CURITIBA-PR 80530-902
+TELEFONE:
+CNPJ: 038020180001-03
+Requisitante: ISLAINE APARECIDA BLUMENTHAL DANIEL - islaine.daniel@sistemaf=
+iep.org.br
+Comprador: VANESSA CRISTINA DE SIQUEIRA - vanessa.siqueira@sistemafiep.org.=
+br
+E-mail UD: administracao.fozdoiguacu@sistemafiep.org.br;administracao.toled=
+o@sistemafiep.org.br;
+
+FRONT COMERCIAL LTDA
+Fritz Spernau ,1000-Fundos, Galp=E3o 2, 1=B0 andar ITOUPAVA NORTE BLUMENAU-=
+SC 89052-003
+TELEFONE: 4730371021
+Email: front@frontcomercial.com.br
+CNPJ: 437317400001-00
+Frete: CIF              Data Entrega: 12/04/2024
+Endere=E7o de Entrega : AVENIDA CANDIDO DE ABREU, 200, CENTRO CIVICO, CURIT=
+IBA
+Linha   Item    Descritivo Curto        CFOP    NCM     CS      Quant.  Uni=
+dade R$ Unit=E1rio     R$ Total        Requisi=E7=E3o
+1       069896  CAFETEIRA ELETRICA ACO INOX AISI304 PRATA 127-220V CA 1.300=
+W S/GRADUACAO 8L S/ALCA 360MM 740MM 290MM C/TORNEIRA C/VISOR NIVEL AGUA/CAF=
+E; C/ALAVANCA     2.556   85167100                1       UN      998,40  9=
+98,40  2.24.1772640
+Descritivo Completo:
+069896 - CAFETEIRA; ELETRICA; MATERIAL CORPO: ACO INOX AISI304; COR: PRATA;=
+ TENSAO ALIMENTACAO: 127-220V; CORRENTE TIPO: CA; POTENCIA: 1.300W; GRADUAC=
+AO: S/GRADUACAO; CAPACIDADE RESERVATORIO: 8L; ALCA: S/ALCA; LARGURA: 360MM;=
+ ALTURA: 740MM; PROFUNDIDADE: 290MM; C/TORNEIRA C/VISOR NIVEL AGUA/CAFE; C/=
+ALAVANCA
+2       079234  FOGAO DOMESTICO 9,6KW PRETO GLP 4 BOCAS AUTOMATICO C/FORNO =
+ACO ESMALTADO VIDRO TEMPERADO 510MM 880MM 573MM      2.556   85166000      =
+          1       UN      681,73  681,73  2.24.1772640
+Descritivo Completo:
+079234 - FOGAO; TIPO FOGAO: DOMESTICO; POTENCIA: 9,6KW; COR: PRETO; TIPO GA=
+S: GLP; BOCA: 4 BOCAS; TIPO ACENDIMENTO: AUTOMATICO; TIPO FORNO: C/FORNO; T=
+IPO TREMPE: ACO ESMALTADO; MATERIAL MESA: VIDRO TEMPERADO; LARGURA: 510MM; =
+ALTURA: 880MM; PROFUNDIDADE: 573MM
+IMPORTANTE
+A partir do recebimento da Ordem de Compra, o fornecedor d=E1 ci=EAncia =E0=
+s seguintes condi=E7=F5es:
+
+ - Entrega:
+- Atrasos podem ocasionar o cancelamento da Ordem de Compra, sem aviso pr=
+=E9vio e sem =F4nus para o Sistema Fiep;
+- Entregas somente no endere=E7o indicado acima nesta OC. Qualquer mudan=E7=
+a no endere=E7o deve ser alinhada previamente com o(a) requisitante e compr=
+ador(a);
+- As mercadorias devem estar acompanhadas de suas respectivas DANFE's;
+- Havendo necessidade de antecipa=E7=E3o da execu=E7=E3o do objeto, comunic=
+ar previamente o(a) requisitante;
+
+- Ser=E1 avaliado a data da emiss=E3o da nota fiscal, podendo n=E3o ser ace=
+ita caso a data seja muito distante da entrega.
+
+- Para servi=E7os de engenharia:
+ - Ser=E3o cumpridas, com rigor, todas as normas e instru=E7=F5es descritas=
+ na Lei 6514 de 22/12/1977 e na Portaria 3214 de 08/06/1978 que disciplinam=
+ a Seguran=E7a e Sa=FAde no trabalho, assim como, assumir total responsabil=
+idade, civil e criminal, por Acidentes Pessoais ou do Trabalho, que porvent=
+ura ocorram durante a presta=E7=E3o dos servi=E7os ora contratados.
+- Dever=E1 ser consultada a pol=EDtica de Seguran=E7a do Trabalho para Obra=
+s e Servi=E7os de Engenharia, dispon=EDvel no endere=E7o:
+https://www.sistemafiep.org.br/uploadAddress/PL-0038-Seguranca-do-Trabalho-=
+Para-Obras-e-Servicos-de-Engenharia[99201].pdf
+
+ - Faturamento:
+- Todas as notas fiscais devem ser encaminhadas via e-mail e entregue impre=
+ssa ao requisitante (para os casos de produtos);
+- Para notas fiscais eletr=F4nicas de mercadoria/produtos, o n=FAmero da or=
+dem de compra deve constar no campo =93XPED=94 e =E9 obrigat=F3rio o envio =
+do arquivo PDF da DANFE para o e-mail do requisitante e do ADM que consta a=
+cima. (Quando houver);
+- Para servi=E7os, o documento fiscal s=F3 pode ser emitido e enviado ap=F3=
+s a aprova=E7=E3o do requisitante da conclus=E3o da execu=E7=E3o do servi=
+=E7o e ap=F3s o recebimento da Ordem de Compra. No documento fiscal deve co=
+nstar, junto =E0 descri=E7=E3o do servi=E7o ou em campo espec=EDfico de obs=
+erva=E7=F5es, o n=FAmero da Ordem de Compra;
+- Para as opera=E7=F5es referente contrata=E7=E3o de servi=E7o, o respectiv=
+o documento fiscal dever=E1 contemplar como c=F3digo de servi=E7o informa=
+=E7=E3o equivalente ao constante no Campo =93CS=94 desta respectiva Ordem d=
+e Compra;
+- A emiss=E3o de Notas Fiscais de Servi=E7os deve ocorrer somente at=E9 o d=
+ia 18 de cada m=EAs. Ap=F3s este prazo, o faturamento dever=E1 ocorrer a pa=
+rtir do primeiro dia =FAtil do m=EAs subsequente.
+
+ - San=E7=F5es e Penalidades:
+- A inexecu=E7=E3o total ou parcial do objeto sujeitar=E1 o fornecedor, gar=
+antida a pr=E9via defesa, =E0s seguintes penalidades: multa, rescis=E3o con=
+tratual e suspens=E3o do direito de licitar/fornecer ao Sistema Fiep por pr=
+azo n=E3o superior a 2 (dois) anos, nas formas adiante especificadas:
+a)           Em caso do descumprimento do prazo de execu=E7=E3o previamente=
+ estabelecido, aplica=E7=E3o de multa de 2% (dois por cento) e juros de 0,0=
+3% ao dia de atraso sobre o valor do objeto.
+b)           Na hip=F3tese de inexecu=E7=E3o parcial, multa no percentual d=
+e 5%, sobre a por=E7=E3o inadimplida.
+c)            Em caso de inexecu=E7=E3o total, multa no percentual de 10% s=
+obre o valor total da Ordem de Compra.
+d)           A multa poder=E1 ser aplicada isolada ou cumulativamente com a=
+s demais san=E7=F5es.
+e)           Caber=E1 a penalidade de suspens=E3o do direito de fornecer, p=
+elo prazo m=E1ximo de 2 (dois) anos, contados a partir de sua aplica=E7=E3o=
+, nos casos de inexecu=E7=E3o total ou parcial, a crit=E9rio do Sistema Fie=
+p.
+- Para as aquisi=E7=F5es/contrata=E7=F5es vinculadas a processo de licita=
+=E7=E3o, prevalece o disposto em edital.
+
+ - Regularidade Fiscal:
+- =C9 imprescind=EDvel que a empresa mantenha a Regularidade Fiscal, tanto =
+na aquisi=E7=E3o/contrata=E7=E3o, quanto na entrega do material ou execu=E7=
+=E3o do servi=E7o.
+
+- Pagamentos:
+- Pagamento em 28 dias da data de emiss=E3o da nota fiscal ou conforme esta=
+belece o Edital de licita=E7=E3o;
+- Boletos devem respeitar o prazo de vencimento de 28 dias, a contar da dat=
+a de emiss=E3o do documento fiscal, ou conforme estabelece o Edital de lici=
+ta=E7=E3o;
+Informar dados banc=E1rios no corpo da nota fiscal (Campo dados adicionais/=
+observa=E7=F5es), para os casos de dep=F3sitos banc=E1rios.
+- A titularidade da conta corrente deve ser em nome da raz=E3o social do fo=
+rnecedor. N=E3o s=E3o efetuados pagamentos em conta Pessoa F=EDsica ou que =
+n=E3o sejam modalidade Conta Corrente.
+
+ - Inconsist=EAncias:
+- Ser=E1 recusada a nota fiscal ou mercadoria que esteja em diverg=EAncia c=
+om as especifica=E7=F5es estabelecidas na Ordem de Compra.
+
+ - Programa de Integridade:
+- No ato do recebimento desta Ordem de Compra, declara ci=EAncia e compromi=
+sso de ades=E3o =E0s diretrizes e recomenda=E7=F5es estabelecidas no C=F3di=
+go de Conduta do Sistema Fiep, dispon=EDvel no endere=E7o eletr=F4nico http=
+://www.sistemafiep.org.br/.  Declara, ainda, o cumprimento do referido c=F3=
+digo por seus s=F3cios ou dirigentes, bem como exigir a sua observ=E2ncia p=
+or seus colaboradores e terceiros contratados.
+
+
+
+PE 3.0838/2023 - AQUISI=C7=C3O DE EQUIPAMENTOS ELETR=D4NICOS/ELETRODOM=C9ST=
+ICOS PARA AS COPAS E ESPA=C7OS DE CONVIV=CANCIA DAS UNIDADES DO SESI/SENAI =
+- REEDI=C7=C3O
+
+O uso das informa=E7=F5es contidas neste e-mail est=E1 submetido a sigilo p=
+rofissional. As informa=E7=F5es s=E3o confidenciais, para uso exclusivo e e=
+spec=EDfico do destinat=E1rio, e o conte=FAdo n=E3o reflete necessariamente=
+ a opini=E3o do Sistema Fiep. Se voc=EA n=E3o =E9 o receptor pretendido, fi=
+ca notificado que n=E3o est=E1 autorizado a utilizar, divulgar ou encaminha=
+r esta mensagem. Caso tenha recebido equivocadamente, por favor entre em co=
+ntato com o remetente e descarte a informa=E7=E3o aqui contida.
+
+The use of the information contained in this email is submitted to professi=
+onal secrecy. These information are confidentials, recipient's specific and=
+ exclusive, and the content doesn't necessarily reflect the opinion of the =
+Fiep System. If you are not the intended recipient, you are notified that a=
+ren't authorized to use, disclose or forward this message. If you have mist=
+ankenly received it, please contact the sender and discard the information =
+here contained.
+
+--_000_CPWP152MB70451A3775806D182702B8D48C2A2CPWP152MB7045LAMP_
+Content-Type: text/html; charset="Windows-1252"
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DWindows-1=
+252">
+<style>
+        h1 {
+            font-size: 1.5em;
+            /* 40px/16=3D2.5em */
+        }
+
+        h2 {
+            font-size: 1.875em;
+            /* 30px/16=3D1.875em */
+        }
+
+        h3 {
+            font-size: 0.875em;
+            /* 14px/16=3D0.875em */
+        }
+    </style>
+</head>
+<body>
+<table class=3D"MsoNormalTable" style=3D"border-collapse: collapse; table-l=
+ayout: fixed; width: 689pt;" border=3D"0" width=3D"918" cellspacing=3D"0" c=
+ellpadding=3D"0">
+<tbody>
+<tr style=3D"mso-height-source: userset; height: 16.5pt;">
+<td style=3D"border-bottom: .5pt solid #5B9BD5; height: 31.5pt; width: 465p=
+t;" colspan=3D"9" rowspan=3D"2" align=3D"left">
+<table cellspacing=3D"0" cellpadding=3D"0">
+<tbody>
+<tr>
+<td class=3D"x183" width=3D"619" height=3D"42" colspan=3D"4"><img src=3D"da=
+ta:image/jpeg;base64,/9j/4AAQSkZJRgABAQEAYABgAAD/4QBaRXhpZgAATU0AKgAAAAgABQ=
+MBAAUAAAABAAAASgMDAAEAAAABAAAAAFEQAAEAAAABAQAAAFERAAQAAAABAAAOw1ESAAQAAAABA=
+AAOwwAAAAAAAYagAACxj//bAEMAAgEBAgEBAgICAgICAgIDBQMDAwMDBgQEAwUHBgcHBwYHBwgJ=
+CwkICAoIBwcKDQoKCwwMDAwHCQ4PDQwOCwwMDP/bAEMBAgICAwMDBgMDBgwIBwgMDAwMDAwMDAw=
+MDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDAwMDP/AABEIACUAawMBIgACEQ=
+EDEQH/xAAfAAABBQEBAQEBAQAAAAAAAAAAAQIDBAUGBwgJCgv/xAC1EAACAQMDAgQDBQUEBAAAA=
+X0BAgMABBEFEiExQQYTUWEHInEUMoGRoQgjQrHBFVLR8CQzYnKCCQoWFxgZGiUmJygpKjQ1Njc4=
+OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoOEhYaHiImKkpOUlZaXmJmaoqOkpaa=
+nqKmqsrO0tba3uLm6wsPExcbHyMnK0tPU1dbX2Nna4eLj5OXm5+jp6vHy8/T19vf4+fr/xAAfAQ=
+ADAQEBAQEBAQEBAAAAAAAAAQIDBAUGBwgJCgv/xAC1EQACAQIEBAMEBwUEBAABAncAAQIDEQQFI=
+TEGEkFRB2FxEyIygQgUQpGhscEJIzNS8BVictEKFiQ04SXxFxgZGiYnKCkqNTY3ODk6Q0RFRkdI=
+SUpTVFVWV1hZWmNkZWZnaGlqc3R1dnd4eXqCg4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S=
+1tre4ubrCw8TFxsfIycrS09TV1tfY2dri4+Tl5ufo6ery8/T19vf4+fr/2gAMAwEAAhEDEQA/AP=
+1m/wCCp/7b+tfsHfs8ab4n0DR9L1DUtc1+00FL3V2lXSdDE+8m7uzEN/lLsxhcElhz2Pmnjb9s7=
+4qfCr9idfH3ij4k/s/teah4q07T9J8ReHNP1PV9Eu7KZ0EkbpGzSC4J8xQQdigDOCcj6I/bG0X4=
+meI/hdDY/DPQvhp4mvLm7CatpXjfz/7PvrIo+6NfKVv3m/yz84K4DcZIr4O/4cnfE2T9lHx74fh=
+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3D">
+</td>
+<td class=3D"xl83" style=3D"height: 31.5pt; width: 465pt;" colspan=3D"9" ro=
+wspan=3D"2" width=3D"619" height=3D"42">
+<h1 style=3D"text-align: center; padding-left: 60px;">Ordem de Compra: OC-2=
+.081747</h1>
+</td>
+</tr>
+</tbody>
+</table>
+</td>
+<h3></h3>
+<td class=3D"xl82" style=3D"width: 112pt;" colspan=3D"1" height=3D"20" widt=
+h=3D"150"></td>
+<td class=3D"xl74" style=3D"width: 64pt;" colspan=3D"2" height=3D"20" width=
+=3D"85" align=3D"right">
+</td>
+</tr>
+<tr style=3D"mso-height-source: userset; height: 15.0pt;">
+<td class=3D"xl81" style=3D"border-bottom: .5pt solid #5B9BD5; height: 31.5=
+pt; width: 465pt;" colspan=3D"2" height=3D"20">
+Emiss=E3o:</td>
+<td class=3D"xl75" style=3D"border-bottom: .5pt solid #5B9BD5; height: 31.5=
+pt; width: 465pt;" colspan=3D"2" height=3D"20" align=3D"right">
+13/03/2024</td>
+<h3></h3>
+</tr>
+<tr style=3D"mso-height-source: userset; height: 18.75pt;">
+<td class=3D"xl89" style=3D"border-bottom: .5pt solid #5B9BD5; height: 18.7=
+5pt; width: 317pt;" colspan=3D"6" width=3D"422" height=3D"25">
+<b>Dados para Faturamento:</b> </td>
+<td class=3D"xl70" style=3D"border-bottom: .5pt solid #5B9BD5; "></td>
+<td class=3D"xl90" style=3D"border-bottom: .5pt solid #5B9BD5; width: 294pt=
+;" colspan=3D"6" width=3D"392">
+<b>Fornecedor:</b> </td>
+</tr>
+<tr style=3D"mso-height-source: userset; height: 108.75pt;">
+<td class=3D"xl88" style=3D"height: 108.75pt; width: 317pt; vertical-align:=
+text-top" colspan=3D"6" width=3D"422" height=3D"145">
+<h4><span>SERVICO SOCIAL DA INDUSTRIA SESI <br>
+</span></h4>
+AVENIDA CANDIDO DE ABREU,200- CENTRO CIVICO CURITIBA-PR 80530-902 <br>
+TELEFONE: <br>
+CNPJ: 038020180001-03<br>
+Requisitante: ISLAINE APARECIDA BLUMENTHAL DANIEL - islaine.daniel@sistemaf=
+iep.org.br<br>
+Comprador: VANESSA CRISTINA DE SIQUEIRA - vanessa.siqueira@sistemafiep.org.=
+br<br>
+E-mail UD: administracao.fozdoiguacu@sistemafiep.org.br;administracao.toled=
+o@sistemafiep.org.br;<br>
+<br>
+</td>
+<td class=3D"xl66"></td>
+<td class=3D"xl94" style=3D"width: 294pt; vertical-align:text-top " colspan=
+=3D"6" width=3D"392">
+FRONT COMERCIAL LTDA<br>
+Fritz Spernau ,1000-Fundos, Galp=E3o 2, 1=B0 andar ITOUPAVA NORTE BLUMENAU-=
+SC 89052-003
+<br>
+TELEFONE: 4730371021<br>
+Email: front@frontcomercial.com.br<br>
+CNPJ: 437317400001-00 </td>
+</tr>
+<tr style=3D"mso-height-source: userset; height: 15.75pt;">
+<td class=3D"xl79" style=3D"height: 15.75pt; width: 641pt;" colspan=3D"5" w=
+idth=3D"854" height=3D"21">
+<b>Frete: </b>CIF </td>
+<td class=3D"xl66"></td>
+<td class=3D"xl79" style=3D"height: 15.75pt; width: 641pt;" colspan=3D"7" w=
+idth=3D"854" height=3D"21">
+<b>Data Entrega: </b>12/04/2024 </td>
+</tr>
+<tr style=3D"mso-height-source: userset; height: 15.75pt;">
+<td class=3D"xl79" style=3D"border-bottom: .5pt solid #5B9BD5; border-top: =
+.5pt solid #5B9BD5; height: 15.75pt; width: 641pt;" colspan=3D"13" width=3D=
+"854" height=3D"21">
+<b>Endere=E7o de Entrega : </b>AVENIDA CANDIDO DE ABREU, 200, CENTRO CIVICO=
+, CURITIBA
+</td>
+</tr>
+<tr style=3D"mso-height-source: userset; height: 15.75pt;">
+<td style=3D"height: 15.75pt; mso-ignore: colspan;" colspan=3D"12" height=
+=3D"21"></td>
+</tr>
+<tr style=3D"border-bottom: 1.5pt solid #5B9BD5; border-top: 1.5pt solid #5=
+B9BD5; height: 15.75pt; width: 641pt;">
+<td class=3D"xl72" style=3D"height: 15.0pt; width: 34pt;" width=3D"45" heig=
+ht=3D"20">Linha</td>
+<td class=3D"xl72" style=3D"width: 44pt;" width=3D"59">Item</td>
+<td class=3D"xl72" style=3D"width: 209pt;" colspan=3D"2" width=3D"278">Desc=
+ritivo Curto</td>
+<td class=3D"xl72" style=3D"width: 30pt;" width=3D"40">CFOP</td>
+<td class=3D"xl72" style=3D"width: 30pt;" width=3D"40">NCM</td>
+<td class=3D"xl72" style=3D"width: 30pt;" width=3D"40">CS</td>
+<td class=3D"xl72" style=3D"width: 41pt;" width=3D"54">Quant.</td>
+<td class=3D"xl72" style=3D"width: 47pt;" width=3D"63">Unidade</td>
+<td class=3D"xl72" style=3D"width: 56pt;" width=3D"75">R$ Unit=E1rio</td>
+<td class=3D"xl72" style=3D"width: 56pt;" width=3D"75">R$ Total</td>
+<td class=3D"xl72" style=3D"width: 64pt;" width=3D"85">Requisi=E7=E3o</td>
+<td class=3D"xl72" style=3D"width: 64pt;" width=3D"85"></td>
+</tr>
+<tr style=3D"mso-height-source: userset; height: 27.0pt;">
+<td class=3D"xl67" style=3D"height: 27.0pt;" height=3D"36">1</td>
+<td class=3D"xl67">069896</td>
+<td class=3D"xl85" style=3D"width: 209pt;" colspan=3D"2" width=3D"278">CAFE=
+TEIRA ELETRICA ACO INOX AISI304 PRATA 127-220V CA 1.300W S/GRADUACAO 8L S/A=
+LCA 360MM 740MM 290MM C/TORNEIRA C/VISOR NIVEL AGUA/CAFE; C/ALAVANCA</td>
+<td class=3D"xl68">2.556</td>
+<td class=3D"xl67">85167100</td>
+<td class=3D"xl69"></td>
+<td class=3D"xl67">1</td>
+<td class=3D"xl67">UN</td>
+<td class=3D"xl67">998,40</td>
+<td class=3D"xl67">998,40</td>
+<td class=3D"xl67">2.24.1772640</td>
+</tr>
+<tr style=3D"background-color: PowderBlue ; mso-height-source: userset; hei=
+ght: 15.0pt; border-bottom: .5pt solid #5B9BD5; border-top: .75pt solid #5B=
+9BD5;">
+<td class=3D"xl78" style=3D"width: 563pt;" colspan=3D"13" width=3D"750"><b>=
+Descritivo Completo:</b>
+</td>
+</tr>
+<tr style=3D"mso-height-source: userset; border-bottom: 1.5pt solid #5B9BD5=
+;">
+<td class=3D"xl77" style=3D"width: 563pt;" colspan=3D"13" width=3D"750"><b>=
+069896 </b>- CAFETEIRA; ELETRICA; MATERIAL CORPO: ACO INOX AISI304; COR: PR=
+ATA; TENSAO ALIMENTACAO: 127-220V; CORRENTE TIPO: CA; POTENCIA: 1.300W; GRA=
+DUACAO: S/GRADUACAO; CAPACIDADE RESERVATORIO:
+ 8L; ALCA: S/ALCA; LARGURA: 360MM; ALTURA: 740MM; PROFUNDIDADE: 290MM; C/TO=
+RNEIRA C/VISOR NIVEL AGUA/CAFE; C/ALAVANCA</td>
+</tr>
+<tr style=3D"mso-height-source: userset; height: 27.0pt;">
+<td class=3D"xl67" style=3D"height: 27.0pt;" height=3D"36">2</td>
+<td class=3D"xl67">079234</td>
+<td class=3D"xl85" style=3D"width: 209pt;" colspan=3D"2" width=3D"278">FOGA=
+O DOMESTICO 9,6KW PRETO GLP 4 BOCAS AUTOMATICO C/FORNO ACO ESMALTADO VIDRO =
+TEMPERADO 510MM 880MM 573MM</td>
+<td class=3D"xl68">2.556</td>
+<td class=3D"xl67">85166000</td>
+<td class=3D"xl69"></td>
+<td class=3D"xl67">1</td>
+<td class=3D"xl67">UN</td>
+<td class=3D"xl67">681,73</td>
+<td class=3D"xl67">681,73</td>
+<td class=3D"xl67">2.24.1772640</td>
+</tr>
+<tr style=3D"background-color: PowderBlue ; mso-height-source: userset; hei=
+ght: 15.0pt; border-bottom: .5pt solid #5B9BD5; border-top: .75pt solid #5B=
+9BD5;">
+<td class=3D"xl78" style=3D"width: 563pt;" colspan=3D"13" width=3D"750"><b>=
+Descritivo Completo:</b>
+</td>
+</tr>
+<tr style=3D"mso-height-source: userset; border-bottom: 1.5pt solid #5B9BD5=
+;">
+<td class=3D"xl77" style=3D"width: 563pt;" colspan=3D"13" width=3D"750"><b>=
+079234 </b>- FOGAO; TIPO FOGAO: DOMESTICO; POTENCIA: 9,6KW; COR: PRETO; TIP=
+O GAS: GLP; BOCA: 4 BOCAS; TIPO ACENDIMENTO: AUTOMATICO; TIPO FORNO: C/FORN=
+O; TIPO TREMPE: ACO ESMALTADO; MATERIAL
+ MESA: VIDRO TEMPERADO; LARGURA: 510MM; ALTURA: 880MM; PROFUNDIDADE: 573MM<=
+/td>
+</tr>
+<tr style=3D"height: 18.75pt;">
+<td class=3D"xl86" style=3D"background-color: yellow; border-bottom: .75pt =
+solid #5B9BD5; border-top: .5pt solid #5B9BD5; height: 18.75pt; width: 641p=
+t;" colspan=3D"13" width=3D"854" height=3D"25" align=3D"center">
+<b>IMPORTANTE</b> </td>
+</tr>
+<tr style=3D"mso-height-source: userset; ">
+<td class=3D"xl91" style=3D" width: 641pt;" colspan=3D"13" width=3D"854">
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">A partir do recebimento da Ordem
+ de Compra, o fornecedor d=E1 ci=EAncia =E0s seguintes condi=E7=F5es:</span=
+></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<strong><span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;- Entrega:&nbsp;</span></str=
+ong></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Atrasos podem ocasionar o cancel=
+amento
+ da Ordem de Compra, sem aviso pr=E9vio e sem =F4nus para o Sistema Fiep;&n=
+bsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Entregas somente no endere=E7o
+ indicado acima nesta OC. Qualquer mudan=E7a no endere=E7o deve ser alinhad=
+a previamente com o(a) requisitante e comprador(a);&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- As mercadorias devem estar acomp=
+anhadas
+ de suas respectivas DANFE's;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Havendo necessidade de antecipa=
+=E7=E3o
+ da execu=E7=E3o do objeto, comunicar previamente o(a) requisitante;</span>=
+</p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<br>
+</p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">-&nbsp;Ser=E1 avaliado a data da e=
+miss=E3o
+ da nota fiscal, podendo n=E3o ser aceita caso a data seja muito distante d=
+a entrega.</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<strong><span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Para servi=E7os de engenharia:</=
+span></strong></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;mso-fareast-language:PT-BR;">&nbsp;</span><span style=3D"colo=
+r: rgb(32, 31, 30); font-family: &quot;Segoe UI&quot;, sans-serif; font-siz=
+e: 8.5pt;">- Ser=E3o
+ cumpridas, com rigor, todas as normas e instru=E7=F5es descritas na Lei 65=
+14 de 22/12/1977 e na Portaria 3214 de 08/06/1978 que disciplinam a Seguran=
+=E7a e Sa=FAde no trabalho, assim como, assumir total responsabilidade, civ=
+il e criminal, por Acidentes Pessoais ou
+ do Trabalho, que porventura ocorram durante a presta=E7=E3o dos servi=E7os=
+ ora contratados.</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;mso-fareast-language:PT-BR;">- Dever=E1 ser consultada a pol=
+=EDtica de Seguran=E7a do Trabalho para Obras e Servi=E7os de Engenharia, d=
+ispon=EDvel
+ no endere=E7o:</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;mso-fareast-language:PT-BR;"><a href=3D"https://www.sistemafi=
+ep.org.br/uploadAddress/PL-0038-Seguranca-do-Trabalho-Para-Obras-e-Servicos=
+-de-Engenharia[99201].pdf" target=3D"_blank">https://www.sistemafiep.org.br=
+/uploadAddress/PL-0038-Seguranca-do-Trabalho-Para-Obras-e-Servicos-de-Engen=
+haria[99201].pdf</a></span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<strong><span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;- Faturamento:&nbsp;</span><=
+/strong></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Todas as notas fiscais devem
+ ser encaminhadas via e-mail e entregue impressa ao requisitante (para os c=
+asos de produtos);</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;"><span style=3D"font-size:11px;font=
+-family:&quot;Segoe UI&quot;,sans-serif;color:#201F1E;background:#FAF9F8;">=
+-
+ Para notas fiscais eletr=F4nicas de mercadoria/produtos, o n=FAmero da ord=
+em de compra deve constar no campo =93XPED=94 e =E9 obrigat=F3rio o envio d=
+o arquivo PDF da DANFE para o e-mail do requisitante e do ADM que consta ac=
+ima.&nbsp;</span><u><span style=3D"font-size:11px;font-family:&quot;Segoe U=
+I&quot;,sans-serif;color:red;background:#FAF9F8;">(Quando
+ houver)</span></u>;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Para servi=E7os, o documento fis=
+cal
+ s=F3 pode ser emitido e enviado ap=F3s a aprova=E7=E3o do requisitante da =
+conclus=E3o da execu=E7=E3o do servi=E7o e ap=F3s o recebimento da Ordem de=
+ Compra. No documento fiscal deve constar, junto =E0 descri=E7=E3o do servi=
+=E7o ou em campo espec=EDfico de observa=E7=F5es, o n=FAmero da Ordem
+ de Compra;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#e74c3c;mso-fareast-language:PT-BR;">- Para as opera=E7=F5es referent=
+e contrata=E7=E3o de servi=E7o, o respectivo documento fiscal dever=E1 cont=
+emplar como
+ c=F3digo de servi=E7o informa=E7=E3o equivalente ao constante no Campo =93=
+CS=94 desta respectiva Ordem de Compra;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- A emiss=E3o de Notas Fiscais de
+ Servi=E7os deve ocorrer somente at=E9 o dia 18 de cada m=EAs. Ap=F3s este =
+prazo, o faturamento dever=E1 ocorrer a partir do primeiro dia =FAtil do m=
+=EAs subsequente.</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<strong><span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;- San=E7=F5es e Penalidades:=
+</span></strong></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- A inexecu=E7=E3o total ou parcia=
+l
+ do objeto sujeitar=E1 o fornecedor, garantida a pr=E9via defesa, =E0s segu=
+intes penalidades: multa, rescis=E3o contratual e suspens=E3o do direito de=
+ licitar/fornecer ao Sistema Fiep por prazo n=E3o superior a 2 (dois) anos,=
+ nas formas adiante especificadas:&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">a) &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; Em caso do descumprimento
+ do prazo de execu=E7=E3o previamente estabelecido, aplica=E7=E3o de multa =
+de 2% (dois por cento) e juros de 0,03% ao dia de atraso sobre o valor do o=
+bjeto.&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">b) &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; Na hip=F3tese de inexecu=E7=E3o
+ parcial, multa no percentual de 5%, sobre a por=E7=E3o inadimplida.&nbsp;<=
+/span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">c) &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; &nbsp;Em caso de inexecu=E7=E3o
+ total, multa no percentual de 10% sobre o valor total da Ordem de Compra.<=
+/span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">d) &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; A multa poder=E1 ser
+ aplicada isolada ou cumulativamente com as demais san=E7=F5es.&nbsp;</span=
+></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">e) &nbsp; &nbsp; &nbsp; &nbsp; &nb=
+sp; Caber=E1 a penalidade
+ de suspens=E3o do direito de fornecer, pelo prazo m=E1ximo de 2 (dois) ano=
+s, contados a partir de sua aplica=E7=E3o, nos casos de inexecu=E7=E3o tota=
+l ou parcial, a crit=E9rio do Sistema Fiep.</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Para as aquisi=E7=F5es/contrata=
+=E7=F5es
+ vinculadas a processo de licita=E7=E3o, prevalece o disposto em edital.</s=
+pan></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<strong><span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;- Regularidade Fiscal:</span=
+></strong></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- =C9 imprescind=EDvel que a empre=
+sa
+ mantenha a Regularidade Fiscal, tanto na aquisi=E7=E3o/contrata=E7=E3o, qu=
+anto na entrega do material ou execu=E7=E3o do servi=E7o.</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<strong><span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Pagamentos:&nbsp;</span></strong=
+></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Pagamento em 28 dias da data
+ de emiss=E3o da nota fiscal ou conforme estabelece o Edital de licita=E7=
+=E3o;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Boletos devem respeitar o prazo
+ de vencimento de 28 dias, a contar da data de emiss=E3o do documento fisca=
+l, ou conforme estabelece o Edital de licita=E7=E3o;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">Informar dados banc=E1rios no corp=
+o
+ da nota fiscal (Campo dados adicionais/observa=E7=F5es), para os casos de =
+dep=F3sitos banc=E1rios.&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- A titularidade da conta corrente
+ deve ser em nome da raz=E3o social do fornecedor. N=E3o s=E3o efetuados pa=
+gamentos em conta Pessoa F=EDsica ou que n=E3o sejam modalidade Conta Corre=
+nte.&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<strong><span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;- Inconsist=EAncias:</span><=
+/strong></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- Ser=E1 recusada a nota fiscal
+ ou mercadoria que esteja em diverg=EAncia com as especifica=E7=F5es estabe=
+lecidas na Ordem de Compra.</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;</span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">&nbsp;<strong>- Programa de Integr=
+idade:</strong></span></p>
+<p class=3D"MsoNormal" style=3D"margin-bottom:0cm;margin-bottom:.0001pt;=0A=
+justify;line-height:normal;background:#FAF9F8;">
+<span style=3D"font-size:8.5pt;=0A=
+font-family:&quot;Segoe UI&quot;,sans-serif;mso-fareast-font-family:&quot;T=
+imes New Roman&quot;;=0A=
+color:#201F1E;border:none windowtext 1.0pt;mso-border-alt:none windowtext 0=
+cm;=0A=
+padding:0cm;mso-fareast-language:PT-BR;">- No ato do recebimento desta
+ Ordem de Compra, declara ci=EAncia e compromisso de ades=E3o =E0s diretriz=
+es e recomenda=E7=F5es estabelecidas no C=F3digo de Conduta do Sistema Fiep=
+, dispon=EDvel no endere=E7o eletr=F4nico http://www.sistemafiep.org.br/. &=
+nbsp;Declara, ainda, o cumprimento do referido c=F3digo por
+ seus s=F3cios ou dirigentes, bem como exigir a sua observ=E2ncia por seus =
+colaboradores e terceiros contratados.</span></p>
+<p><br>
+</p>
+<p><br>
+</p>
+<br>
+PE 3.0838/2023 - AQUISI=C7=C3O DE EQUIPAMENTOS ELETR=D4NICOS/ELETRODOM=C9ST=
+ICOS PARA AS COPAS E ESPA=C7OS DE CONVIV=CANCIA DAS UNIDADES DO SESI/SENAI =
+- REEDI=C7=C3O</td>
+</tr>
+</tbody>
+</table>
+<p><em>O uso das informa=E7=F5es contidas neste e-mail est=E1 submetido a s=
+igilo profissional. As informa=E7=F5es s=E3o confidenciais, para uso exclus=
+ivo e espec=EDfico do destinat=E1rio, e o conte=FAdo n=E3o reflete necessar=
+iamente a opini=E3o do Sistema Fiep. Se voc=EA n=E3o =E9 o receptor
+ pretendido, fica notificado que n=E3o est=E1 autorizado a utilizar, divulg=
+ar ou encaminhar esta mensagem. Caso tenha recebido equivocadamente, por fa=
+vor entre em contato com o remetente e descarte a informa=E7=E3o aqui conti=
+da.</em></p>
+<p><em>The use of the information contained in this email is submitted to p=
+rofessional secrecy. These information are confidentials, recipient's speci=
+fic and exclusive, and the content doesn't necessarily reflect the opinion =
+of the Fiep System. If you are not
+ the intended recipient, you are notified that aren't authorized to use, di=
+sclose or forward this message. If you have mistankenly received it, please=
+ contact the sender and discard the information here contained.</em></p>
+</body>
+</html>
+
+--_000_CPWP152MB70451A3775806D182702B8D48C2A2CPWP152MB7045LAMP_--
