@@ -1,13 +1,45 @@
 from django.shortcuts import render, redirect
 from .models import Cliente
-from .form import ClienteForm
+from .form import ClienteForm, AccountAuthenticationForm
+
+from django.contrib.auth import login, authenticate, logout
+from django.contrib.auth.decorators import login_required
+
 from django.contrib import messages
 from django.core.paginator import Paginator
 from .filters import ClienteFilter
 from django.db.models import Sum
 import locale
 
+def login_view(request):
+    context = {}
 
+    user = request.user
+    if user.is_authenticated:
+        return redirect('cliente')
+    
+    if request.POST:
+        form = AccountAuthenticationForm(request.POST)
+        if form.is_valid():
+            email = request.POST['email']
+            password = request.POST['password']
+            user = authenticate(email=email, password=password)
+
+            if user:
+                login(request, user)
+                return redirect('cliente')
+    
+    else:
+        form = AccountAuthenticationForm()
+
+    context['login_form'] = form
+    return render(request, 'cliente/login.html', context)
+
+def logout_view(request):
+    logout(request)
+    return redirect('login')
+
+@login_required(login_url='login')
 def cliente(request):
     # list_clientes = Cliente.objects.all()
     list_clientes = Cliente.objects.order_by('-data_criacao')
@@ -18,15 +50,18 @@ def cliente(request):
     list_clientes = paginator.get_page(page)
     return render(request, 'cliente/cliente.html', {'clientes': list_clientes, 'myFilter': myFilter})
 
+@login_required(login_url='login')
 def detalhe(request, pk):
     cliente = Cliente.objects.get(pk=pk)
     return render(request, 'cliente/detalhe.html', {'cliente': cliente})
 
+@login_required(login_url='login')
 def form(request):
     data = {}
     data['form'] = ClienteForm()
     return render(request, 'cliente/form.html', data)
 
+@login_required(login_url='login')
 def create(request):
     if request.method == 'POST':
         form = ClienteForm(request.POST, request.FILES)
@@ -37,11 +72,13 @@ def create(request):
     else:
         form = ClienteForm()
 
+@login_required(login_url='login')
 def edit(request, pk):
     cliente = Cliente.objects.get(pk=pk)
     form = ClienteForm(instance=cliente)
     return render(request, 'cliente/form.html', {'cliente': cliente, 'form': form})
 
+@login_required(login_url='login')
 def update(request, pk):
     cliente = Cliente.objects.get(pk=pk)
     form = ClienteForm(request.POST, request.FILES, instance=cliente)
@@ -50,12 +87,14 @@ def update(request, pk):
         messages.add_message(request, messages.INFO, 'Empenho atualizado com sucesso.')
         return redirect('cliente')
 
+@login_required(login_url='login')
 def delete(request, pk):
     cliente = Cliente.objects.get(pk=pk)
     cliente.delete()
     messages.add_message(request, messages.ERROR, 'Empenho excluido com sucesso.')
     return redirect('cliente')
 
+@login_required(login_url='login')
 def dashboard(request):
 
     number_empenhos = Cliente.objects.count()

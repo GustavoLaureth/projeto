@@ -1,0 +1,37 @@
+{% load widget_tweaks %}
+{% load static %}
+
+{% block conteudo %}
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'vendor/css/login.css' %}">
+    <title>Login - Empenhos</title>
+</head>
+
+<section class="login-box">
+    <div class="title">
+        <p>Login</p>
+    </div>
+    <div class="login-content">
+        <form method="post">{% csrf_token %}
+            <div class="username-content"><i class="fa-solid fa-envelope"></i><input type="email" name='email' placeholder="E-mail" required ></div>
+            <div class="password-content"><i class="fa-solid fa-lock"></i><input type="password" name='password' placeholder="Senha" required></div>
+            {% for field in login_form %}
+                {% for error in field.errors %}
+                    <p style="color: red;">{{error}}</p>
+                {% endfor %}
+            {% endfor %}
+
+            {% if login_form.non_field_errors %}
+                <div style="color: red; margin-top: 30px;">
+                    <p>{{login_form.non_field_errors}}</p>
+                </div>
+            {% endif %}
+            <div class="login-button">
+                <button type="submit">Login</button>
+            </div>        
+        </form>
+    </div>
+</section>
+{% endblock %}
