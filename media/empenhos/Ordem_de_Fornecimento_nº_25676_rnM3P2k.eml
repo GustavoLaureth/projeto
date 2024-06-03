@@ -1,0 +1,396 @@
+From - Thu May 23 11:54:21 2024
+X-Mozilla-Status: 0000
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+X-Account-Key: account9
+X-UIDL: UID28249-1633437133
+Return-Path: <no-reply@gestor.venith.com.br>
+Delivered-To: front@frontcomercial.com.br
+Received: from cpanel19.unifique.cloud
+	by cpanel19.unifique.cloud with LMTP
+	id +GZbBEdYT2bJqQMA7lOeTQ
+	(envelope-from <no-reply@gestor.venith.com.br>)
+	for <front@frontcomercial.com.br>; Thu, 23 May 2024 11:52:55 -0300
+Return-path: <no-reply@gestor.venith.com.br>
+Envelope-to: front@frontcomercial.com.br
+Delivery-date: Thu, 23 May 2024 11:52:55 -0300
+Received: from bumble.yew.relay.mailchannels.net ([23.83.220.25]:9227)
+	by cpanel19.unifique.cloud with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.97.1)
+	(envelope-from <no-reply@gestor.venith.com.br>)
+	id 1sA9oN-00000001L7d-0x79
+	for front@frontcomercial.com.br;
+	Thu, 23 May 2024 11:52:55 -0300
+X-Sender-Id: hostingeremail|x-authuser|no-reply@gestor.venith.com.br
+Received: from relay.mailchannels.net (localhost [127.0.0.1])
+	by relay.mailchannels.net (Postfix) with ESMTP id 141EA362F7D
+	for <front@frontcomercial.com.br>; Thu, 23 May 2024 14:52:06 +0000 (UTC)
+Received: from uk-fast-smtpout3.hostinger.io (unknown [127.0.0.6])
+	(Authenticated sender: hostingeremail)
+	by relay.mailchannels.net (Postfix) with ESMTPA id 3D992362E04
+	for <front@frontcomercial.com.br>; Thu, 23 May 2024 14:52:05 +0000 (UTC)
+ARC-Seal: i=1; s=arc-2022; d=mailchannels.net; t=1716475925; a=rsa-sha256;
+	cv=none;
+	b=uNBu9LBN6Ooelb/hJt712CyB094eCpHrEH7qeaxdWpa7H4T6iZV4SYA+N9JtblzFA54sUw
+	SeqAQQVRm/a8mzSv3cpg7U13giTBeDNqZko20VOqk3ng22TyWMj6OOG+sZXYjEdJTez8a5
+	D1mJx5CsWKG/HCDFWWI5OhLiQ+Q79MosrzlzaAcFNquYSgqCHpg2mYGF2uWfSVBE7wMNUB
+	79UsyiIRTEUOja05xPZ0D7E4v72672zjdmbQuHgKef9fBEZ07RAOui0xDzKkLlLHCFpYes
+	bUSDOLoNmvxhv4/uRdgVpWRbKCZtdoHj9FVzAGRdfdXs/7ezpuZ/LUcuSFRlUw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=mailchannels.net;
+	s=arc-2022; t=1716475925;
+	h=from:from:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:
+	 content-transfer-encoding:content-transfer-encoding:dkim-signature;
+	bh=nYmxFE8N8Jws4tMn5+HEMZcfoBYEf0eiBPmO+I+NHgE=;
+	b=LofjegjgUiJJvkYptLerx+gEl/uLBuVGVGExCFbRGN5OzNjWmHmlT7QKEnDLDKu0FJNKPr
+	oujkTUOobcUMaV+ehiIfhv4YAr+sgb+ShIX3DrZQhpPj3UQK436YC13yxrVkgKfYOwcr3C
+	TyBsqF2KZCu7WhTso36pmrrkur4tNEA+F2kf41yBWXqu875Yfj26rIaPv9B44vYqvsLPA/
+	pk9lOTQ1Y0IFI0GvjGQYzvtuvFbvN1CkMOBBSVcV/wvCm9OwIg/PpF9yzyFVilF0LjxOfM
+	zJVMcwOLKPP2DJwZaPnqE6Mcv9i5fASdSaxzawFNXeLuvrstfbnUk+kRbLYxhA==
+ARC-Authentication-Results: i=1;
+	rspamd-68bbddc7f5-lcvkk;
+	auth=pass smtp.auth=hostingeremail
+ smtp.mailfrom=no-reply@gestor.venith.com.br
+X-Sender-Id: hostingeremail|x-authuser|no-reply@gestor.venith.com.br
+X-MC-Relay: Good
+X-MailChannels-SenderId:
+ hostingeremail|x-authuser|no-reply@gestor.venith.com.br
+X-MailChannels-Auth-Id: hostingeremail
+X-Madly-Slimy: 2b13be9f1dac5d9a_1716475926003_2508262107
+X-MC-Loop-Signature: 1716475926003:305899349
+X-MC-Ingress-Time: 1716475926003
+Received: from uk-fast-smtpout3.hostinger.io (uk-fast-smtpout3.hostinger.io
+ [31.220.23.37])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384)
+	by 100.114.21.137 (trex/6.9.2);
+	Thu, 23 May 2024 14:52:06 +0000
+Date: Thu, 23 May 2024 11:52:01 -0300
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=gestor.venith.com.br;
+	s=hostingermail-a; t=1716475923;
+	h=from:from:reply-to:reply-to:subject:subject:date:date:
+	 message-id:message-id:to:to:cc:mime-version:mime-version:
+	 content-type:content-type:  content-transfer-encoding:content-transfer-encoding;
+	bh=idjw40/0Fbmg6W/kgX59Aj6Vm4hg2MEPM4jMFB/DPu0=;
+	b=PEBtmBKMOGia0Hzpyx3OnrztxgPFhRM1nhiBTvuDV560o3EKpQQ2N1Zb0FvNWR3yy0xzeT
+	5L+vc/h7CFJxNO20XUGcm1NvL6sRpo01XXGmcoFPbn+b/6Ih8U6L+bH0UPUYKbwxai031w
+	tyxy5mQqY48f4S3l8sC7/s6on1BQLz+OcU8Qzptg4aBPgq7xTQ6kpcKXB2NcqUOQ7MyNb9
+	iL8RJlGXlg57O2gZu6zOpElrDNOC/RoggivtRYpUFy4mMsIwL1snGqgWywDyin4SvQY6Jn
+	/aY5rNjd8ApI1vWYrVlc3+GSQchOYQsFXTbpPUHMspOmKKMhVDiXMcmxOWqa7g==
+To: FRONT COMERCIAL LTDA <front@frontcomercial.com.br>
+From: Gestor Plus <no-reply@gestor.venith.com.br>
+Reply-To: Gestor Plus <no-reply@gestor.venith.com.br>
+Subject: =?UTF-8?Q?Ordem_de_Fornecimento_n=C2=BA_25676?=
+Message-ID: <46a2f170e5677d7d704cf3b3b31d04a7@gestor.venith.com.br>
+X-Mailer: PHPMailer 5.2.16 (https://github.com/PHPMailer/PHPMailer)
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Content-Transfer-Encoding: 8bit
+X-CM-Envelope: MS4xfKCj8FhvoUEXtx1YvLgo+/Tvwn9NhkQWD2LgnHmNfwSzQB9eSAb7nqYCKapLJYwa9BQx//yIdEIIrFnkeoD3gdMSxZnyEhsv72PXtBEofbC64ABX2n37 jQYrVSwFgfmOQBw59PeILQJ6OrLbM1EqW/caPzjCqvmjj3T+qdIFB5tEM30TniK+M1CKk7sC3d1bTg25RNTJN/hNr9gXvGxWGdW2A87vKt0sVfpmDozW1HEt dgiqsVM3JlqIpJe06TwNYv8Y29EpoZCYT+oJGsu9tS0=
+X-CM-Analysis: v=2.4 cv=XL5iShhE c=1 sm=1 tr=0 ts=664f5813 a=oXM6PYFwau+hCh98Jenrrw==:617 a=xqWC_Br6kY4A:10 a=IkcTkHD0fZMA:10 a=5KLPUuaC_9wA:10 a=g8TUdU_LZmEA:10 a=SSmOFEACAAAA:8 a=8ej5aemIAAAA:8 a=SYiHBJXOnTxTm-wNxHEA:9 a=O2QKD8Ew6j2SkfYt:21 a=frz4AuCg-hUA:10 a=_W_S_7VecoQA:10 a=3ZKOabzyN94A:10 a=QEXdDO2ut3YA:10 a=xGcaBvv1o0tx8B3wbFeA:22 a=QXiUFU56U9gVRuKlB1ht:22
+X-AuthUser: no-reply@gestor.venith.com.br
+X-Spam-Status: No, score=1.6
+X-Spam-Score: 16
+X-Spam-Bar: +
+X-Ham-Report: Spam detection software, running on the system "cpanel19.unifique.cloud",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Ordem de Fornecimento Olá, Sua empresa acabou de receber
+    uma Ordem de Fornecimento, clique no botão abaixo para acessar: 
+ Content analysis details:   (1.6 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.8 BAYES_50               BODY: Bayes spam probability is 40 to 60%
+                             [score: 0.5000]
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was
+                             blocked.  See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URIs: venith.com.br]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.1 MIME_HTML_ONLY         BODY: Message only has text/html MIME parts
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily
+                             valid
+  0.0 T_KAM_HTML_FONT_INVALID Test for Invalidly Named or Formatted
+                             Colors in HTML
+  0.0 KAM_DMARC_STATUS       Test Rule for DKIM or SPF Failure with Strict
+                             Alignment
+  0.5 KAM_NUMSUBJECT         Subject ends in numbers excluding current years
+  0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
+X-Spam-Flag: NO
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD XHTML 1.0 Transitional //EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:v="urn:schemas-microsoft-com:vml" xmlns:o="urn:schemas-microsoft-com:office:office">
+<head>
+<!--[if gte mso 9]>
+<xml>
+  <o:OfficeDocumentSettings>
+    <o:AllowPNG/>
+    <o:PixelsPerInch>96</o:PixelsPerInch>
+  </o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="x-apple-disable-message-reformatting">
+  <!--[if !mso]><!--><meta http-equiv="X-UA-Compatible" content="IE=edge"><!--<![endif]-->
+  <title></title>
+
+    <style type="text/css">
+      @media only screen and (min-width: 520px) {
+  .u-row {
+    width: 500px !important;
+  }
+  .u-row .u-col {
+    vertical-align: top;
+  }
+
+  .u-row .u-col-100 {
+    width: 500px !important;
+  }
+
+}
+
+@media (max-width: 520px) {
+  .u-row-container {
+    max-width: 100% !important;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
+  }
+  .u-row .u-col {
+    min-width: 320px !important;
+    max-width: 100% !important;
+    display: block !important;
+  }
+  .u-row {
+    width: 100% !important;
+  }
+  .u-col {
+    width: 100% !important;
+  }
+  .u-col > div {
+    margin: 0 auto;
+  }
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+table,
+tr,
+td {
+  vertical-align: top;
+  border-collapse: collapse;
+}
+
+p {
+  margin: 0;
+}
+
+.ie-container table,
+.mso-container table {
+  table-layout: fixed;
+}
+
+* {
+  line-height: inherit;
+}
+
+a[x-apple-data-detectors='true'] {
+  color: inherit !important;
+  text-decoration: none !important;
+}
+
+table, td { color: #000000; } #u_body a { color: #0000ee; text-decoration: underline; }
+    </style>
+
+
+
+</head>
+
+<body class="clean-body u_body" style="margin: 0;padding: 0;-webkit-text-size-adjust: 100%;background-color: #ffffff;color: #000000">
+  <!--[if IE]><div class="ie-container"><![endif]-->
+  <!--[if mso]><div class="mso-container"><![endif]-->
+  <table id="u_body" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;min-width: 320px;Margin: 0 auto;background-color: #ffffff;width:100%" cellpadding="0" cellspacing="0">
+  <tbody>
+  <tr style="vertical-align: top">
+    <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top">
+    <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td align="center" style="background-color: #ffffff;"><![endif]-->
+
+
+<div class="u-row-container" style="padding: 0px;background-color: transparent">
+  <div class="u-row" style="Margin: 0 auto;min-width: 320px;max-width: 500px;overflow-wrap: break-word;word-wrap: break-word;word-break: break-word;background-color: transparent;">
+    <div style="border-collapse: collapse;display: table;width: 100%;height: 100%;background-color: transparent;">
+      <!--[if (mso)|(IE)]><table width="100%" cellpadding="0" cellspacing="0" border="0"><tr><td style="padding: 0px;background-color: transparent;" align="center"><table cellpadding="0" cellspacing="0" border="0" style="width:500px;"><tr style="background-color: transparent;"><![endif]-->
+
+<!--[if (mso)|(IE)]><td align="center" width="500" style="width: 500px;padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;" valign="top"><![endif]-->
+<div class="u-col u-col-100" style="max-width: 320px;min-width: 500px;display: table-cell;vertical-align: top;">
+  <div style="height: 100%;width: 100% !important;">
+  <!--[if (!mso)&(!IE)]><!--><div style="height: 100%; padding: 0px;border-top: 0px solid transparent;border-left: 0px solid transparent;border-right: 0px solid transparent;border-bottom: 0px solid transparent;"><!--<![endif]-->
+
+<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+
+  <h1 style="margin: 0px; line-height: 140%; text-align: left; word-wrap: break-word; font-weight: normal; font-size: 22px;">Ordem de Fornecimento</h1>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+
+  <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 1px solid #BBBBBB;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+    <tbody>
+      <tr style="vertical-align: top">
+        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+          <span>&#160;</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+
+  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
+    <p style="font-size: 14px; line-height: 140%;">Olá,</p>
+<p style="font-size: 14px; line-height: 140%;">Sua empresa acabou de receber uma Ordem de Fornecimento, clique no botão abaixo para acessar:</p>
+  </div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+
+  <!--[if mso]><style>.v-button {background: transparent !important;}</style><![endif]-->
+<div align="center">
+  <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="https://test.com" style="height:37px; v-text-anchor:middle; width:187px;" arcsize="11%"  stroke="f" fillcolor="#285f9b"><w:anchorlock/><center style="color:#FFFFFF;font-family:arial,helvetica,sans-serif;"><![endif]-->
+    <a href="https://gestor.venith.com.br/view/report/print-order?token=FuGuAAaGYcA%2BR2NTuKFuDTIzSWRZN1BKWElLNlB2clNOU0NXaWwxNmZ3NXhRSDJjQ3FGa0tpQXdhaUF3SlJ3em5ReXVnSUJ6SzlieVVjemFQSHNNNWxLcTVEcjZFMVp6ZEFoMVhXb3I4M1RONmEzK0Y5Y1RNOVJPTm9xbzhXNmxPSW84TkRqOThhTjNqdXJp" target="_blank" class="v-button" style="box-sizing: border-box;display: inline-block;font-family:arial,helvetica,sans-serif;text-decoration: none;-webkit-text-size-adjust: none;text-align: center;color: #FFFFFF; background-color: #285f9b; border-radius: 4px;-webkit-border-radius: 4px; -moz-border-radius: 4px; width:auto; max-width:100%; overflow-wrap: break-word; word-break: break-word; word-wrap:break-word; mso-border-alt: none;">
+      <span style="display:block;padding:10px 20px;line-height:120%;"><span style="font-size: 14px; line-height: 16.8px;">Ordem de fornecimento</span></span>
+    </a>
+  <!--[if mso]></center></v:roundrect><![endif]-->
+</div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+
+  <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 1px solid #BBBBBB;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+    <tbody>
+      <tr style="vertical-align: top">
+        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+          <span>&#160;</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+
+  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
+    <p style="font-size: 14px; line-height: 140%;"><strong><span style="font-size: 18px; line-height: 25.2px;">Dados do solicitante</span></strong></p>
+<p style="font-size: 14px; line-height: 140%;"> </p>
+  <p style="font-size: 14px; line-height: 140%;">PREFEITURA MUNICIPAL DE CAPIM GROSSO - BA</p>
+<p style="font-size: 14px; line-height: 140%;">CNPJ 31.359.483/0001-49</p>
+<p style="font-size: 14px; line-height: 140%;">Praca Nove de Maio, SN, Novo Horizonte, Capim Grosso, Bahia, CEP 44695-000</p>
+  </div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+
+  <table height="0px" align="center" border="0" cellpadding="0" cellspacing="0" width="100%" style="border-collapse: collapse;table-layout: fixed;border-spacing: 0;mso-table-lspace: 0pt;mso-table-rspace: 0pt;vertical-align: top;border-top: 1px solid #BBBBBB;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+    <tbody>
+      <tr style="vertical-align: top">
+        <td style="word-break: break-word;border-collapse: collapse !important;vertical-align: top;font-size: 0px;line-height: 0px;mso-line-height-rule: exactly;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%">
+          <span>&#160;</span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<table style="font-family:arial,helvetica,sans-serif;" role="presentation" cellpadding="0" cellspacing="0" width="100%" border="0">
+  <tbody>
+    <tr>
+      <td style="overflow-wrap:break-word;word-break:break-word;padding:10px;font-family:arial,helvetica,sans-serif;" align="left">
+
+  <div style="line-height: 140%; text-align: left; word-wrap: break-word;">
+    <p style="font-size: 14px; line-height: 140%;">Mensagem automática, por favor não responda.</p>
+<p style="font-size: 14px; line-height: 140%;"> </p>
+<p style="font-size: 14px; line-height: 140%;"><a rel="noopener" href="https://gestor.venith.com.br" target="_blank">Gestor Plus</a></p>
+<p style="font-size: 14px; line-height: 140%;">Software de Gestão Pública</p>
+  </div>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+  <!--[if (!mso)&(!IE)]><!--></div><!--<![endif]-->
+  </div>
+</div>
+<!--[if (mso)|(IE)]></td><![endif]-->
+      <!--[if (mso)|(IE)]></tr></table></td></tr></table><![endif]-->
+    </div>
+  </div>
+</div>
+
+
+    <!--[if (mso)|(IE)]></td></tr></table><![endif]-->
+    </td>
+  </tr>
+  </tbody>
+  </table>
+  <!--[if mso]></div><![endif]-->
+  <!--[if IE]></div><![endif]-->
+</body>
+
+</html>
+
