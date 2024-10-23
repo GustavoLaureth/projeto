@@ -1,0 +1,441 @@
+From - Thu Oct  3 14:32:36 2024
+X-Mozilla-Status: 0002
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+X-Account-Key: account7
+X-UIDL: UID9405-1525114045
+Return-Path: <dir.mat@uenp.edu.br>
+Delivered-To: sentinela@sentinelavale.com.br
+Received: from cpanel12-idc.redeunifique.com.br
+	by cpanel12-idc.redeunifique.com.br with LMTP
+	id 4EkaLwvV/mYcdgAAOr4tRw
+	(envelope-from <dir.mat@uenp.edu.br>)
+	for <sentinela@sentinelavale.com.br>; Thu, 03 Oct 2024 14:31:55 -0300
+Return-path: <dir.mat@uenp.edu.br>
+Envelope-to: sentinela@sentinelavale.com.br
+Delivery-date: Thu, 03 Oct 2024 14:31:55 -0300
+Received: from mail-ej1-f53.google.com ([209.85.218.53]:60770)
+	by cpanel12-idc.redeunifique.com.br with esmtps  (TLS1.2) tls TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256
+	(Exim 4.96.2)
+	(envelope-from <dir.mat@uenp.edu.br>)
+	id 1swPg7-000BUa-2W
+	for sentinela@sentinelavale.com.br;
+	Thu, 03 Oct 2024 14:31:55 -0300
+Received: by mail-ej1-f53.google.com with SMTP id a640c23a62f3a-a8d29b7edc2so163035466b.1
+        for <sentinela@sentinelavale.com.br>; Thu, 03 Oct 2024 10:31:35 -0700 (PDT)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=uenp.edu.br; s=google; t=1727976673; x=1728581473; darn=sentinelavale.com.br;
+        h=mime-version:date:message-id:subject:references:cc:to:from:from:to
+         :cc:subject:date:message-id:reply-to;
+        bh=5u0NYE25XlCJQwVSgDnXiNzTcX0SQ0BaPiggWQcmctY=;
+        b=CX9O+t1EdxyVUPlqj43yPV8wwqpvD98/f+ts7+wHwbGKP3aFSy0GkK7QFk0wuX6yjZ
+         MTfM84N5ceFB6o1Y0YUebV6rrfhBfFP6LkYjZWf6aTrWHk52pTOAO18PBHPnmcaPOPrI
+         uJVy1cEfuCWvGKIlCEzUK/yrRHmOk8xwfii5UOef/lw/vsq+1cMceTfInE0XRYIenQx+
+         XLNuqcKoMYfn4jTXmuYpFduocHL0TyOZogG5NPKbvM5oL5QmLt1+WPdDndbmsX3Prk83
+         BJWpWiI7UJlIgRLY4VfHXNDeGm7y12UYJ+VP+tMnGAaDyXjyPTafK3e6T4SDE8x2WNbR
+         TJbg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1727976673; x=1728581473;
+        h=mime-version:date:message-id:subject:references:cc:to:from
+         :x-gm-message-state:from:to:cc:subject:date:message-id:reply-to;
+        bh=5u0NYE25XlCJQwVSgDnXiNzTcX0SQ0BaPiggWQcmctY=;
+        b=bI9h9K4tuKxrQwcjaj/ANBnybEfkRyiRl1x2xDRnEJhFQap1ptf3flGQ9h2U2SFM0J
+         MZhZX56m2rMBPqbN3QnQIAKfJIh5vIxj4fA3+/BjVDJm0J6iPB/uY4dpLMAkvJi7PqvC
+         jxi4irehKpZ3sZD0NWkZuwMbav/lDQGtjaerQRmBYrr3Za27iTXbd9m0pSBzvN2isBeL
+         VMzTPoFJfuFtJcCenuOpLN1rc0qJKjrqgYulipXRiGHl00myuiT0NHphITp6VUQEUnKN
+         ac/sCp6s5l8crvaC8QGcjCHPPgiN52yFnm+viexg6OIvqZg2ftW4BaEWWhRVOlwwzKi5
+         EPAw==
+X-Gm-Message-State: AOJu0YzbkfNs4e4rptkCVDG4S1T8EAOXWNXlSZSP+PfsxP28P/+vgJcT
+	TIRLvmE9kh1APhN9SmkYDV8v3i6Z7bN3Ge4OysNh+fJhWAUFQkoIz4g7CkbSK/e51xNQ2vstb0M
+	y
+X-Google-Smtp-Source: AGHT+IHB66xsJPGu+iR4GN5IuBnj8tVtBSazDOin9uoW9h4zOttxuY3ba2Wk/RQ7HUCfTW1VIpXM5g==
+X-Received: by 2002:a17:907:e6c9:b0:a8a:926a:d027 with SMTP id a640c23a62f3a-a991bfd8564mr11667366b.45.1727976672519;
+        Thu, 03 Oct 2024 10:31:12 -0700 (PDT)
+Received: from [127.0.0.1] (ec2-34-252-18-194.eu-west-1.compute.amazonaws.com. [34.252.18.194])
+        by smtp.gmail.com with ESMTPSA id a640c23a62f3a-a99104c97fasm110537466b.208.2024.10.03.10.31.12
+        for <sentinela@sentinelavale.com.br>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Thu, 03 Oct 2024 10:31:12 -0700 (PDT)
+From: "UENP/Proaf - Diretoria de Material" <dir.mat@uenp.edu.br>
+To: sentinela@sentinelavale.com.br
+Cc: "Setor Compras - CLM" <setorcompras.clm@uenp.edu.br>, Planejamento
+ Campus Jacarezinho <planejamento.cj@uenp.edu.br>,
+ =?UTF-8?Q?Infraestrutura_e_Servi=C3=A7os_Campus_de?=
+ =?UTF-8?Q?_Jacarezinho?= <coordenadoria.infraestrutura.cj@uenp.edu.br>,
+ Setor de Compras do CCP <setorcompras.ccp@uenp.edu.br>, Almoxarifado
+ Campus Luiz Meneghel <almoxarifado.clm@uenp.edu.br>, Almoxarifado Campus
+ de Jacarezinho <almoxarifado.cj@uenp.edu.br>, "UENP/Reitoria -
+ Almoxarifado" <almoxarifado@uenp.edu.br>
+References: <7e5fc8b851.940c@mailtrack.io>
+Subject: =?UTF-8?Q?ORDENS_DE_FORNECIMENTO_DE_MATERIAL_?=
+ =?UTF-8?Q?=E2=80=93_N=2E=C2=BA_2024520_A_2024523_-?=
+ =?UTF-8?Q?_AQUISI=C3=87=C3=83O_DE_MATERIAIS_HIDROS?=
+ =?UTF-8?Q?SANIT=C3=81RIOS?=
+Message-ID: <f0efb18d-9cd0-500c-7b65-a2fb57418078@uenp.edu.br>
+Date: Thu, 03 Oct 2024 17:31:09 +0000
+MIME-Version: 1.0
+Content-Type: multipart/alternative;
+ boundary="--_NmP-07c19f175bcbad53-Part_1"
+
+----_NmP-07c19f175bcbad53-Part_1
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+ORDENS DE=C2=A0FORNECIMENTO=C2=A0DE MATERIAL=C2=A0 =E2=80=93 N.=C2=BA =
+2024520, 2024521, 2024522 E 2024523
+
+Prezados(as),
+
+
+Segue ordens de=C2=A0fornecimento referente =C3=A0 aquisi=C3=A7=C3=A3o =
+de=C2=A0MATERIAIS=C2=A0HIDROSSANIT=C3=81RIOS
+.
+
+[https://drive-thirdparty.=
+googleusercontent.com/16/type/application/pdf]=C2=A0OF
+2024520 - MATERIAIS HIDROSSANIT=C3=81RIOS - CLM - 03-10-2024.pdf
+[https://drive.google.com/open?id=3D10rVhMoi23D7U2ltJ8cpp2uUdsrIloJLm][//ss=
+l.gstatic.com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png]
+[https://drive-thirdparty.googleusercontent.com/16/type/application/pdf]=
+=C2=A0EMPENHO2024NE006241-SENTINELA.pdf
+[https://drive.google.com/open?=
+id=3D10SiP-v73njjxALQchOxGbVeHJyKMxOLe][//ssl.gstatic.=
+com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png]
+[https://drive-thirdparty.googleusercontent.com/16/type/application/pdf]=
+=C2=A0OF
+2024521 - MATERIAIS HIDROSSANIT=C3=81RIOS - CJ - 03-10-2024.pdf
+[https://drive.google.com/open?id=3D10rsJzntRovKJ7kAdHRvZlx3DC9P7CV9b][//ss=
+l.gstatic.com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png]
+[https://drive-thirdparty.googleusercontent.com/16/type/application/pdf]=
+=C2=A0EMPENHO2024NE006283-SENTINELA.pdf
+[https://drive.google.com/open?=
+id=3D10Pg5I4hr2uJU11QoCWJPsWJvNyfd6Qci][//ssl.gstatic.=
+com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png]
+[https://drive-thirdparty.googleusercontent.com/16/type/application/pdf]=
+=C2=A0OF
+2024522 - MATERIAIS HIDROSSANIT=C3=81RIOS - CCP - 03-10-2024.pdf
+[https://drive.google.com/open?id=3D10uRHy8nE-3EUwrkYc8LbaoUB7nSwIMvc][//ss=
+l.gstatic.com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png]
+[https://drive-thirdparty.googleusercontent.com/16/type/application/pdf]=
+=C2=A0EMPENHO2024NE006429-SENTINELA.pdf
+[https://drive.google.com/open?=
+id=3D10LRnHIUkoWoHXl4dKLGhBDI8J1v5FT25][//ssl.gstatic.=
+com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png]
+[https://drive-thirdparty.googleusercontent.com/16/type/application/pdf]=
+=C2=A0OF
+2024523 - MATERIAIS HIDROSSANIT=C3=81RIOS - RTA - 03-10-2024.pdf
+[https://drive.google.com/open?id=3D10xU0vDB6hbTWbhY_KrxnVEg7byEdou2z][//ss=
+l.gstatic.com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png]
+[https://drive-thirdparty.googleusercontent.com/16/type/application/pdf]=
+=C2=A0EMPENHO2024NE005953
+-SENTINELA.pdf
+[https://drive.google.com/open?=
+id=3D10JUnnkCkYpNREY-sJ0G5QPfgye3Vrkzf][//ssl.gstatic.=
+com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png]
+[https://drive-thirdparty.googleusercontent.com/16/type/application/pdf]=
+=C2=A0Contrato522024ass.pdf
+[https://drive.google.com/open?=
+id=3D1cQ1kjKO7PZqRbtL1gm-Q44RZS4EXY3a2][//ssl.gstatic.=
+com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png]
+
+
+Descri=C3=A7=C3=B5es t=C3=A9cnicas, faturamento e endere=C3=A7os de entrega=
+ est=C3=A3o especificados nos
+documentos.
+
+
+
+ * Aguardamos=C2=A0 a =
+confirma=C3=A7=C3=A3o do recebimento deste e-mail com previs=C3=A3o de
+   entrega.=C2=A0
+
+
+Colocamo-nos =C3=A0 disposi=C3=A7=C3=A3o para eventuais=
+ esclarecimentos.
+
+
+
+
+Atenciosamente,
+
+
+
+
+Fernando Azevedo Rodrigues
+Agente Administrador
+
+
+
+
+Diretoria de Materiais
+PROAF - Pr=C3=B3-reitoria =
+de Administra=C3=A7=C3=A3o e Finan=C3=A7as - Reitoria/UENP
+Telefone: (43) 3511 3264
+WhatsApp: (43) 3511 3274
+dir.mat@uenp.edu.br [dir.=
+mat@uenp.edu.br]
+EMAIL RASTREADO
+[data:image/gif;base64,=
+R0lGODlhAQABAIAAAP///wAAACwAAAAAAQABAAACAkQBADs=3D3D]
+----_NmP-07c19f175bcbad53-Part_1
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<p class=3D"MsoNormal" align=3D"center" style=3D"margin: 2.85pt 5.65pt 2.=
+85pt 0cm; text-align: center;"><b><span style=3D"font-size: 14pt; =
+font-family: Arial, sans-serif;">ORDENS DE&nbsp;FORNECIMENTO&nbsp;DE =
+MATERIAL&nbsp; =E2=80=93 N.=C2=BA 2024520, 2024521, 2024522 E =
+2024523</span></b></p><div>Prezados(as),</div><div><span =
+style=3D"text-align: center;"><br></span></div><div><span =
+style=3D"text-align: center;">Segue ordens de&nbsp;fornecimento referente =
+=C3=A0 aquisi=C3=A7=C3=A3o de&nbsp;<font face=3D"Arial, sans-serif"><span =
+style=3D"font-size: 18.6667px;"><b><span zeum4c13=3D"PR_1_0" =
+data-ddnwab=3D"PR_1_0" aria-invalid=3D"grammar" class=3D"Lm =
+ng">MATERIAIS</span>&nbsp;HIDROSSANIT=C3=81RIOS .</b></span></font></span><=
+/div><div>=E2=80=8B=E2=80=8B=E2=80=8B=E2=80=8B=E2=80=8B=E2=80=8B=E2=80=8B=
+=E2=80=8B=E2=80=8B=E2=80=8B</div><div contenteditable=3D"false" =
+class=3D"gmail_chip gmail_drive_chip" style=3D"width: 386px; height: 20px; =
+max-height: 20px; background-color: rgb(245, 245, 245); margin: 6px 0px; =
+padding: 10px; font-variant-numeric: normal; font-variant-east-asian: =
+normal; font-variant-alternates: normal; font-size-adjust: none; =
+font-kerning: auto; font-optical-sizing: auto; font-feature-settings: =
+normal; font-variation-settings: normal; font-variant-position: normal; =
+font-stretch: normal; font-size: 14px; line-height: 20px; font-family: =
+&quot;Google Sans&quot;, sans-serif; cursor: default; border: 1px solid =
+rgb(221, 221, 221);"><a href=3D"https://drive.google.com/open?=
+id=3D10rVhMoi23D7U2ltJ8cpp2uUdsrIloJLm" target=3D"_blank" style=3D"color: =
+rgb(32, 33, 36); display: inline-block; max-width: 356px; overflow: hidden;=
+ text-overflow: ellipsis; text-wrap: nowrap; text-decoration-line: none; =
+border: none;" aria-label=3D"OF 2024520 - MATERIAIS HIDROSSANIT=C3=81RIOS -=
+ CLM - 03-10-2024.pdf"><img style=3D"vertical-align: text-bottom; border: =
+none; padding-right: 10px; height: 20px;" alt=3D"" src=3D"https://drive-thi=
+rdparty.googleusercontent.com/16/type/application/pdf">&nbsp;<span =
+dir=3D"ltr" style=3D"vertical-align: bottom; text-decoration: none;">OF =
+2024520 - MATERIAIS HIDROSSANIT=C3=81RIOS - CLM - 03-10-2024.=
+pdf</span></a><img src=3D"//ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/close_b=
+aseline_nv700_20dp.png" class=3D"gmail_chip_remove" aria-label=3D"Remover =
+anexo" style=3D"padding-left: 10px; cursor: pointer; width: 20px; height: =
+20px; float: right; display: none;"></div>=E2=80=8B=E2=80=8B<div =
+contenteditable=3D"false" class=3D"gmail_chip gmail_drive_chip" =
+style=3D"width: 386px; height: 20px; max-height: 20px; background-color: =
+rgb(245, 245, 245); margin: 6px 0px; padding: 10px; font-variant-numeric: =
+normal; font-variant-east-asian: normal; font-variant-alternates: normal; =
+font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; =
+font-feature-settings: normal; font-variation-settings: normal; =
+font-variant-position: normal; font-stretch: normal; font-size: 14px; =
+line-height: 20px; font-family: &quot;Google Sans&quot;, sans-serif; =
+cursor: default; border: 1px solid rgb(221, 221, 221);"><a =
+href=3D"https://drive.google.com/open?id=3D10SiP-v73njjxALQchOxGbVeHJyKMxOL=
+e" target=3D"_blank" style=3D"color: rgb(32, 33, 36); display: =
+inline-block; max-width: 356px; overflow: hidden; text-overflow: ellipsis; =
+text-wrap: nowrap; text-decoration-line: none; border: none;" =
+aria-label=3D"EMPENHO2024NE006241-SENTINELA.pdf"><img =
+style=3D"vertical-align: text-bottom; border: none; padding-right: 10px; =
+height: 20px;" alt=3D"" src=3D"https://drive-thirdparty.googleusercontent.=
+com/16/type/application/pdf">&nbsp;<span dir=3D"ltr" =
+style=3D"vertical-align: bottom; text-decoration: none;">EMPENHO2024NE00624=
+1-SENTINELA.pdf</span></a><img src=3D"//ssl.gstatic.=
+com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png" =
+class=3D"gmail_chip_remove" aria-label=3D"Remover anexo" =
+style=3D"padding-left: 10px; cursor: pointer; width: 20px; height: 20px; =
+float: right; display: none;"></div>=E2=80=8B=E2=80=8B<div =
+contenteditable=3D"false" class=3D"gmail_chip gmail_drive_chip" =
+style=3D"width: 386px; height: 20px; max-height: 20px; background-color: =
+rgb(245, 245, 245); margin: 6px 0px; padding: 10px; font-variant-numeric: =
+normal; font-variant-east-asian: normal; font-variant-alternates: normal; =
+font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; =
+font-feature-settings: normal; font-variation-settings: normal; =
+font-variant-position: normal; font-stretch: normal; font-size: 14px; =
+line-height: 20px; font-family: &quot;Google Sans&quot;, sans-serif; =
+cursor: default; border: 1px solid rgb(221, 221, 221);"><a =
+href=3D"https://drive.google.com/open?id=3D10rsJzntRovKJ7kAdHRvZlx3DC9P7CV9=
+b" target=3D"_blank" style=3D"color: rgb(32, 33, 36); display: =
+inline-block; max-width: 356px; overflow: hidden; text-overflow: ellipsis; =
+text-wrap: nowrap; text-decoration-line: none; border: none;" =
+aria-label=3D"OF 2024521 - MATERIAIS HIDROSSANIT=C3=81RIOS - CJ - =
+03-10-2024.pdf"><img style=3D"vertical-align: text-bottom; border: none; =
+padding-right: 10px; height: 20px;" alt=3D"" src=3D"https://drive-thirdpart=
+y.googleusercontent.com/16/type/application/pdf">&nbsp;<span dir=3D"ltr" =
+style=3D"vertical-align: bottom; text-decoration: none;">OF 2024521 - =
+MATERIAIS HIDROSSANIT=C3=81RIOS - CJ - 03-10-2024.pdf</span></a><img =
+src=3D"//ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.=
+png" class=3D"gmail_chip_remove" aria-label=3D"Remover anexo" =
+style=3D"padding-left: 10px; cursor: pointer; width: 20px; height: 20px; =
+float: right; display: none;"></div>=E2=80=8B=E2=80=8B<div =
+contenteditable=3D"false" class=3D"gmail_chip gmail_drive_chip" =
+style=3D"width: 386px; height: 20px; max-height: 20px; background-color: =
+rgb(245, 245, 245); margin: 6px 0px; padding: 10px; font-variant-numeric: =
+normal; font-variant-east-asian: normal; font-variant-alternates: normal; =
+font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; =
+font-feature-settings: normal; font-variation-settings: normal; =
+font-variant-position: normal; font-stretch: normal; font-size: 14px; =
+line-height: 20px; font-family: &quot;Google Sans&quot;, sans-serif; =
+cursor: default; border: 1px solid rgb(221, 221, 221);"><a =
+href=3D"https://drive.google.com/open?id=3D10Pg5I4hr2uJU11QoCWJPsWJvNyfd6Qc=
+i" target=3D"_blank" style=3D"color: rgb(32, 33, 36); display: =
+inline-block; max-width: 356px; overflow: hidden; text-overflow: ellipsis; =
+text-wrap: nowrap; text-decoration-line: none; border: none;" =
+aria-label=3D"EMPENHO2024NE006283-SENTINELA.pdf"><img =
+style=3D"vertical-align: text-bottom; border: none; padding-right: 10px; =
+height: 20px;" alt=3D"" src=3D"https://drive-thirdparty.googleusercontent.=
+com/16/type/application/pdf">&nbsp;<span dir=3D"ltr" =
+style=3D"vertical-align: bottom; text-decoration: none;">EMPENHO2024NE00628=
+3-SENTINELA.pdf</span></a><img src=3D"//ssl.gstatic.=
+com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png" =
+class=3D"gmail_chip_remove" aria-label=3D"Remover anexo" =
+style=3D"padding-left: 10px; cursor: pointer; width: 20px; height: 20px; =
+float: right; display: none;"></div>=E2=80=8B=E2=80=8B<div =
+contenteditable=3D"false" class=3D"gmail_chip gmail_drive_chip" =
+style=3D"width: 386px; height: 20px; max-height: 20px; background-color: =
+rgb(245, 245, 245); margin: 6px 0px; padding: 10px; font-variant-numeric: =
+normal; font-variant-east-asian: normal; font-variant-alternates: normal; =
+font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; =
+font-feature-settings: normal; font-variation-settings: normal; =
+font-variant-position: normal; font-stretch: normal; font-size: 14px; =
+line-height: 20px; font-family: &quot;Google Sans&quot;, sans-serif; =
+cursor: default; border: 1px solid rgb(221, 221, 221);"><a =
+href=3D"https://drive.google.com/open?id=3D10uRHy8nE-3EUwrkYc8LbaoUB7nSwIMv=
+c" target=3D"_blank" style=3D"color: rgb(32, 33, 36); display: =
+inline-block; max-width: 356px; overflow: hidden; text-overflow: ellipsis; =
+text-wrap: nowrap; text-decoration-line: none; border: none;" =
+aria-label=3D"OF 2024522 - MATERIAIS HIDROSSANIT=C3=81RIOS - CCP - =
+03-10-2024.pdf"><img style=3D"vertical-align: text-bottom; border: none; =
+padding-right: 10px; height: 20px;" alt=3D"" src=3D"https://drive-thirdpart=
+y.googleusercontent.com/16/type/application/pdf">&nbsp;<span dir=3D"ltr" =
+style=3D"vertical-align: bottom; text-decoration: none;">OF 2024522 - =
+MATERIAIS HIDROSSANIT=C3=81RIOS - CCP - 03-10-2024.pdf</span></a><img =
+src=3D"//ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.=
+png" class=3D"gmail_chip_remove" aria-label=3D"Remover anexo" =
+style=3D"padding-left: 10px; cursor: pointer; width: 20px; height: 20px; =
+float: right; display: none;"></div>=E2=80=8B=E2=80=8B<div =
+contenteditable=3D"false" class=3D"gmail_chip gmail_drive_chip" =
+style=3D"width: 386px; height: 20px; max-height: 20px; background-color: =
+rgb(245, 245, 245); margin: 6px 0px; padding: 10px; font-variant-numeric: =
+normal; font-variant-east-asian: normal; font-variant-alternates: normal; =
+font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; =
+font-feature-settings: normal; font-variation-settings: normal; =
+font-variant-position: normal; font-stretch: normal; font-size: 14px; =
+line-height: 20px; font-family: &quot;Google Sans&quot;, sans-serif; =
+cursor: default; border: 1px solid rgb(221, 221, 221);"><a =
+href=3D"https://drive.google.com/open?id=3D10LRnHIUkoWoHXl4dKLGhBDI8J1v5FT2=
+5" target=3D"_blank" style=3D"color: rgb(32, 33, 36); display: =
+inline-block; max-width: 356px; overflow: hidden; text-overflow: ellipsis; =
+text-wrap: nowrap; text-decoration-line: none; border: none;" =
+aria-label=3D"EMPENHO2024NE006429-SENTINELA.pdf"><img =
+style=3D"vertical-align: text-bottom; border: none; padding-right: 10px; =
+height: 20px;" alt=3D"" src=3D"https://drive-thirdparty.googleusercontent.=
+com/16/type/application/pdf">&nbsp;<span dir=3D"ltr" =
+style=3D"vertical-align: bottom; text-decoration: none;">EMPENHO2024NE00642=
+9-SENTINELA.pdf</span></a><img src=3D"//ssl.gstatic.=
+com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png" =
+class=3D"gmail_chip_remove" aria-label=3D"Remover anexo" =
+style=3D"padding-left: 10px; cursor: pointer; width: 20px; height: 20px; =
+float: right; display: none;"></div>=E2=80=8B=E2=80=8B<div =
+contenteditable=3D"false" class=3D"gmail_chip gmail_drive_chip" =
+style=3D"width: 386px; height: 20px; max-height: 20px; background-color: =
+rgb(245, 245, 245); margin: 6px 0px; padding: 10px; font-variant-numeric: =
+normal; font-variant-east-asian: normal; font-variant-alternates: normal; =
+font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; =
+font-feature-settings: normal; font-variation-settings: normal; =
+font-variant-position: normal; font-stretch: normal; font-size: 14px; =
+line-height: 20px; font-family: &quot;Google Sans&quot;, sans-serif; =
+cursor: default; border: 1px solid rgb(221, 221, 221);"><a =
+href=3D"https://drive.google.com/open?id=3D10xU0vDB6hbTWbhY_KrxnVEg7byEdou2=
+z" target=3D"_blank" style=3D"color: rgb(32, 33, 36); display: =
+inline-block; max-width: 356px; overflow: hidden; text-overflow: ellipsis; =
+text-wrap: nowrap; text-decoration-line: none; border: none;" =
+aria-label=3D"OF 2024523 - MATERIAIS HIDROSSANIT=C3=81RIOS - RTA - =
+03-10-2024.pdf"><img style=3D"vertical-align: text-bottom; border: none; =
+padding-right: 10px; height: 20px;" alt=3D"" src=3D"https://drive-thirdpart=
+y.googleusercontent.com/16/type/application/pdf">&nbsp;<span dir=3D"ltr" =
+style=3D"vertical-align: bottom; text-decoration: none;">OF 2024523 - =
+MATERIAIS HIDROSSANIT=C3=81RIOS - RTA - 03-10-2024.pdf</span></a><img =
+src=3D"//ssl.gstatic.com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.=
+png" class=3D"gmail_chip_remove" aria-label=3D"Remover anexo" =
+style=3D"padding-left: 10px; cursor: pointer; width: 20px; height: 20px; =
+float: right; display: none;"></div>=E2=80=8B=E2=80=8B<div =
+contenteditable=3D"false" class=3D"gmail_chip gmail_drive_chip" =
+style=3D"width: 386px; height: 20px; max-height: 20px; background-color: =
+rgb(245, 245, 245); margin: 6px 0px; padding: 10px; font-variant-numeric: =
+normal; font-variant-east-asian: normal; font-variant-alternates: normal; =
+font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; =
+font-feature-settings: normal; font-variation-settings: normal; =
+font-variant-position: normal; font-stretch: normal; font-size: 14px; =
+line-height: 20px; font-family: &quot;Google Sans&quot;, sans-serif; =
+cursor: default; border: 1px solid rgb(221, 221, 221);"><a =
+href=3D"https://drive.google.com/open?id=3D10JUnnkCkYpNREY-sJ0G5QPfgye3Vrkz=
+f" target=3D"_blank" style=3D"color: rgb(32, 33, 36); display: =
+inline-block; max-width: 356px; overflow: hidden; text-overflow: ellipsis; =
+text-wrap: nowrap; text-decoration-line: none; border: none;" =
+aria-label=3D"EMPENHO2024NE005953 -SENTINELA.pdf"><img =
+style=3D"vertical-align: text-bottom; border: none; padding-right: 10px; =
+height: 20px;" alt=3D"" src=3D"https://drive-thirdparty.googleusercontent.=
+com/16/type/application/pdf">&nbsp;<span dir=3D"ltr" =
+style=3D"vertical-align: bottom; text-decoration: none;">EMPENHO2024NE00595=
+3 -SENTINELA.pdf</span></a><img src=3D"//ssl.gstatic.=
+com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png" =
+class=3D"gmail_chip_remove" aria-label=3D"Remover anexo" =
+style=3D"padding-left: 10px; cursor: pointer; width: 20px; height: 20px; =
+float: right; display: none;"></div>=E2=80=8B=E2=80=8B<div =
+contenteditable=3D"false" class=3D"gmail_chip gmail_drive_chip" =
+style=3D"width: 386px; height: 20px; max-height: 20px; background-color: =
+rgb(245, 245, 245); margin: 6px 0px; padding: 10px; font-variant-numeric: =
+normal; font-variant-east-asian: normal; font-variant-alternates: normal; =
+font-size-adjust: none; font-kerning: auto; font-optical-sizing: auto; =
+font-feature-settings: normal; font-variation-settings: normal; =
+font-variant-position: normal; font-stretch: normal; font-size: 14px; =
+line-height: 20px; font-family: &quot;Google Sans&quot;, sans-serif; =
+cursor: default; border: 1px solid rgb(221, 221, 221);"><a =
+href=3D"https://drive.google.com/open?id=3D1cQ1kjKO7PZqRbtL1gm-Q44RZS4EXY3a=
+2" target=3D"_blank" style=3D"color: rgb(32, 33, 36); display: =
+inline-block; max-width: 356px; overflow: hidden; text-overflow: ellipsis; =
+text-wrap: nowrap; text-decoration-line: none; border: none;" =
+aria-label=3D"Contrato522024ass.pdf"><img style=3D"vertical-align: =
+text-bottom; border: none; padding-right: 10px; height: 20px;" alt=3D"" =
+src=3D"https://drive-thirdparty.googleusercontent.com/16/type/application/p=
+df">&nbsp;<span dir=3D"ltr" style=3D"vertical-align: bottom; =
+text-decoration: none;">Contrato522024ass.pdf</span></a><img src=3D"//ssl.=
+gstatic.com/ui/v1/icons/mail/gm3/1x/close_baseline_nv700_20dp.png" =
+class=3D"gmail_chip_remove" aria-label=3D"Remover anexo" =
+style=3D"padding-left: 10px; cursor: pointer; width: 20px; height: 20px; =
+float: right; display: none;"></div>=E2=80=8B<div><br><div><div>Descri=
+=C3=A7=C3=B5es t=C3=A9cnicas, faturamento e endere=C3=A7os de entrega =
+est=C3=A3o especificados nos documentos.<br></div><div><br></div><div><ul><=
+li style=3D"margin-left: 15px;"><span style=3D"color: rgb(0, 0, =
+0);">Aguardamos&nbsp; a confirma=C3=A7=C3=A3o do recebimento deste e-mail =
+com previs=C3=A3o de entrega.&nbsp;</span></li></ul><br>Colocamo-nos =C3=A0=
+ disposi=C3=A7=C3=A3o para eventuais esclarecimentos.</div><div><span =
+style=3D"font-family: Arial, sans-serif; text-indent: 42.55pt; text-align: =
+justify;"><br></span></div><div><span style=3D"font-family: Arial, =
+sans-serif; text-indent: 42.55pt; text-align: justify;"><br></span></div><d=
+iv><span style=3D"font-family: Arial, sans-serif; text-indent: 42.55pt; =
+text-align: justify;">Atenciosamente,</span></div><div><span =
+style=3D"font-family: Arial, sans-serif; text-indent: 42.55pt; text-align: =
+justify;"><br></span></div><div><br></div><div><span style=3D"font-family: =
+Arial, sans-serif; text-indent: 42.55pt; text-align: justify;">Fernando =
+Azevedo Rodrigues</span></div><div><span style=3D"font-family: Arial, =
+sans-serif; text-indent: 42.55pt; text-align: justify;">Agente =
+Administrador</span></div><div><div dir=3D"ltr" class=3D"gmail_signature"><=
+div dir=3D"ltr"><div style=3D"color: rgb(136, 136, 136);"><br></div></div><=
+/div></div></div><div><div dir=3D"ltr" class=3D"gmail_signature" =
+data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div><div><div =
+dir=3D"ltr"><div dir=3D"ltr"><div style=3D"color:rgb(34,34,=
+34)"><br></div><div style=3D"color:rgb(136,136,136)"><div =
+style=3D"color:rgb(34,34,34)"><b><font color=3D"#000000" =
+size=3D"4">Diretoria de Materiais</font></b></div><div =
+style=3D"color:rgb(34,34,34)"><b><font color=3D"#000000" size=3D"4">PROAF -=
+ Pr=C3=B3-reitoria de Administra=C3=A7=C3=A3o e Finan=C3=A7as - =
+Reitoria/</font></b><b><font color=3D"#000000" size=3D"4">UENP</font></b></=
+div><div style=3D"color:rgb(34,34,34)"><b><font color=3D"#000000">Telefone:=
+ (43) 3511 3264</font></b></div><div style=3D"color:rgb(34,34,34)"><b><font=
+ color=3D"#6aa84f">WhatsApp: (43) 3511 3274</font></b></div><div><a =
+href=3D"mailto:dir.mat@uenp.edu.br" style=3D"color:rgb(17,85,204)" =
+target=3D"_blank"><b>dir.mat@uenp.edu.br</b></a></div><div =
+style=3D"color:rgb(34,34,34)"><font color=3D"#ff0000"><i><b>EMAIL =
+RASTREADO</b></i></font></div></div></div></div></div></div></div></div></d=
+iv></div>
+<img width=3D"0" height=3D"0" class=3D"mailtrack-img" alt=3D"" =
+style=3D"display:flex" src=3D"https://mailtrack.io/trace/mail/w/c2VudGluZWx=
+hQHNlbnRpbmVsYXZhbGUuY29tLmJy/d97a52fab3f4461c9ccfc0e31a7b5cccb71fce7b.png?=
+u=3D7362500" >
+----_NmP-07c19f175bcbad53-Part_1--
