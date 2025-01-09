@@ -1,0 +1,205 @@
+X-Account-Key: account9
+X-UIDL: UID48342-1633437133
+X-Mozilla-Status: 0000
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Return-Path: <setordecompras01@junqueiro.al.gov.br>
+Delivered-To: front@frontcomercial.com.br
+Received: from cpanel19.unifique.cloud
+	by cpanel19.unifique.cloud with LMTP
+	id wK6sKtuVbmc1PC4A7lOeTQ
+	(envelope-from <setordecompras01@junqueiro.al.gov.br>)
+	for <front@frontcomercial.com.br>; Fri, 27 Dec 2024 08:56:11 -0300
+Return-path: <setordecompras01@junqueiro.al.gov.br>
+Envelope-to: front@frontcomercial.com.br
+Delivery-date: Fri, 27 Dec 2024 08:56:11 -0300
+Received: from sienna.cherry.relay.mailchannels.net ([23.83.223.165]:22847)
+	by cpanel19.unifique.cloud with esmtps  (TLS1.3) tls TLS_AES_256_GCM_SHA384
+	(Exim 4.98)
+	(envelope-from <setordecompras01@junqueiro.al.gov.br>)
+	id 1tR8wt-0000000CpVy-1x01
+	for front@frontcomercial.com.br;
+	Fri, 27 Dec 2024 08:56:11 -0300
+X-Sender-Id: hostingeremail|x-authuser|setordecompras01@junqueiro.al.gov.br
+Received: from relay.mailchannels.net (localhost [127.0.0.1])
+	by relay.mailchannels.net (Postfix) with ESMTP id 19A493236F9
+	for <front@frontcomercial.com.br>; Fri, 27 Dec 2024 11:55:27 +0000 (UTC)
+Received: from uk-fast-smtpout2.hostinger.io (100-109-21-121.trex-nlb.outbound.svc.cluster.local [100.109.21.121])
+	(Authenticated sender: hostingeremail)
+	by relay.mailchannels.net (Postfix) with ESMTPA id 3BDB93236EB
+	for <front@frontcomercial.com.br>; Fri, 27 Dec 2024 11:55:26 +0000 (UTC)
+ARC-Seal: i=1; s=arc-2022; d=mailchannels.net; t=1735300526; a=rsa-sha256;
+	cv=none;
+	b=D/9m2mjawbobYypRBVqiS4itolH0mrKu1ZQg0aPXNIIB31LP4922MNwFT6CxpMwNaAP8Z9
+	sMpsMpKexU3wPkTw/h1BZreSfZ2JQFLPcGwIkN2p9E2I/bdhc4GAvKS5jHM3z9vzEUkbLA
+	WdUSDvFIN8dTtRdjqv35MShtraH6BlzyH/3CgFUFZV96fiZdZ9Bt2j/krc1ydYioQOmMD3
+	fahDI9fTGivxQBWj2BgWotU6ipus7IhDWFfk+/EtzKeICawnDkBcYBCL8wf4NIibZaVRFi
+	7NsfQroUPcyVTGnZcG7uEGqoOt6F5XN/L2l1rwNDiO/TKvbDokMbprNa6M4UTQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=mailchannels.net;
+	s=arc-2022; t=1735300526;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 in-reply-to:in-reply-to:references:references:dkim-signature;
+	bh=qoUnEE1JOGenKgzIZn4HC2Sodc3nYdZIV3sV8A9NWLA=;
+	b=LmI31ACdNgby2x650MjYPrQ6ijIYzqOim14EpGA835NfIRxrChAHC2SoyjI0yUcfvLXIrM
+	DzZ9tYgSfh0qAQCLaOZpieawaGw9yQed6H0KDnXNuye6W7LJ/wxnUtvuGE+/Jntmnel2oa
+	CF0xOGoNU31OUeHrgPiAOg9WLVJWNNY3iXS21u9ltJyw/8RrHcHBMvcYJ6+sTP+fCXwYtv
+	bmsJsRgnqOEVl9bXftrRua/HWrAzoNgkwjTPyRwOWEAvRKLKeM2CF4FUXx24kBnQMuTaFH
+	FGPcXo6iaRCYhiXrGbu+GmmONkUsKFeMe0a4QSDrJ86CS2BHbnnLs7Z5BHxxZg==
+ARC-Authentication-Results: i=1;
+	rspamd-7d788bbf85-5k5rz;
+	auth=pass smtp.auth=hostingeremail
+ smtp.mailfrom=setordecompras01@junqueiro.al.gov.br
+X-Sender-Id: hostingeremail|x-authuser|setordecompras01@junqueiro.al.gov.br
+X-MC-Relay: Neutral
+X-MailChannels-SenderId:
+ hostingeremail|x-authuser|setordecompras01@junqueiro.al.gov.br
+X-MailChannels-Auth-Id: hostingeremail
+X-Vacuous-Trouble: 3a9f764644ea5ebd_1735300526722_4078954327
+X-MC-Loop-Signature: 1735300526722:4096163174
+X-MC-Ingress-Time: 1735300526722
+Received: from uk-fast-smtpout2.hostinger.io (uk-fast-smtpout2.hostinger.io
+ [31.220.23.36])
+	(using TLSv1.3 with cipher TLS_AES_256_GCM_SHA384)
+	by 100.109.21.121 (trex/7.0.2);
+	Fri, 27 Dec 2024 11:55:26 +0000
+MIME-Version: 1.0
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=junqueiro.al.gov.br;
+	s=hostingermail1; t=1735300524;
+	h=from:from:reply-to:subject:subject:date:date:message-id:message-id:
+	 to:to:cc:mime-version:mime-version:content-type:content-type:
+	 in-reply-to:in-reply-to:references:references;
+	bh=qoUnEE1JOGenKgzIZn4HC2Sodc3nYdZIV3sV8A9NWLA=;
+	b=e+/BAFJsRUJBOPecKDwNB55ioDTx7aqe1lfTHTaq6uLK0jgSaIiVu+rWxwtKbUyF+ufZ/z
+	IGKO1mYiAjRTrzyK87GvImOdDI+Mf6ZtXiWizPl3lzJZ6yMNSXqXcdvqMDnUJY+tjQAyl6
+	QbiS0zMg6RADflGAZyNzTMzZL9OnAC4tnIspmbCeXSoDZNRNT1BP1AWUH94X0Yvi2B6XND
+	ubPUaXOKqc+rOEcS9JKjtYRIh7AN9wizpI6uMMk1Jn4i1q6rVqi/tpmZ5FuwAUEFhzQlA1
+	DR4M1VA7BdR1/CyE4+SK7Zl9n1fMRv+K/xiWEdQMJdtvyrKxzPh6KobxWCZ6aQ==
+From: setordecompras01@junqueiro.al.gov.br
+To: =?UTF-8?Q?Alison_Andr=C3=A9_da_Silva?= <front@frontcomercial.com.br>
+Subject: Re: cancelamento de pedido
+In-Reply-To: <c682ce7a-a435-4bf2-af3f-5fac6ba14c9b@frontcomercial.com.br>
+References: <7992360edecff805851530c248f1796f@junqueiro.al.gov.br>
+ <c682ce7a-a435-4bf2-af3f-5fac6ba14c9b@frontcomercial.com.br>
+Message-ID: <c38d26457fa4250739787b4344d5ba28@junqueiro.al.gov.br>
+X-Sender: setordecompras01@junqueiro.al.gov.br
+Disposition-Notification-To: setordecompras01@junqueiro.al.gov.br
+Content-Type: multipart/alternative;
+ boundary="=_5ee8af11425f1be4a568b55d982cd00c"
+Date: Fri, 27 Dec 2024 11:55:23 +0000 (UTC)
+X-CM-Envelope: MS4xfE8td7cUxOChStFHOSbF54jJXgfq/tQOqXSgZ4H8l9O3wDkcyxsS/AoBxfk2VLwcb8rBPFXF4lNXT6KhWCru6qpJO9Sr5taj70lA08euf4m2vUIELXxc SstNc9w8umi4GZKSZQ20uKhx0Bwqv+LWk04pZLZOAIe++hAPBji7FMqeHz9m6sd4of+vyFejHoopJk2Xgf7mV/6DqI2TrHg88aml92meUQaM9f2njPm7KsOJ
+X-CM-Analysis: v=2.4 cv=F+8FdbhN c=1 sm=1 tr=0 ts=676e95ac a=KCMtmAbq3HOdN61GGM7oVg==:117 a=KCMtmAbq3HOdN61GGM7oVg==:17 a=Hr53G-3bAd4X-W9tYogA:9 a=3ZKOabzyN94A:10 a=QEXdDO2ut3YA:10 a=xPGn8KOAHNhF45Pbk9IA:9 a=CJrS2VkDtvLrFFG4:21 a=_W_S_7VecoQA:10 a=lqcHg5cX4UMA:10
+X-AuthUser: setordecompras01@junqueiro.al.gov.br
+X-Spam-Status: No, score=1.0
+X-Spam-Score: 10
+X-Spam-Bar: +
+X-Ham-Report: Spam detection software, running on the system "cpanel19.unifique.cloud",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Boa tarde, amigo! Infelizmente sim, devido ao esgotamento
+   do recurso. Grato pela atenção Em 2024-12-26 17:26, Alison André da Silva
+    escreveu: 
+ Content analysis details:   (1.0 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The query to
+                              Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [23.83.223.165 listed in sa-accredit.habeas.com]
+  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                          [23.83.223.165 listed in sa-trusted.bondedsender.org]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The query to
+                              Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [23.83.223.165 listed in bl.score.senderscore.com]
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URI: al.gov.br]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+  0.0 ARC_VALID              Message has a valid ARC signature
+  0.0 ARC_SIGNED             Message has a ARC signature
+  0.0 KAM_DMARC_STATUS       Test Rule for DKIM or SPF Failure with Strict
+                             Alignment
+  0.1 DKIM_INVALID           DKIM or DK signature exists, but is not valid
+  0.8 BAYES_50               BODY: Bayes spam probability is 40 to 60%
+                             [score: 0.4997]
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+X-Spam-Flag: NO
+X-Antivirus: Norton (VPS 241227-2, 27/12/2024), Inbound message
+X-Antivirus-Status: Clean
+
+--=_5ee8af11425f1be4a568b55d982cd00c
+Content-Transfer-Encoding: 8bit
+Content-Type: text/plain; charset=UTF-8
+
+Boa tarde, amigo! Infelizmente sim, devido ao esgotamento do recurso. 
+
+Grato pela atenção
+
+Em 2024-12-26 17:26, Alison André da Silva escreveu:
+
+> Boa tarde, informo que a nota foi enviada para o seu e-mails antes da leitura desse, poderia me confirmar se realmente foi feito o cancelamento ?
+> 
+> Atenciosamente,
+> 
+> Alison André da Silva
+> Front Comercial
+> (47) 3037-1021
+> 
+> Em 26/12/2024 16:24, setordecompras01@junqueiro.al.gov.br escreveu: 
+> 
+>> Prezados(as), boa tarde! Conforme solicitado várias vezes a antecipação da nota, e sem sucesso, estamos cancelando o pedido contido na ordem 12/12/2024-020, pois o prazo máximo de pagamento era hoje. 
+>> 
+>> Grato pela atenção
+--=_5ee8af11425f1be4a568b55d982cd00c
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=UTF-8
+
+<html><head><meta http-equiv=3D"Content-Type" content=3D"text/html; charset=
+=3DUTF-8" /></head><body style=3D'font-size: 10pt; font-family: Verdana,Gen=
+eva,sans-serif'>
+<p>Boa tarde, amigo! Infelizmente sim, devido ao esgotamento do recurso.</p>
+<p>Grato pela aten&ccedil;&atilde;o</p>
+<div id=3D"signature"></div>
+<p><br /></p>
+<p id=3D"reply-intro">Em 2024-12-26 17:26, Alison Andr&eacute; da Silva esc=
+reveu:</p>
+<blockquote type=3D"cite" style=3D"padding: 0 0.4em; border-left: #1010ff 2=
+px solid; margin: 0">
+<div id=3D"replybody1">
+<p>Boa tarde, informo que a nota foi enviada para o seu e-mails antes da le=
+itura desse, poderia me confirmar se realmente foi feito o cancelamento ?</=
+p>
+<pre class=3D"v1moz-signature">Atenciosamente,
+
+Alison Andr&eacute; da Silva
+Front Comercial
+(47) 3037-1021</pre>
+<div class=3D"v1moz-cite-prefix">Em 26/12/2024 16:24, <a class=3D"v1moz-txt=
+-link-abbreviated" href=3D"mailto:setordecompras01@junqueiro.al.gov.br" rel=
+=3D"noreferrer">setordecompras01@junqueiro.al.gov.br</a> escreveu:</div>
+<blockquote type=3D"cite" style=3D"padding: 0 0.4em; border-left: #1010ff 2=
+px solid; margin: 0">
+<p style=3D"color: #2c363a; background-color: #ffffff;">Prezados(as), boa t=
+arde! Conforme solicitado v&aacute;rias vezes a antecipa&ccedil;&atilde;o d=
+a nota, e sem sucesso, estamos cancelando o pedido contido na ordem 12/12/2=
+024-020, pois o prazo m&aacute;ximo de pagamento era hoje.</p>
+<p style=3D"color: #2c363a; background-color: #ffffff;">Grato pela aten&cce=
+dil;&atilde;o</p>
+</blockquote>
+</div>
+</blockquote>
+</body></html>
+
+--=_5ee8af11425f1be4a568b55d982cd00c--

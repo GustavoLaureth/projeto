@@ -1,0 +1,968 @@
+X-Account-Key: account10
+X-UIDL: UID4851-1701204419
+X-Mozilla-Status: 0000
+X-Mozilla-Status2: 00000000
+X-Mozilla-Keys:                                                                                 
+Return-Path: <willian.alberti@ifc.edu.br>
+Delivered-To: bhcomercial@bhcomercial.com.br
+Received: from cpanel19.unifique.cloud
+	by cpanel19.unifique.cloud with LMTP
+	id UBoFMb0IYGcixhgA7lOeTQ
+	(envelope-from <willian.alberti@ifc.edu.br>)
+	for <bhcomercial@bhcomercial.com.br>; Mon, 16 Dec 2024 08:02:21 -0300
+Return-path: <willian.alberti@ifc.edu.br>
+Envelope-to: bhcomercial@bhcomercial.com.br
+Delivery-date: Mon, 16 Dec 2024 08:02:21 -0300
+Received: from mail-pj1-f43.google.com ([209.85.216.43]:42344)
+	by cpanel19.unifique.cloud with esmtps  (TLS1.3) tls TLS_AES_128_GCM_SHA256
+	(Exim 4.98)
+	(envelope-from <willian.alberti@ifc.edu.br>)
+	id 1tN8rk-00000006qbQ-2dMM
+	for bhcomercial@bhcomercial.com.br;
+	Mon, 16 Dec 2024 08:02:21 -0300
+Received: by mail-pj1-f43.google.com with SMTP id 98e67ed59e1d1-2ee76929a98so2804524a91.1
+        for <bhcomercial@bhcomercial.com.br>; Mon, 16 Dec 2024 03:01:59 -0800 (PST)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=ifc.edu.br; s=google; t=1734346897; x=1734951697; darn=bhcomercial.com.br;
+        h=cc:to:subject:message-id:date:from:disposition-notification-to
+         :mime-version:from:to:cc:subject:date:message-id:reply-to;
+        bh=vGFJ8S7etVc6r45dPfLfnQIRQFdaGH7LzBGuj9TisW0=;
+        b=FlwHdDmeQO0UceZjbyQdyD+qAdjnKpXDWS/oPiEL+CUfzziCrWT1LjY+yaAjRJfkQJ
+         8kahKFQRO913i4MPvQyDDqigpWW06qI9piuB5h0lxjYXR5Is+/D+NJ0Ytx7lXKMbgisC
+         AKUYHYkdyY5GUmkiqOafWznA202bbrh/9GhmyDdaoUsIct5AqtzullDmW0zn88Tb6R1p
+         W1I9L2HEZUN0EijRiRUM/SNcsr5i86QfU9wAwrcbBDCDYBA2j1D42l9MuDeTdWlglWWM
+         gPHOEPFxs5A4JHTfMEU0qCVtvJR2AUMEF/0hq93Oe8kLFNgdA/t4KaMIBKCZJ+Gox42T
+         gIPg==
+X-Google-DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+        d=1e100.net; s=20230601; t=1734346897; x=1734951697;
+        h=cc:to:subject:message-id:date:from:disposition-notification-to
+         :mime-version:x-gm-message-state:from:to:cc:subject:date:message-id
+         :reply-to;
+        bh=vGFJ8S7etVc6r45dPfLfnQIRQFdaGH7LzBGuj9TisW0=;
+        b=mTtAjdwRvd9eiWe2bBZ5jjfe5t+1MQgaZd0EZhqbnPhXNQM2GhiwIsyb2DzyPB1a7u
+         c065CbgpmwfPS5kMc8eH9qoxgePrsLbhBexCQYgfcWsce7f1CTW0XsqQgrg9K178HOHo
+         HCCzlJAJ+pK1PvwOe4EksomO3VS9YPM2VCL1VvIm1IHoXenE1h4ss7IGrLOeuEwgzzLG
+         d/Gl/tbxCmHUpkCMzewzoU7xODT0nATRdcl8qEBUmmhR9RQyRC7Q/9Fh+0R+DWIi2pJL
+         gqcU/5Gv+iRSvu7ZJ0ToEPCRPhsMw5JbwTWqDqq0Qcql+oXtokNbboGPQFs6DiWLcK6r
+         wzbw==
+X-Gm-Message-State: AOJu0YzRiQ0jT2iRia7lYO31dix7eaqFWZBII7YLfbEzkkyD7sq2jOou
+	vRJXH5srkRDEmBZITuKiPdEi90rrz9BmSMLKEdXwpSYDJb+kwJsXDEktWCyxgGo8mSyq0wEUx97
+	9T598lUzyYZeoZOvN9k4pIUEMKOit/TNTJcWNDaygq8QCYqTd+tY=
+X-Gm-Gg: ASbGnctaRiz+Ut43J1ufJNhDXcS+45dN7xJFcEKEG/KNyNulB4bsl739x1VzCMvRNJl
+	vzMGSDk0kBZ39omacnECQXyTDksZo/DMDD27gB8ZAj61lQ31aTgu13qjdKY0ctjpFD2SxWXw=
+X-Google-Smtp-Source: AGHT+IFLxmw+4DkMZOdU6I56skI7qDksL9sPUBOa6BL9HDcbyY/gPXBK0i43cDdmDT1n+wVJWWsagQBkDcq40RhK56o=
+X-Received: by 2002:a17:90b:2682:b0:2ee:cd1d:7b06 with SMTP id
+ 98e67ed59e1d1-2f29164d43bmr16489493a91.6.1734346895902; Mon, 16 Dec 2024
+ 03:01:35 -0800 (PST)
+MIME-Version: 1.0
+Disposition-Notification-To: willian.alberti@ifc.edu.br
+From: Will Alberti <willian.alberti@ifc.edu.br>
+Date: Mon, 16 Dec 2024 08:00:00 -0300
+Message-ID: <CAMj1=uvSVtkBkqJAMc0JrUYtin2jdAw19aMkoMD4+1Y-3c_iLg@mail.gmail.com>
+Subject: Pedido 2024NE000143
+To: bhcomercial@bhcomercial.com.br
+Cc: Ricardo Campagnin <ricardo.campagnin@ifc.edu.br>, 
+	Rodrigo Luiz Ferreira Santos <rodrigo.santos@ifc.edu.br>, 
+	=?UTF-8?Q?Departamento_Administra=C3=A7=C3=A3o_Planejamento_=2D_S=C3=A3o_Bento_do_Su?=
+	=?UTF-8?Q?l_IFC?= <dap.sbs@ifc.edu.br>, 
+	Aline Buss Cardoso <aline.cardoso@ifc.edu.br>, 
+	=?UTF-8?Q?Coordena=C3=A7=C3=A3o_Almoxarifado_e_Patrim=C3=B4nio_=2D_S=C3=A3o_Bento_do_Sul?=
+	=?UTF-8?Q?_IFC?= <patrimonio.sbs@ifc.edu.br>
+Content-Type: multipart/mixed; boundary="000000000000a5fd5e0629611ae0"
+X-Spam-Status: No, score=0.3
+X-Spam-Score: 3
+X-Spam-Bar: /
+X-Ham-Report: Spam detection software, running on the system "cpanel19.unifique.cloud",
+ has NOT identified this incoming email as spam.  The original
+ message has been attached to this so you can view it or label
+ similar future email.  If you have any questions, see
+ root\@localhost for details.
+ Content preview:  Bom dia! Encaminhamos abaixo pedido de compra e nota de empenho
+    em anexo. *O Campus estará em recesso de 23/12/24 a 03/01/25.* 
+ Content analysis details:   (0.3 points, 5.0 required)
+  pts rule name              description
+ ---- ---------------------- --------------------------------------------------
+  0.0 RCVD_IN_VALIDITY_CERTIFIED_BLOCKED RBL: ADMINISTRATOR NOTICE: The
+                             query to Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                          [209.85.216.43 listed in sa-trusted.bondedsender.org]
+  0.0 RCVD_IN_VALIDITY_SAFE_BLOCKED RBL: ADMINISTRATOR NOTICE: The query to
+                              Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [209.85.216.43 listed in sa-accredit.habeas.com]
+  0.0 RCVD_IN_VALIDITY_RPBL_BLOCKED RBL: ADMINISTRATOR NOTICE: The query to
+                              Validity was blocked.  See
+                             https://knowledge.validity.com/hc/en-us/articles/20961730681243
+                              for more information.
+                             [209.85.216.43 listed in bl.score.senderscore.com]
+  0.0 URIBL_BLOCKED          ADMINISTRATOR NOTICE: The query to URIBL was blocked.
+                             See
+                             http://wiki.apache.org/spamassassin/DnsBlocklists#dnsbl-block
+                              for more information.
+                             [URI: edu.br]
+ -0.0 SPF_PASS               SPF: sender matches SPF record
+ -0.1 DKIM_VALID             Message has at least one valid DKIM or DK signature
+ -0.1 DKIM_VALID_EF          Message has a valid DKIM or DK signature from
+                             envelope-from domain
+  0.1 DKIM_SIGNED            Message has a DKIM or DK signature, not necessarily valid
+ -0.1 DKIM_VALID_AU          Message has a valid DKIM or DK signature from author's
+                             domain
+  0.0 HTML_MESSAGE           BODY: HTML included in message
+  0.0 AC_DIV_BONANZA         RAW: Too many divs in a row... spammy template
+  0.5 KAM_NUMSUBJECT         Subject ends in numbers excluding current years
+  0.0 KAM_SHORT              Use of a URL Shortener for very short URL
+X-Spam-Flag: NO
+X-Antivirus: Norton (VPS 241216-0, 16/12/2024), Inbound message
+X-Antivirus-Status: Clean
+
+--000000000000a5fd5e0629611ae0
+Content-Type: multipart/alternative; boundary="000000000000a5fd5d0629611ade"
+
+--000000000000a5fd5d0629611ade
+Content-Type: text/plain; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+Bom dia!
+
+Encaminhamos abaixo pedido de compra e nota de empenho em anexo.
+
+*O Campus estar=C3=A1 em recesso de 23/12/24 a 03/01/25.*
+
+*Confirmar o recebimento deste pedido respondendo a todos os envolvidos.*
+
+*PEDIDO DE COMPRA 2024 - PREG=C3=83O 90086/2024*
+
+N=C3=9AMERO DO PROCESSO
+23821.002000/2024-61
+
+DATA DA SOLICITA=C3=87=C3=83O:
+
+16/12/2024
+
+SOLICITANTE:
+ ricardo.campagnin@ifc.edu.br
+ rodrigo.santos@ifc.edu.br
+
+
+CONTATO SOLICITANTE:
+
+
+patrimonio.sbs@ifc.edu.br
+
+(47) 3188-1707
+
+PRAZO DE ENTREGA:
+
+30 dias a contar do recebimento da nota de empenho.
+
+
+
+
+INFORMA=C3=87=C3=95ES SOBRE A ENTREGA:
+
+Entregar os produtos objeto desta contrata=C3=A7=C3=A3o, de acordo com os
+eventuais pedidos encaminhados, sempre no prazo nas especifica=C3=A7=C3=B5e=
+s e nas
+quantidades solicitadas, acompanhados da respectiva nota fiscal, na qual
+constar=C3=A3o as indica=C3=A7=C3=B5es referentes a marca, fabricante, mode=
+lo, proced=C3=AAncia;IFC
+Campus S=C3=A3o Bento do Sul, situado na Rua Paulo Chapiewiski, 931, Centen=
+=C3=A1rio,
+S=C3=A3o Bento do Sul/SC, em dias =C3=BAteis e no hor=C3=A1rio 08h:00m =C3=
+=A0s 12h:00m e
+13h:00m =C3=A0s 16h:30m, com pr=C3=A9vio aviso e agendamento junto ao setor
+respons=C3=A1vel no e-mail patrimonio.sbs@ifc.edu.br ou no telefone (47)
+3188-1707.
+
+HOR=C3=81RIO DE ENTREGA:
+
+Condicionado ao que for previsto no agendamento com o respons=C3=A1vel.
+
+
+
+FATURAMENTO DO PEDIDO:
+
+A NF-e ou d=C3=BAvidas a respeito do pagamento devem ser enviadas diretamen=
+te
+pelo e-mail patrimonio.sbs@ifc.edu.br ou no telefone (47) 3188-1707.
+
+OBS: Por favor destacar o n=C3=BAmero da conta banc=C3=A1ria e n=C3=BAmero =
+de empenho na
+nota fiscal.
+
+DESTINO:
+
+Almoxarifado / IFC S=C3=A3o Bento do Sul
+
+
+
+
+
+
+INFORMA=C3=87=C3=95ES COMPLEMENTARES:
+
+   -
+
+   D=C3=BAvidas t=C3=A9cnicas sobre especifica=C3=A7=C3=B5es/ajustes/necess=
+idades de dados e
+   outros sobre os itens a serem entregues, dever=C3=A3o ser tratadas =C3=
+=BAnica e
+   exclusivamente com o solicitante da compra/contrata=C3=A7=C3=A3o;
+   -
+
+   O agendamento e demais condi=C3=A7=C3=B5es de entrega somente ser=C3=A3o=
+ tratados pelos
+   respons=C3=A1veis, conforme informa=C3=A7=C3=B5es deste pedido.
+   -
+
+   O envio da nota fiscal de faturamento dever=C3=A1 respeitar ao que const=
+a
+   neste pedido, sendo encaminhado aos setores ou servidores que n=C3=A3o s=
+ejam os
+   respons=C3=A1veis implicar=C3=A1 automaticamente em desconsiderarmos tal=
+ remessa.
+   -
+
+   Este departamento (Departamento de Administra=C3=A7=C3=A3o e Planejament=
+o =E2=80=93 DAP)
+   n=C3=A3o tem autoriza=C3=A7=C3=A3o para tratar das especificidades relat=
+ivas =C3=A0s quest=C3=B5es
+   deste pedido, uma vez que todas as informa=C3=A7=C3=B5es necess=C3=A1ria=
+s para a correta
+   entrega e cumprimento das obriga=C3=A7=C3=B5es da contratada encontram-s=
+e previstas
+   no edital do sistema de registro de pre=C3=A7o.
+
+
+Atenciosamente,
+
+--=20
+*Willian Alberti*
+Administrador - CRA/SC 32183
+Departamento de Administra=C3=A7=C3=A3o e Planejamento - DAP
+Instituto Federal Catarinense - *Campus* S=C3=A3o Bento do Sul
+http://saobentodosul.ifc.edu.br/
+(47) 3188-1707
+(47) 9 9142-9873 - whatsapp
+*Em regime de teletrabalho parcial*
+
+--000000000000a5fd5d0629611ade
+Content-Type: text/html; charset="UTF-8"
+Content-Transfer-Encoding: quoted-printable
+
+<div dir=3D"ltr"><div><div><div><div><div><div><div><div><div><div><div><sp=
+an id=3D"m_-8087168930347899272m_7323486154847316289m_-4672059664147944172m=
+_-6656006559462684769m_1868086457455197161m_-2048661450706507757m_448429218=
+6109893223m_-3115025820467673478m_6186349347801826809m_-7826171001137583248=
+m_4210317122664420302m_-8333223817062639879m_-4250179142948556157m_25778705=
+48177234541m_1979567850982492284m_2259024098411226752m_5196772135397369839m=
+_2453203569050977970m_-4997241690642572698m_1689553648288596408m_-548007478=
+6356259884m_-8234802516835237046m_-6752556687430029906m_5932574572119457356=
+m_-4055934310995531234gmail-m_-3217071238419078075gmail-m_65152923755298818=
+60gmail-m_4561294481343102380gmail-m_5320066676330828441gmail-m_36149341224=
+05018399gmail-m_-239523095575690649m_-472335383562411565gmail-m_15288687910=
+06813210m_3964944903584897378gmail-m_-1586941066786672723gmail-m_-918075430=
+1990248769gmail-m_7368528413165905824m_-8710087885329396669gmail-m_-3122004=
+179094930833m_-7514732749795033280gmail-m_6237483492774830108m_-52304074314=
+68077195gmail-m_6887494337026220883gmail-m_5344465603007329084gmail-m_45985=
+33944179852956gmail-m_9169189517162488818m_4356090428727240450m_22100315214=
+80419036gmail-m_-3353841683825270005gmail-m_-4019495104934170350gmail-m_-48=
+11025578923323727gmail-m_-5243030618756261669gmail-m_7506780425724750227gma=
+il-m_-6870770709166587535gmail-m_7776757381969278240gmail-m_-73264535853934=
+161gmail-m_-3407857025161197637gmail-m_-8761496897615529717gmail-m_-2817988=
+855737082361gmail-m_7483765334505283062gmail-m_2017697440119411783gmail-m_-=
+2389091205217401536gmail-m_-3985496251215014612gmail-m_3335381434163812254g=
+mail-m_6145670366733777045gmail-m_8124760946941077148gmail-m_-8368997991968=
+962039gmail-m_-2053839462053483548gmail-m_-6113716126546003586gmail-m_-4924=
+36419020865722gmail-m_-4682829499988061148gmail-m_-7586527096869660508gmail=
+-m_4085046173088479088gmail-m_2230109802363751952gmail-m_350933306291720141=
+gmail-m_7940799678855517784gmail-m_5879736955515744855gmail-m_-518339751128=
+5924190gmail-m_1182154360346819900gmail-m_-492019427584373644gmail-m_-82019=
+00608677578302gmail-m_-2619893755704033475gmail-m_3123986328800472533gmail-=
+m_-2791102995733445829gmail-m_-5177295870910761273gmail-m_-3999922225929780=
+401gmail-m_2192370348007155086gmail-m_-846567896979601123gmail-m_1235992507=
+126401438gmail-m_2934175909686304974gmail-m_-4559998468131679522gmail-m_-53=
+17928117723909142gmail-m_-5857799623453207883gmail-m_-6017522082834303472gm=
+ail-m_5433611931129464684gmail-m_7739424646263402527gmail-m_904904653052619=
+5394gmail-m_5184731780391446095gmail-m_6209610656878726734gmail-docs-intern=
+al-guid-f2a2e4bc-4b97-9cdd-50e7-ba512fb2a21d"><div><font face=3D"arial, hel=
+vetica, sans-serif">Bom dia!</font><font face=3D"arial, helvetica, sans-ser=
+if"><br></font></div><div><font face=3D"arial, helvetica, sans-serif"><br>E=
+ncaminhamos abaixo=C2=A0pedido=C2=A0de compra e=C2=A0nota de=C2=A0empenho e=
+m anexo.=C2=A0</font></div><div><font face=3D"arial, helvetica, sans-serif"=
+><br></font></div><div><font face=3D"arial, helvetica, sans-serif" color=3D=
+"#0000ff"><b>O Campus estar=C3=A1 em recesso de 23/12/24 a 03/01/25.</b></f=
+ont></div><div><font face=3D"arial, helvetica, sans-serif"><br></font></div=
+><div><b style=3D"font-family:arial,helvetica,sans-serif"><font color=3D"#f=
+f0000">Confirmar o recebimento deste=C2=A0pedido=C2=A0respondendo a todos o=
+s envolvidos.</font></b><br></div><div><br></div><div dir=3D"ltr" style=3D"=
+margin-left:0pt"><table style=3D"border:none;border-collapse:collapse"><col=
+group><col width=3D"146"><col width=3D"459"></colgroup><tbody><tr style=3D"=
+height:27.25pt"><td colspan=3D"2" style=3D"font-family:arial,sans-serif;bor=
+der-width:0.75pt;border-style:solid;border-color:rgb(0,0,0);vertical-align:=
+top;padding:5pt"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;ma=
+rgin-bottom:0pt;text-align:center"><font size=3D"2" color=3D"#000000"><b><s=
+pan style=3D"font-family:Arial;font-variant-numeric:normal;font-variant-eas=
+t-asian:normal;vertical-align:baseline">PEDIDO=C2=A0DE COMPRA=C2=A02024 -=
+=C2=A0</span><span style=3D"font-family:Verdana,sans-serif">PREG=C3=83O 900=
+86/2024</span></b></font></p></td></tr><tr style=3D"height:35.5pt"><td styl=
+e=3D"font-family:arial,sans-serif;border-width:0.75pt;border-style:solid;bo=
+rder-color:rgb(0,0,0);vertical-align:top;padding:5pt"><p dir=3D"ltr" style=
+=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align:center"><s=
+pan style=3D"font-size:9.5pt;font-family:Arial;background-color:transparent=
+;font-weight:700;font-variant-numeric:normal;font-variant-east-asian:normal=
+;vertical-align:baseline">N=C3=9AMERO DO=C2=A0</span><span style=3D"font-si=
+ze:9.5pt;font-family:Arial;font-weight:700;font-variant-numeric:normal;font=
+-variant-east-asian:normal;vertical-align:baseline">PROCESSO</span></p></td=
+><td style=3D"font-family:arial,sans-serif;border-width:0.75pt;border-style=
+:solid;border-color:rgb(0,0,0);vertical-align:top;padding:5pt">23821.002000=
+/2024-61</td></tr><tr style=3D"height:35.5pt"><td style=3D"font-family:aria=
+l,sans-serif;border-width:0.75pt;border-style:solid;border-color:rgb(0,0,0)=
+;vertical-align:top;padding:5pt"><p dir=3D"ltr" style=3D"line-height:1.38;m=
+argin-top:0pt;margin-bottom:0pt;text-align:center"><span style=3D"font-size=
+:9.5pt;font-family:Arial;background-color:transparent;font-weight:700;font-=
+variant-numeric:normal;font-variant-east-asian:normal;vertical-align:baseli=
+ne">DATA DA SOLICITA=C3=87=C3=83O:</span></p></td><td style=3D"border-width=
+:0.75pt;border-style:solid;border-color:rgb(0,0,0);vertical-align:top;paddi=
+ng:5pt"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bott=
+om:0pt"><font face=3D"Arial" size=3D"2">16/12/2024</font></p></td></tr><tr =
+style=3D"height:24.25pt"><td style=3D"font-family:arial,sans-serif;border-w=
+idth:0.75pt;border-style:solid;border-color:rgb(0,0,0);vertical-align:top;p=
+adding:5pt"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-=
+bottom:0pt;text-align:center"><span style=3D"font-size:9.5pt;font-family:Ar=
+ial;background-color:transparent;font-weight:700;font-variant-numeric:norma=
+l;font-variant-east-asian:normal;vertical-align:baseline">SOLICITANTE</span=
+><font color=3D"#000000"><span style=3D"font-size:9.5pt;font-family:Arial;b=
+ackground-color:transparent;font-weight:700;font-variant-numeric:normal;fon=
+t-variant-east-asian:normal;vertical-align:baseline">:</span></font></p></t=
+d><td style=3D"font-family:arial,sans-serif;border-width:0.75pt;border-styl=
+e:solid;border-color:rgb(0,0,0);vertical-align:top;padding:5pt">=C2=A0<a hr=
+ef=3D"mailto:ricardo.campagnin@ifc.edu.br">ricardo.campagnin@ifc.edu.br</a>=
+ <br>=C2=A0<a href=3D"mailto:rodrigo.santos@ifc.edu.br">rodrigo.santos@ifc.=
+edu.br</a></td></tr><tr style=3D"height:56.5pt"><td style=3D"font-family:ar=
+ial,sans-serif;border-width:0.75pt;border-style:solid;border-color:rgb(0,0,=
+0);vertical-align:top;padding:5pt"><p dir=3D"ltr" style=3D"line-height:1.38=
+;margin-top:0pt;margin-bottom:0pt;text-align:center"><span style=3D"font-si=
+ze:9.5pt;font-family:Arial;background-color:transparent;font-weight:700;fon=
+t-variant-numeric:normal;font-variant-east-asian:normal;vertical-align:base=
+line"><br></span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0p=
+t;margin-bottom:0pt;text-align:center"><span style=3D"font-size:9.5pt;font-=
+family:Arial;background-color:transparent;font-weight:700;font-variant-nume=
+ric:normal;font-variant-east-asian:normal;vertical-align:baseline">CONTATO =
+SOLICITANTE:</span></p><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:=
+0pt;margin-bottom:0pt;text-align:center"><span style=3D"font-size:9.5pt;fon=
+t-family:Arial;background-color:transparent;font-weight:700;font-variant-nu=
+meric:normal;font-variant-east-asian:normal;vertical-align:baseline"><br></=
+span></p></td><td style=3D"font-family:arial,sans-serif;border-width:0.75pt=
+;border-style:solid;border-color:rgb(0,0,0);vertical-align:top;padding:5pt"=
+><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;=
+text-align:justify"><span style=3D"font-size:9.5pt;font-family:Arial;font-v=
+ariant-numeric:normal;font-variant-east-asian:normal;vertical-align:baselin=
+e">patrimonio.sbs@ifc.<font color=3D"#000000"><a href=3D"http://edu.br/" ta=
+rget=3D"_blank">edu.br</a></font></span></p><br><p dir=3D"ltr" style=3D"lin=
+e-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align:justify"><span st=
+yle=3D"font-size:9.5pt;font-family:Arial;font-variant-numeric:normal;font-v=
+ariant-east-asian:normal;vertical-align:baseline">(47) 3188-1707</span></p>=
+</td></tr><tr style=3D"height:24.25pt"><td style=3D"font-family:arial,sans-=
+serif;border-width:0.75pt;border-style:solid;border-color:rgb(0,0,0);vertic=
+al-align:top;padding:5pt"><p dir=3D"ltr" style=3D"line-height:1.38;margin-t=
+op:0pt;margin-bottom:0pt;text-align:center"><span style=3D"font-size:9.5pt;=
+font-family:Arial;background-color:transparent;font-weight:700;font-variant=
+-numeric:normal;font-variant-east-asian:normal;vertical-align:baseline">PRA=
+ZO DE ENTREGA:</span></p></td><td style=3D"font-family:arial,sans-serif;bor=
+der-width:0.75pt;border-style:solid;border-color:rgb(0,0,0);vertical-align:=
+top;padding:5pt"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;ma=
+rgin-bottom:0pt;text-align:justify"><span style=3D"font-size:9.5pt;font-fam=
+ily:Arial;background-color:transparent;font-variant-numeric:normal;font-var=
+iant-east-asian:normal;vertical-align:baseline">30 dias a contar do recebim=
+ento da nota de empenho.</span></p></td></tr><tr style=3D"height:105.25pt">=
+<td style=3D"font-family:arial,sans-serif;border-width:0.75pt;border-style:=
+solid;border-color:rgb(0,0,0);vertical-align:top;padding:5pt"><br><br><br><=
+br><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0p=
+t;text-align:center"><span style=3D"font-size:9.5pt;font-family:Arial;backg=
+round-color:transparent;font-weight:700;font-variant-numeric:normal;font-va=
+riant-east-asian:normal;vertical-align:baseline">INFORMA=C3=87=C3=95ES SOBR=
+E A ENTREGA:</span></p></td><td style=3D"font-family:arial,sans-serif;borde=
+r-width:0.75pt;border-style:solid;border-color:rgb(0,0,0);vertical-align:to=
+p;padding:5pt"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;marg=
+in-bottom:0pt;text-align:justify"><span style=3D"font-size:9.5pt;font-famil=
+y:Arial;background-color:transparent;font-variant-numeric:normal;font-varia=
+nt-east-asian:normal;vertical-align:baseline">Entregar os produtos objeto d=
+esta contrata=C3=A7=C3=A3o, de acordo com os eventuais=C2=A0pedidos=C2=A0en=
+caminhados, sempre no prazo nas especifica=C3=A7=C3=B5es e nas quantidades =
+solicitadas, acompanhados da respectiva nota fiscal, na qual constar=C3=A3o=
+ as indica=C3=A7=C3=B5es referentes a marca, fabricante, modelo, proced=C3=
+=AAncia;</span><span style=3D"font-size:12pt;font-family:Arial;color:rgb(25=
+5,0,0);background-color:rgb(255,255,0);font-weight:700;font-variant-numeric=
+:normal;font-variant-east-asian:normal;vertical-align:baseline">IFC Campus =
+S=C3=A3o Bento do Sul, situado na Rua Paulo Chapiewiski, 931, Centen=C3=A1r=
+io, S=C3=A3o Bento do Sul/SC</span><span style=3D"font-size:9.5pt;font-fami=
+ly:Arial;background-color:transparent;font-variant-numeric:normal;font-vari=
+ant-east-asian:normal;vertical-align:baseline">, em dias =C3=BAteis e no ho=
+r=C3=A1rio</span><span style=3D"font-size:9.5pt;font-family:Arial;backgroun=
+d-color:transparent;font-weight:700;font-variant-numeric:normal;font-varian=
+t-east-asian:normal;vertical-align:baseline">=C2=A008h:00m =C3=A0s 12h:00m =
+e 13h:00m =C3=A0s 16h:30m, com pr=C3=A9vio aviso e agendamento junto ao set=
+or respons=C3=A1vel</span><span style=3D"font-size:9.5pt;font-family:Arial;=
+background-color:transparent;font-variant-numeric:normal;font-variant-east-=
+asian:normal;vertical-align:baseline">=C2=A0no e-mail=C2=A0</span><span sty=
+le=3D"font-size:9.5pt;font-family:Arial;font-variant-numeric:normal;font-va=
+riant-east-asian:normal;vertical-align:baseline"><a href=3D"mailto:patrimon=
+io.sbs@ifc.edu.br" target=3D"_blank">patrimonio.sbs@ifc.edu.br</a></span><s=
+pan style=3D"font-size:9.5pt;font-family:Arial;font-variant-numeric:normal;=
+font-variant-east-asian:normal;vertical-align:baseline">=C2=A0ou no telefon=
+e (47) 3188-1707.</span></p></td></tr><tr style=3D"height:51.75pt"><td styl=
+e=3D"font-family:arial,sans-serif;border-width:0.75pt;border-style:solid;bo=
+rder-color:rgb(0,0,0);vertical-align:top;padding:5pt"><br><p dir=3D"ltr" st=
+yle=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align:center"=
+><span style=3D"font-size:9.5pt;font-family:Arial;background-color:transpar=
+ent;font-weight:700;font-variant-numeric:normal;font-variant-east-asian:nor=
+mal;vertical-align:baseline">HOR=C3=81RIO DE ENTREGA:</span></p></td><td st=
+yle=3D"font-family:arial,sans-serif;border-width:0.75pt;border-style:solid;=
+border-color:rgb(0,0,0);vertical-align:top;padding:5pt"><br><p dir=3D"ltr" =
+style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align:justi=
+fy"><span style=3D"font-size:9.5pt;font-family:Arial;background-color:trans=
+parent;font-variant-numeric:normal;font-variant-east-asian:normal;vertical-=
+align:baseline">Condicionado ao que for previsto no agendamento com o respo=
+ns=C3=A1vel.</span></p><br></td></tr><tr style=3D"height:56.5pt"><td style=
+=3D"font-family:arial,sans-serif;border-width:0.75pt;border-style:solid;bor=
+der-color:rgb(0,0,0);vertical-align:top;padding:5pt"><br><br><p dir=3D"ltr"=
+ style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align:cent=
+er"><span style=3D"font-size:9.5pt;font-family:Arial;background-color:trans=
+parent;font-weight:700;font-variant-numeric:normal;font-variant-east-asian:=
+normal;vertical-align:baseline">FATURAMENTO DO=C2=A0PEDIDO:</span></p></td>=
+<td style=3D"font-family:arial,sans-serif;border-width:0.75pt;border-style:=
+solid;border-color:rgb(0,0,0);vertical-align:top;padding:5pt"><p dir=3D"ltr=
+" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align:jus=
+tify"><span style=3D"font-size:9.5pt;font-family:Arial;color:rgb(0,0,0);bac=
+kground-color:transparent;font-variant-numeric:normal;font-variant-east-asi=
+an:normal;vertical-align:baseline">A NF-e ou d=C3=BAvidas a respeito do pag=
+amento devem ser enviadas diretamente pelo e-mail patrimonio.sbs@ifc.</span=
+><font color=3D"#000000"><span style=3D"font-size:9.5pt;font-family:Arial;b=
+ackground-color:transparent;font-variant-numeric:normal;font-variant-east-a=
+sian:normal;vertical-align:baseline"><a href=3D"http://edu.br/" target=3D"_=
+blank">edu.br</a></span><span style=3D"font-size:9.5pt;font-family:Arial;ba=
+ckground-color:transparent;font-variant-numeric:normal;font-variant-east-as=
+ian:normal;vertical-align:baseline">=C2=A0</span></font><span style=3D"font=
+-size:9.5pt;font-family:Arial;color:rgb(0,0,0);background-color:transparent=
+;font-variant-numeric:normal;font-variant-east-asian:normal;vertical-align:=
+baseline">ou no telefone (47) 3188-1707.</span></p><br><p dir=3D"ltr" style=
+=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align:justify"><=
+span style=3D"font-size:9.5pt;font-family:Arial;color:rgb(0,0,0);background=
+-color:transparent;font-weight:700;font-variant-numeric:normal;font-variant=
+-east-asian:normal;vertical-align:baseline">OBS: Por favor destacar o n=C3=
+=BAmero da conta banc=C3=A1ria e n=C3=BAmero de empenho na nota fiscal.</sp=
+an></p></td></tr><tr style=3D"height:24.25pt"><td style=3D"font-family:aria=
+l,sans-serif;border-width:0.75pt;border-style:solid;border-color:rgb(0,0,0)=
+;vertical-align:top;padding:5pt"><p dir=3D"ltr" style=3D"line-height:1.38;m=
+argin-top:0pt;margin-bottom:0pt;text-align:center"><span style=3D"font-size=
+:9.5pt;font-family:Arial;background-color:transparent;font-weight:700;font-=
+variant-numeric:normal;font-variant-east-asian:normal;vertical-align:baseli=
+ne">DESTINO</span><span style=3D"font-size:9.5pt;font-family:Arial;backgrou=
+nd-color:transparent;font-variant-numeric:normal;font-variant-east-asian:no=
+rmal;vertical-align:baseline">:</span></p></td><td style=3D"font-family:ari=
+al,sans-serif;border-width:0.75pt;border-style:solid;border-color:rgb(0,0,0=
+);vertical-align:top;padding:5pt"><p dir=3D"ltr" style=3D"line-height:1.38;=
+margin-top:0pt;margin-bottom:0pt;text-align:justify"><span style=3D"font-si=
+ze:9.5pt;font-family:Arial;background-color:transparent;font-variant-numeri=
+c:normal;font-variant-east-asian:normal;vertical-align:baseline">Almoxarifa=
+do / IFC S=C3=A3o Bento do Sul</span></p></td></tr><tr style=3D"height:197.=
+5pt"><td style=3D"font-family:arial,sans-serif;border-width:0.75pt;border-s=
+tyle:solid;border-color:rgb(0,0,0);vertical-align:top;padding:5pt"><br><br>=
+<br><br><br><br><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;mar=
+gin-bottom:0pt;text-align:center"><span style=3D"font-size:9.5pt;font-famil=
+y:Arial;background-color:transparent;font-weight:700;font-variant-numeric:n=
+ormal;font-variant-east-asian:normal;vertical-align:baseline">INFORMA=C3=87=
+=C3=95ES COMPLEMENTARES:</span></p></td><td style=3D"font-family:arial,sans=
+-serif;border-width:0.75pt;border-style:solid;border-color:rgb(0,0,0);verti=
+cal-align:top;padding:5pt"><ul style=3D"margin-top:0pt;margin-bottom:0pt"><=
+li dir=3D"ltr" style=3D"margin-left:11pt;list-style-type:disc;font-size:9.5=
+pt;font-family:Arial;background-color:transparent;font-variant-numeric:norm=
+al;font-variant-east-asian:normal;vertical-align:baseline"><p dir=3D"ltr" s=
+tyle=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align:justif=
+y"><span style=3D"font-size:9.5pt;background-color:transparent;font-variant=
+-numeric:normal;font-variant-east-asian:normal;vertical-align:baseline">D=
+=C3=BAvidas t=C3=A9cnicas sobre especifica=C3=A7=C3=B5es/ajustes/necessidad=
+es de dados e outros sobre os itens a serem entregues, dever=C3=A3o ser tra=
+tadas =C3=BAnica e exclusivamente com o solicitante da compra/contrata=C3=
+=A7=C3=A3o;</span></p></li><li dir=3D"ltr" style=3D"margin-left:11pt;list-s=
+tyle-type:disc;font-size:9.5pt;font-family:Arial;background-color:transpare=
+nt;font-variant-numeric:normal;font-variant-east-asian:normal;vertical-alig=
+n:baseline"><p dir=3D"ltr" style=3D"line-height:1.38;margin-top:0pt;margin-=
+bottom:0pt;text-align:justify"><span style=3D"font-size:9.5pt;background-co=
+lor:transparent;font-variant-numeric:normal;font-variant-east-asian:normal;=
+vertical-align:baseline">O agendamento e demais condi=C3=A7=C3=B5es de entr=
+ega somente ser=C3=A3o tratados pelos respons=C3=A1veis, conforme informa=
+=C3=A7=C3=B5es deste=C2=A0pedido.</span></p></li><li dir=3D"ltr" style=3D"m=
+argin-left:11pt;list-style-type:disc;font-size:9.5pt;font-family:Arial;back=
+ground-color:transparent;font-variant-numeric:normal;font-variant-east-asia=
+n:normal;vertical-align:baseline"><p dir=3D"ltr" style=3D"line-height:1.38;=
+margin-top:0pt;margin-bottom:0pt;text-align:justify"><span style=3D"font-si=
+ze:9.5pt;background-color:transparent;font-variant-numeric:normal;font-vari=
+ant-east-asian:normal;vertical-align:baseline">O envio da nota fiscal de fa=
+turamento dever=C3=A1 respeitar ao que consta neste=C2=A0pedido, sendo enca=
+minhado aos setores ou servidores que n=C3=A3o sejam os respons=C3=A1veis i=
+mplicar=C3=A1 automaticamente em desconsiderarmos tal remessa.</span></p></=
+li><li dir=3D"ltr" style=3D"margin-left:11pt;list-style-type:disc;font-size=
+:9.5pt;font-family:Arial;background-color:transparent;font-variant-numeric:=
+normal;font-variant-east-asian:normal;vertical-align:baseline"><p dir=3D"lt=
+r" style=3D"line-height:1.38;margin-top:0pt;margin-bottom:0pt;text-align:ju=
+stify"><span style=3D"font-size:9.5pt;background-color:transparent;font-var=
+iant-numeric:normal;font-variant-east-asian:normal;vertical-align:baseline"=
+>Este departamento (Departamento de Administra=C3=A7=C3=A3o e Planejamento =
+=E2=80=93 DAP) n=C3=A3o tem autoriza=C3=A7=C3=A3o para tratar das especific=
+idades relativas =C3=A0s quest=C3=B5es deste=C2=A0pedido, uma vez que todas=
+ as informa=C3=A7=C3=B5es necess=C3=A1rias para a correta entrega e cumprim=
+ento das obriga=C3=A7=C3=B5es da contratada encontram-se previstas no edita=
+l do sistema de registro de pre=C3=A7o.</span></p></li></ul></td></tr></tbo=
+dy></table></div></span><br></div><div>Atenciosamente,</div></div></div></d=
+iv></div></div></div></div></div></div></div><div><br></div><span class=3D"=
+gmail_signature_prefix">-- </span><br><div dir=3D"ltr" class=3D"gmail_signa=
+ture" data-smartmail=3D"gmail_signature"><div dir=3D"ltr"><div dir=3D"ltr">=
+<div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div di=
+r=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"lt=
+r"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div dir=3D"ltr"><div=
+ dir=3D"ltr"><b style=3D"font-size:12.8px">Willian Alberti</b><div style=3D=
+"font-size:12.8px">Administrador - CRA/SC 32183</div><div style=3D"font-siz=
+e:12.8px">Departamento de Administra=C3=A7=C3=A3o e Planejamento - DAP</div=
+><div style=3D"font-size:12.8px"><span style=3D"font-size:12.8px">Instituto=
+ Federal Catarinense -=C2=A0<i>Campus</i>=C2=A0S=C3=A3o Bento do Sul</span>=
+</div><div style=3D"font-size:12.8px"><a href=3D"http://saobentodosul.ifc.e=
+du.br/" style=3D"font-family:arial,sans-serif;color:rgb(17,85,204);font-siz=
+e:small" target=3D"_blank">http://saobentodosul.ifc.edu.br/</a><span style=
+=3D"font-size:12.8px"><br></span></div><div style=3D"font-size:12.8px"><spa=
+n style=3D"font-size:12.8px">(47) 3188-1707</span></div><div style=3D"font-=
+size:12.8px"><span style=3D"font-size:12.8px">(47) 9 9142-9873 - whatsapp</=
+span></div><div style=3D"font-size:12.8px"><span style=3D"font-size:12.8px"=
+><b>Em regime de teletrabalho parcial</b></span></div><div style=3D"font-si=
+ze:12.8px"><span style=3D"font-size:12.8px"><br></span></div><div style=3D"=
+font-size:12.8px"><span style=3D"font-size:12.8px"><br></span></div><div st=
+yle=3D"font-size:12.8px"><span style=3D"font-size:12.8px"><img width=3D"200=
+" height=3D"66" src=3D"https://ci3.googleusercontent.com/mail-sig/AIorK4xDo=
+xBFkn7CJXTmYAa_dtoBO7b81PXzBfILYdlbn-uboXXCTMWMebVp4kKmelCjVxciw2hojr0"><br=
+></span></div></div></div></div></div></div></div></div></div></div></div><=
+/div></div></div></div></div></div></div></div>
+
+--000000000000a5fd5d0629611ade--
+--000000000000a5fd5e0629611ae0
+Content-Type: application/pdf; name="2024NE000143 - Best Hydro.pdf"
+Content-Disposition: attachment; filename="2024NE000143 - Best Hydro.pdf"
+Content-Transfer-Encoding: base64
+Content-ID: <f_m4ph4p5n0>
+X-Attachment-Id: f_m4ph4p5n0
+
+JVBERi0xLjQKJeLjz9MKNSAwIG9iago8PC9Db2xvclNwYWNlL0RldmljZUdyYXkvU3VidHlwZS9J
+bWFnZS9IZWlnaHQgMzkvRmlsdGVyL0ZsYXRlRGVjb2RlL1R5cGUvWE9iamVjdC9XaWR0aCAyNzAv
+TGVuZ3RoIDE5Ni9CaXRzUGVyQ29tcG9uZW50IDg+PnN0cmVhbQp4nO3asQ7CIBRG4fd/S6cmDrUJ
+0KC1VjFB/BnsJpek59uYuDls5J5ce1v2VFtr36vjNGRTOq0mM/QkZuf0KuG2NNNljtVn7xqL9TTW
+qhrXLh+sIWooaihqKGooaihqqFJjpIbU8NSgRq3UcNSgRo0aihqKGooaihqKGooaihqKGooaihqK
+/w3F35eihqKGooaihqKGooaqajysp7FWakypxmXPOFvP+n+lRkyHEObf/N161gY+e1+Dc87vOtJO
+4AutjdVACmVuZHN0cmVhbQplbmRvYmoKNiAwIG9iago8PC9GaWx0ZXIvRmxhdGVEZWNvZGUvQWx0
+ZXJuYXRlL0RldmljZVJHQi9MZW5ndGggMjU5Mi9OIDM+PnN0cmVhbQp4nJ2Wd1RT2RaHz703vdAS
+IiAl9F4VCCDSO0iRLgohCRAgAUJCsyuiAiOKiDRFkEEBBxwdiowVUSwMir1PkEFEGQdHERXLu9G1
+Rte8ee/Nm98fZ31rn7P3PbuctS4AFN90jiAbVgBAIBSLwnzcmdExsUz8EIABEeCANQBsTnamW0hI
+IEDl5+XBzEYPgS+CAHh1Q7YCcNVcFgv8f1LkZIrEaJgQlOdxedkclAtRTs8VZ8rsUyjTE9NkDGNk
+LEIviLKKjJM/s9mnM5/ZVcZcgZCLcjjKmVwBV8b9KG/KkfBQRmS5FOXwebkoX0NZL10i4KP8WuYr
+4LHRHDAUmV3M46SgbIUyRRQe5oHyAgAIlOSvOPErFvPyxLKkPDIy80X85BQx04hjzLR2cGAxfXm5
+6Tyx2DyEzUlji7hMjwxBJluYD8DnnD9JSVZbJlpkO2sHOztzGwvrrwr1Xzf/pmS9/UwvQj/1DGIM
+frH91bmMRgBY02httn6xJVYD0L0BAJU7X2x6ewCQR/vWdemrfBiyeUkRizMdLS1zc3Mt+DyOhayg
+f+h/Hvgb+up7FrJwf5SH6clLYkvSxUxZ3TgZ6RkSETM7k83hMc3/PMT/2PGv72EWxkviiXhC1CMS
+nTK+MBltt5DLF/MzhEy+8D818R+6/Umf5xoVrekDoMdbAIVLdID8OggwNDJA4najO9AffQskRgLZ
+y4vSGv88958E/XtUuEy2ZPOTP/l5hIUzORJRzuc92bMEWEAC8oAOVIEm0AVGwBzYAHvgBFyBF/AH
+wSAcxIBlgANSgACIQC5YAdaCIlACtoIdoAbUgybQAtrBIdANjoJT4Cy4CC6D6+AukIIx8BRMgVdg
+FoIgPESFaJAqpAXpQ6aQDcSCFkJeUCAUBsVACVAyJIQk0ApoPVQClUM1UAPUAn0PHYFOQeehYeg2
+NAJNQL9Db2EEpsB0WAM2gC1hFuwGB8Dh8FI4Gc6CC+BCeAtcBTfCB+Au+BR8Eb4OS+Gn8DQCEDLC
+QLQRc4SFeCDBSCyShIiQVUgxUok0Iu1ILzKAXEWkyCTyBoPD0DBMjDnGCeOLicBwMFmYVZhSTA1m
+P6YL04+5ihnBTGE+YKlYdawp1hHrh43GJmNzsUXYSmwzthN7BnsdO4Z9hcPhGDhDnD3OFxeDS8Ut
+x5XiduE6cCdxw7hR3DQej1fFm+Kd8cF4Nl6ML8JX4w/gT+Cv4MfwrwlkghbBhuBNiCUICesIlYRW
+wnHCFcI4YZaoQNQnOhKDiVxiPrGM2ETsJV4ijhFnSYokQ5IzKZyUSlpLqiK1k86Q7pFekMlkHbID
+OZTMJ68hV5EPks+RR8hvKEoUE4oHJY4ioWyh7KOcpNymvKBSqQZUV2osVUzdQm2hnqY+oL6Wo8lZ
+yPnJceVWy9XKdcldkXsmT5TXl3eTXyZfIF8pf1j+kvykAlHBQMFDga2wSqFW4YjCTYVpRZqitWKw
+okCxVLFV8bziYyW8koGSlxJXqVBpr9JppVEaQtOledA4tPW0JtoZ2hgdRzek+9FT6SX07+hD9Cll
+JeX5ypHKecq1yseUpQyEYcDwY6QzyhiHGDcYb+dozHGbw5uzeU77nCtzZlTmqriq8FSKVTpUrqu8
+VWWqeqmmqW5T7Va9r4ZRM1ELVctV2612Rm1yLn2u01zO3OK5h+beUYfVTdTD1Jer71UfVJ/W0NTw
+0cjUqNY4rTGpydB01UzVrNA8rjmhRdNaqMXXqtA6ofWEqcx0Y6Yzq5j9zCltdW1fbYl2g/aQ9qyO
+oU6EzjqdDp37uiRdlm6SboVun+6UnpZekN4KvTa9O/pEfZZ+iv5O/QH9GQNDgyiDjQbdBo8NVQz9
+DAsM2wzvGVGNXIyyjBqNrhnjjFnGaca7jC+bwCa2JikmtSaXTGFTO1O+6S7TYTOsmYOZ0KzR7KY5
+xdzNPMe8zXzEgmERaLHOotvimaWeZazlNssByw9WtlbpVk1Wd62VrP2t11n3Wv9uY2LDsam1uTaP
+Os973up5PfOezzedz5u/e/4tW5ptkO1G2z7b93b2diK7drsJez37BPs6+5ssOiuEVco654B1cHdY
+7XDU4Y2jnaPY8ZDjb07mTmlOrU6PFxgu4C1oWjDqrOPMdm5wli5kLkxYuGeh1EXbhe3S6PLQVdeV
+69rsOu5m7JbqdsDtmbuVu8i9033Gw9FjpcdJT8TTx7PYc8hLySvCq8brgbeOd7J3m/eUj63Pcp+T
+vljfAN9tvjf9NPw4fi1+U/72/iv9+wMoAYsDagIeBpoEigJ7g+Ag/6DtQfcW6S8SLuoOBsF+wduD
+74cYhmSF/BiKCw0JrQ19FGYdtiJsYDFtcfzi1sWvwt3Dy8LvRhhFSCL6IuUj4yJbImeiPKPKo6TR
+ltEroy/GqMXwY3pi8bGRsc2x00u8luxYMhZnG1cUd2Op4dK8peeXqS1LX3YsXj6eHX84AZsQldCa
+8I4dzG5kTyf6JdYlTnE8ODs5T7mu3AruBM+ZV84bT3JOKk96nOycvD15IsUlpTJlku/Br+E/T/VN
+rU+dSQtO25f2MT0qvUNAECQIjgiVhGnC/gzNjLyM4UzTzKJMaZZj1o6sKVGAqDkbyl6a3SOmoz9T
+gxIjyQbJSM7CnNqc17mRuYfzFPOEeYP5Jvmb88cLvAu+XY5Zzlnet0J7xdoVIyvdVjasglYlrupb
+rbu6cPXYGp81+9eS1qat/Wmd1brydS/XR63vLdQoXFM4usFnQ1uRXJGo6OZGp431mzCb+JuGNs/b
+XL35QzG3+EKJVUllybtSTumFb6y/qfrm45akLUNldmW7t+K2Crfe2OaybX+5YnlB+ej2oO1dFcyK
+4oqXO+J3nK+cX1m/k7RTslNaFVjVU61XvbX6XU1KzfVa99qOOvW6zXUzu7i7rux23d1er1FfUv92
+D3/PrQafhq5Gg8bKvbi9OXsfNUU2DXzL+ralWa25pPn9PuE+6f6w/f0t9i0treqtZW1wm6Rt4kDc
+gcvfeX7X027e3tDB6Cg5CA5KDj75PuH7G4cCDvUdZh1u/0H/h7pOWmdxF9SV3zXVndIt7YnpGT7i
+f6Sv16m380eLH/cd1T5ae0z5WNlx0vHC4x9PFJyYPpl5cvJU8qnRvvi+u6ejT1/rD+0fOhNw5txZ
+77OnB9wGTpxzPnf0vOP5IxdYF7ov2l3sGrQd7PzJ9qfOIbuhrkv2l3ouO1zuHV4wfPyKy5VTVz2v
+nr3md+3i9UXXh29E3Lh1M+6m9Bb31uPb6bef38m5M3t3zT3sveL7CvcrH6g/aPzZ+OcOqZ302Ijn
+yODDxQ/vjnJGn/6S/cu7scJH1EeV41rjLY9tHh+d8J64/GTJk7GnmU9nJ4t+Vfy17pnRsx9+c/1t
+cCp6auy56PnH30tfqL7Y93L+y77pkOkHrwSvZmeKX6u+3v+G9WbgbdTb8dncd/h3Ve+N3/d+CPhw
+76Pg48d/AdXn9OMKZW5kc3RyZWFtCmVuZG9iago3IDAgb2JqCjw8L0NvbG9yU3BhY2VbL0lDQ0Jh
+c2VkIDYgMCBSXS9TdWJ0eXBlL0ltYWdlL0hlaWdodCAzOS9GaWx0ZXIvRmxhdGVEZWNvZGUvVHlw
+ZS9YT2JqZWN0L1dpZHRoIDI3MC9TTWFzayA1IDAgUi9MZW5ndGggNTQwNC9CaXRzUGVyQ29tcG9u
+ZW50IDg+PnN0cmVhbQp4nO2debBO9R/HVdpcyr7lWjIJk8pSWapfUnObZNCiKVkqS6SylHUSIZQ0
+GFkjcUUll1I0KukKoRqVFiRl7aJwu0g6v9ec9zyf+TrneZ77RJLref9x5pzv+W7nPJ/397N9z72e
+90/ijwgOHz585MiRv/76K1AhXJJEEnkVmzdvXrx48Zs+3njjjdmzZ8+dO3fVqlX79+/3fLJkZ2fn
+5ORwAlnU5C8fJ3XWSSTxLwGxX7169bBhw9LS0sqUKXP++ecXKFCA47nnnlu4cOGaNWt279594cKF
+4ouQZEcSpxUwpRYtWtSuXbsaNWrAjvz580OQFAdc5veRmprauHHjKVOm7Nmz52TPOokkTiwCltKa
+NWvgSOnSpfPly3fmmWdCioIFCxYqVOi8886DGtCkoA/x5ayzzqIal40aNcrIyJD19a9plr870D9i
+Eyb15ukM+/WnT59euXLlM84445xzzkH+L7jggkI+IEXRokWrVq1apEgRI4sYxBF7DL5wa/DgwXv3
+7g30GX/EBCd2zD0kjlw7THIkCWHChAlIvnSEcUTaBOXSq1cveFSxYsWzzz674NEQX2SPderUaefO
+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
+76q23TSq5L5Nutm2mhLOA7uEPHerIkm9dzmn4A2r5aVOJ2m2CkT5lCFoHKEsMbnjqAaTwswUXZbG
+y35lmyIKOs6VLY7psYYRiZRD4NGZml2TztvHiyTm+Puj1ggvI9+E88AuYa1E8yzzZDHfP3yStYYu
+a0s6k2QSyajjy0PQXuRSJMagwNWlxqa9dnKZlSsboesh8+JTREYkUjqyTqTPr8gmmAeLpPmhSIOu
+jGtwHrJgWYnam3xUzwpq6cL1QYQlI8NqGC7kmRRxWh6p9aKu+qqYsoSSVR6DmSVR4uliiqSz2Vo5
+UmEPh8jHiKxIuCnhdXrz4CTl+PxwkTh7JOrbtHviKU5grRzOar5ca+fTO2O82lFCBo/zhcEXz5nq
+Lgbq9REsc5CpzpP/GhovkR11ZCtHrg7qfBfZbNI/2iNVVZ1iDv3R6YyqOJtkrsliYw08ykGs3PRK
+Doc1VIuCqwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAOA7/AMEAVIj
+CmVuZHN0cmVhbQplbmRvYmoKOSAwIG9iago8PC9Db2xvclNwYWNlL0RldmljZVJHQi9TdWJ0eXBl
+L0ltYWdlL0hlaWdodCAxNjIvRmlsdGVyL0ZsYXRlRGVjb2RlL1R5cGUvWE9iamVjdC9XaWR0aCA1
+NDkvU01hc2sgOCAwIFIvTGVuZ3RoIDI0MjgvQml0c1BlckNvbXBvbmVudCA4Pj5zdHJlYW0KeJzt
+3c+qJEkVB+B4EwVBwaU6uFB8BUcU1IWtqC+gzYC6UlyLM9vBjTr4HiK+l42J19ZbFXXiRERmVOb3
+UavpzBMRJzPj13n/9JQCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAwwN//8c+bn3kj/uGPn9z8zBsRgMPdi5tJiXMva8QNwOntljiyBuDidkgcWQPA7LiRNQBs
+5iVOJWvEDcAFTUocWQPA+ypxk04crzYAvDY2cWQNADcNjJt61ogbgIsblTiyBoCKetwEE8erDQB1
+/XEjawCI6EwccQNARE/cPMwacQPA5mHcVBJH1gAQl4sbrzYANMm94IgbAJpMipv9FwLAyiJx83+J
+49UGgARxA8AOhsfNr379my987vOVz0ELBeBITXHzkim//d3v37796Aff/+G7z7e+8c13ny9/8Uv1
+lJFBAFcW/PbNFgoffOWr75KlJ1ZED8A1RbLmzY/ezI4YuQNwbpG4+eUv3h4SN3IH4DQicfPxx58c
+GzdCB+B5bXv4n//y2cO4+fTTPx2eNUIH4Im83r3fRcnDuPnrZ387PGWEDsBTuLdvR+Lm5SfTlvoc
+3VEA/uvhpp2Im69/7YPtd22237t59/nxm5+8ffvR9vnZT38ucQAuIr5jx3/v5sNvfxj5F2zi/4iN
+0AF4Xq17dTBuSuxfS+v5N9MkDsD6crv0977z3XXipnM5/YMCUNHzRhDMmv3jJre6geMC8KL/FaAp
+bspBidO02OHjAlzZqL/zP1HcxBc+aWiA6xj+laWni5uNuAGYZMaXkuJZs1rcbMQNwEDzvnz07HFT
+7jRnn6EBTmP2Nylas6a0xM1uiVNeNWq3cQGe3T7fm0jETVnvBWcjbgCa7PlN8DPFzUbcADy0849a
+Jb5xs1k5bsq/23jIuABPYf9veeeypqz67RsA6o762ap03JTlX3AAeN+BP8Gb/kraRtwAPIXDf1Wk
+J2uKr6cBLG+R3xDpjJviBQdgYSsETen+StpG3AAsaJGg2fRnTfH1NIDFLBU0myFxU7zgAKxkqaAp
+g76SthE3ANwzKms2EgeAm8QNALONzZoibgC4ZXjcFIkDwCvDs6aIGwD+14xXm424AeDFpKwpXnAA
++I95rzYbcQNAmflqs/GCA0CZHzfFCw7A5e2QNUXcAFzePnFTJA7Ahe2WNRtxA3BNC8bNnonz+v/T
+3fnZbeYM13993RhQsWfWbMQNa+q/xG4MuGf/rCnihlWJG5jnkLgpKyWOuOFF/1V2Y8BNR2VNETcs
+SdzAJAfGTVkmccQNL/ovtBsDXjs2azbihqWIG5jh8Kwpy7zg3GPruJr+v1q4Z+C1FeKmrPGCc09u
+6xj7TjTklaqzwpC/3ve0qL66UcscMrFJQwc70LqQ4FmdAw1feK5FPe0ddV2uaZGsKWu/4OTuz9Yt
+K7FxxefTP41KkfTBo1o0dpm5icUrVOb/cOj6uaOWMORCj+15/JTOtuROr5/FZp24KQu/4ORuzsTz
+3rRrzdsQ7pUaMmj/xGYvM1cqXuHmiMFxK+cObEX/LZFYyKhTOjuTO71+FmWxrNmIm84Ko6Zxs1pT
+EyYtsHVuezYtWOFmu+LjVk7v6UPrtevseaJacLGd/cmdXj+L8ihuDpnSmi8487aOSsF9HuGmgk1N
+6Ck4amI7922fe6Zyek8r9rx26Z5HTulvTqJC5RTKkq82G3ETPP3mMf0TSBRsWv6oGc5bZn3y/bPq
+v2H6K/Rf6OFtH3WZ7jUnPudEhcoplCVfbV6sljgD78z+QevHp6cdObhpSukdprVO5+4Un1jTTpW4
+ZxKjNJ1eH3dUz5vanlj+w1P625socu94ysKvNhtxUxl0XoX0JpMePVhth1lFJvZyWGSnGriVjV1a
+RPpO6JlbYu2T2psoEunqZa2cNZulEif3IHfelp27x4xHacgO8/CYpjqTdox62chO1Tqxes1IkZ67
+pbVUYqx0zdZTmiYwpEiuyRexftYUcdP9XePcc1E/q6lm5OBItYFT6pxYZNz6JtbarvgCczdJukUz
+2l5vafyU1tH7L1OuyRfxFHFTVkqc3LMcf3w6n76b08g9F/Wzhj+YuRalpxSfW3rcl2MGXqyeTtb7
+MLw/M2q2diY+emItY/t8BU+RNZsrx02iQuTc3EoTNWcs8HWRGcusT2zg5Ae2PdeHXH/27Hnlv9f/
+KDJ68E+bVsH7nihryjIvOE1bR+SsYMGe02fsCU01Jy0wWKFnmfWJdU7+5tz6L2WuD7n+7Nnz+ok9
+7W3tcM/aL+u54qas8YLTtHVEzooXTFeYsSc01YwcPK8/PcusT6xz/rklpCdc70OuP3v2vP5HwWn0
+tzdxJE+XNZvDEye+dQTPai2YqDBjTxgy57EtmrHM+sTGzr+zUZ19GNufeTVnt3f4YRRxkxW/tx+e
+NW8mwSc0Vz9RM3Jw0zbSVKFnmfWJBUt1zr+1VK4Pw/szvGaiUcFxx1ZLNPncnjRrNscmTvxufHjW
+blMauCHkakYOzu0wraOMmtio3azz9KZLU29FukUz2p4bccYFSlRLNPncnjdrirhpmVV6zmM3mcjB
+uQOCu1B6ma1le3aw1nPHtiLdolE9f1gz0aux7Q0WbO3wuT31q81G3ARnlZv22A2t5+FtWmPwmCET
+S7Qu3c9EweCgEQPvhPjxPRel85T+gk3tPb1nz5rNUYmTe4oHPvVNs4pMu+mpTLSi57AnWmawcm7m
+rQXj496cfFPPm1q0w82Qu+IDL9m93l7QObKmnCJuBu4e+zxuoxYVrxYcceAam5bZf63jS9uzFU0D
+zWh753Xpb++8DldGPJ/TxE05KHFyN1LnMzjvEe55UnaoFhzxqGX2X+74uhKzGtKEZW+GyKCtq4gU
+71xyZcSTOVPWFHHTfmMP3BCGrOthqfiI85aZuOKjru+9+ju0ommUfXqe6POM9j4s27rYszpZ3JQj
+Eid3I3U+iQPv6uHPyKhqwSODNQcuc2pb0vXjJ3a2Ij632T1P9Ll1CcHiw9d7PufLmo24ab2lhz8d
+QwoGD46XHbXMqVe8aUU9E0vfQkOu46Sb4eFwuSUE197a0uCg53DKrCnXiJt4hVFrSTwXnXMLnjK8
++T3rSp/4foWe/reem7iFJq09cXpirES1eOVIM3PjAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
+AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAHOhfR+cjAgplbmRzdHJlYW0KZW5kb2JqCjEwIDAgb2Jq
+Cjw8L0ZpbHRlci9GbGF0ZURlY29kZS9MZW5ndGggMjIxNj4+c3RyZWFtCnic1VtLcxu5Eb7zV+CQ
+g1clUnjOQ7cRNZLHy5dnyE1lszlMyJGWKZIjD6lNan/VnnPb2kN+h5ODKwefcsspaMxQotdSD21g
+q2LJJTZJAF9/QKPR3QO/6VxMO8IjAfXIdNGJp53XHU5ewaeMUP0LfwPJyXTdObtihFEyvem8+Gr6
+F2j72ISS+fqwk/Ao8aXX85qevOlJzffVbefFZb7LSUG+L6ucLHIyLzfb+9UuP4ehKbl9Yvg//km/
+Lox6zwNLoYgvBAI8296/rZalNVDwIUPxERAhTJwxfsYpl4Spc0ldQB5wewqy/jk5Oekpj/dCybon
+J5awXAbEC31kSkelXstFQeL1XbH5vjwS76+60atmlPR6/52gxAvCniLrjvJUI686GaLr8yBvCOes
+p6T5SnDCQ+L7gW5EzpbrW0YuS/L6A6r195rmQz+9K7qHbzSpNyQMejwwfXQP6QvdS+xHFR+Num+g
+h913hFEPZHQvSaVNmtPWZU/Wd1Wx3f6rJP1yfbcqdvmRCwG/ehjao0ovCn9qUTyi/NAsCTXSqgPm
+5dcfwzqpgPW0mdeiJPN68XxmWoIkTOu6k2dEal7nMDgIq442bT0EyILtexiJQStmBl7VggGr24MG
+jX7zzs2Xo+qDRR+5AEKphhVID6zgDagtlL9nBc63ZiX11q1ZSUUPWEklDCt4NaxA2LMCWbB9D5D0
+KIYVDGxYNWB1e9Cg0a9ZgC9D1U9dAK63cM0KpAdW8AbU5r7as+LgYwwXIfashDxkJWTNCl4NKxD2
+rEAGzeWeFYxiWMHAq1pQj6xAg0a/ZgG+DFU/dQFk6DWsQHpgBW+M3YBDbfY1ZQ0rJUTDSgl1wEpp
+PY2HqPWtP9izAhn2bt3DSKLZ15TVrBqwxgy1Bo1+zQJ8GaoeLMCzh492aipAzv7+fxbL22OP/OdQ
+GOctMKNyXViHT6oFZFgWi2MPzecjX1hWBCTauJgtHGO6vLMF4ZS2gIz+uy4qWxiwLymR2IapwBPM
+hX2hMMkV6UfTKE1G8SiLSVe/G05mGcl+GZOLeDQdk8sxyWYDFzaIKpLG0UDDf/ci/d13XzmwRcUQ
+MEhNXBgjCjKKXZgiCsGksMUAz8xCzNzz3X1V/Giy1ctie1dsbV2Ftn0cMt7eFJU1CvVbYGbXqQsj
+QDEm0zTOHGyeFpRVvilJstkVlbWXNVaHol2VGgjy3rSY31fbzwJ8CH3AGKTUmSXpMk6qQscRvzIV
+IbFj+N+r+1VOxtW7fF1sdm+rpQvrpArbdC6MBkXgginKXawjToTuf1w4ERRKiJAK6zoQ7GgUputi
+p6EIA07TwYTqqRvZH1IyYG2VQlNdWkJ1w4HV4XiOgiccZFKV82L7eT7jcPJo2MYm/5uZvf4/139e
+WkdrvI3XN/mqrOw9j8SdnZOcQ/IWGAc5B+S6aMqhI4l5tXxnbdYARLF6+6Cc5yuIXeLNripuHaQ5
+zMeIJZubslrn7x7KkXAs5bamAc7Cw4rujyV3F34ChRpXi+UGHiW4cBYoEhcBZz1KdUtquHU928PX
+OA4UlJ46OBGNw8AXzGOnwjZ6lwYJQVG8F+pYLqTqTJNiXc8W0XgPFPIizqbk5R8u0zHpj4dx2k90
+YjeYXkYOdjqaQcbDSTx6qRPWWP/LJnEWaQXSVCexMZlEaUSi17MkS/7xi2kyjKZxmkRJRl4ml+nP
+s0HSH2d1uzFJrvrdOhHeK32ohRA9ZrR4xP51unxKhvFlEgF0pJXR3yZaTkcRGf1EmNc8HIvGZNKL
+e2T0dxJSGnj1p10yGfUn+oWpgHHVe0oFvj+LDk7WdNyPs2wMoz21cXrkKsn60eCcpEk/SrWewDC6
+HiUjckbS8WWaXI/JQDeL9aQladRz4CpD7Knd4yx/VG7Q7LO+VquugnT714ltEgXaeC0FFz3bVJmV
+aBZiFmXXZLjc3O/y82Y5bJ0e16sXYqdvVO3sD3ntGATnv3UoIRhrITPJq7e3VX5jH72qFkLDcpGv
+lot8YTLTwXK+3OUOwovQb2GYbObvrcNZ2TaP0a4kI4grdssfrPNtIUPi+c/l2zpVwxRZ3+VVSQY6
+klo5sFEaYDvSD12YDYoxSePraOxiUwfYocgDF1sNhbDNfY2powiJdXbNf2MOBgHfSKv3m8JBiQjn
+MSiWOlLqMSHg9LWOWfXRJbGcI1tud8XapLvjanlbrB0ACuys1IHdJI2yUTztDj+ryn3ojqQKiZLP
+uSMp0VJk/kNZFfPlwoEHlmgeGW8WRVW8c3EwhxyZ2qs0mX5LdPiqg8UZgRIduZqNLnVsejVOp9Eg
+/tY2kIYiF861H08cYOA8A52TqC63z7T0hKIJ+fB+s5y/v7OvAcG+wDbFxWA2jPWiWafFogUo67uA
+QCdtdmV9JIYtENNiVdyUG9tKkwFCp0spoUNHn7kwNU9QbN+MJq8cYDC0bqAVEKonudQZPZNdahsj
+mUezOC0n7gCnFYQ8EF3qWZevJG9h48iRGyCUUjqLyCSaDXSi/TKaJPHvk+zr5NQk+4KdkosoSaFG
+AvWJ0c9pMrbNt8F0KJoiufOEKsCC6ixyenkA3BXOzN5daYgWTtZOVzsqnIVDj4hzkX5XeNzr+tox
+2kZvXgD74LnozfPRZbuGh1u7YrOzvuMUBoRj4YZtDK6YwAEg+DY/x87ocXcvKVl3uFIgrLTgm+uM
+lHC44sjNzUKQ4FonCAKu/YIgmWlYt5e6lYKbps1FUvl4j1Say6Nsf4kxbO4wquYKIz+4wUjrZy0P
+Vy3/HzU74mKfqZ5i5X/swTvtcfXM/X2fw0X7NbyaGcEu7n+oDvos7puiQp/9IhrBtNUa6UQURFAK
+Z6Bn3TAQrBcEx5PwfZwEPMk+e1liV3qOmFnm+8cR0Q1rJiB8OhXcj3zwX1sEO2efZy5GtYbVJxkM
+0/4WnezxXVHhlc9j1OI6KW9m+mi10ImLVrs2vQ6A/gfYdPIZCmVuZHN0cmVhbQplbmRvYmoKMSAw
+IG9iago8PC9Hcm91cDw8L1MvVHJhbnNwYXJlbmN5L1R5cGUvR3JvdXAvQ1MvRGV2aWNlUkdCPj4v
+Q29udGVudHMgMTAgMCBSL1R5cGUvUGFnZS9SZXNvdXJjZXM8PC9Db2xvclNwYWNlPDwvQ1MvRGV2
+aWNlUkdCPj4vUHJvY1NldCBbL1BERiAvVGV4dCAvSW1hZ2VCIC9JbWFnZUMgL0ltYWdlSV0vRm9u
+dDw8L0YxIDIgMCBSL0YyIDMgMCBSL0YzIDQgMCBSPj4vWE9iamVjdDw8L2ltZzMgOSAwIFIvaW1n
+MiA4IDAgUi9pbWcxIDcgMCBSL2ltZzAgNSAwIFI+Pj4+L1BhcmVudCAxMSAwIFIvTWVkaWFCb3hb
+MCAwIDU5NSA4NDJdPj4KZW5kb2JqCjEzIDAgb2JqCjw8L0ZpbHRlci9GbGF0ZURlY29kZS9MZW5n
+dGggMjcwMz4+c3RyZWFtCnic1VzNciLJEb7zFHVcTyBUf/2nWwtamh4jWgOIGIfDByyxs3KAmAEU
+jvBT+RUmfNjYwxz3ARx78Gs4s6obEKKzm+6Ww6uJGQpUVV9+lZlVXzVV87V1OW4pl/ncZeOHVjRu
+fWxJ9gE/FYzDH/zX15KNF63zK8EEZ+MfWz/8Yfw3rLurwtn9Yr+RcjnztNtx05YybcnN71efWz/0
+ppspm7Gflqspe5iy++XT+nm+mV5g15x9PtL9n/8Crw/GvHxgrRzmKUUA362f/716XNYG8l8yVK+A
+GBPqXMhzyaVmwrnQvAnIPW7HIO3Pu3fvOo4rO4EWZ+/e1YSV2mdu4BFDOliCLx9mLFp8mT39tCyJ
+93eo9CHtZXid/U5x5vpBx2GLluM6aXneGhG25oN8ZVKKjqPNr5RkMmCe50Mldv64+CxYb8k+vqBq
+fw80t+0gK8723wCpryzwO9I3baCF9hS0Ulmv6lWvWQXoNmuIve6VyVzSDoS05IVujxdfVrP1+rcl
+6y4XX+azzbSkI/APdMM73AGnyGNOcZnkvnEJN6V5C8PLsx+jn6TgHQhzW4SxsM4D0vO05GDttJHr
+YSNuXu+xcyzMWxDa0AWWlchamBL2BwXseG4LBszWRwtS++5bP/5+TN1G9KtoTv2hoT8fQDQ7E5Kt
+ZkBuPyoQTRNJ2X9c26yMN7On9WmhcNyyA3SHnBKmm+fV7B/GgN5s/WW2LhuNFKTWRBYoFXCYPc7Y
+TTiOhnHYZ72IdZPB6O4mqYsti8CFK9pKNQFDDusYZto5rpfGu1XgeCfgAUw7L17SaFMBRBw7k/x1
+tCnmyoAwbPT819l8tpg9bYjpn3ecnFlf847nGAMgAXhgSjjpEy2MvR2JCwWWRVCwSuQRz+CEPspc
+CFFAXeoqjDNY4CvVlm8F89PWGkP/mP0wQrT9ewlzew7lwd24A5lzGQ1GLL5JJlE8Oo8Ho3HYD7tJ
+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
+1m6dLd0qXbmlk15Dlvu3kO0l5N116f9Dy/JuR7/4PyZoP5InfomdjSfxvwpY4KsZkZICHcxR1H3s
+yWxF7lAJi3DYrEXmW7/C5wBgudaWgRKdUw6feB5NAh8Unr9frqo9LcxGVnheOSJQ0TLBwulUyPA4
+aQYtsDFjdVLACF/Sg13v8WRmlnSCbKRLm0UOXDjfFNm1B/Rfwnps1QplbmRzdHJlYW0KZW5kb2Jq
+CjEyIDAgb2JqCjw8L0dyb3VwPDwvUy9UcmFuc3BhcmVuY3kvVHlwZS9Hcm91cC9DUy9EZXZpY2VS
+R0I+Pi9Db250ZW50cyAxMyAwIFIvVHlwZS9QYWdlL1Jlc291cmNlczw8L0NvbG9yU3BhY2U8PC9D
+Uy9EZXZpY2VSR0I+Pi9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJ
+XS9Gb250PDwvRjEgMiAwIFIvRjIgMyAwIFIvRjMgNCAwIFI+Pi9YT2JqZWN0PDwvaW1nMyA5IDAg
+Ui9pbWcyIDggMCBSL2ltZzEgNyAwIFIvaW1nMCA1IDAgUj4+Pj4vUGFyZW50IDExIDAgUi9NZWRp
+YUJveFswIDAgNTk1IDg0Ml0+PgplbmRvYmoKMTQgMCBvYmoKWzEgMCBSL1hZWiAwIDg1MiAwXQpl
+bmRvYmoKMTUgMCBvYmoKWzEyIDAgUi9YWVogMCA4NTIgMF0KZW5kb2JqCjIgMCBvYmoKPDwvU3Vi
+dHlwZS9UeXBlMS9UeXBlL0ZvbnQvQmFzZUZvbnQvSGVsdmV0aWNhL0VuY29kaW5nL1dpbkFuc2lF
+bmNvZGluZz4+CmVuZG9iagoxNiAwIG9iago8PC9EZXNjZW50IC0yMTAvQ2FwSGVpZ2h0IDY5OS9T
+dGVtViA4MC9UeXBlL0ZvbnREZXNjcmlwdG9yL0ZsYWdzIDI2MjE3Ni9Gb250QkJveFstNDUgLTIx
+MCAxMDAwIDkwMl0vRm9udE5hbWUvQXJpYWwtQm9sZE1UL0l0YWxpY0FuZ2xlIDAvQXNjZW50IDcy
+OD4+CmVuZG9iagozIDAgb2JqCjw8L1N1YnR5cGUvVHJ1ZVR5cGUvRmlyc3RDaGFyIDMyL1R5cGUv
+Rm9udC9CYXNlRm9udC9BcmlhbC1Cb2xkTVQvRm9udERlc2NyaXB0b3IgMTYgMCBSL0VuY29kaW5n
+L1dpbkFuc2lFbmNvZGluZy9MYXN0Q2hhciAyNTAvV2lkdGhzWzI3NyAwIDAgMCAwIDAgMCAwIDAg
+MCAwIDAgMCAzMzMgMjc3IDI3NyAwIDAgNTU2IDAgNTU2IDAgMCAwIDAgMCAzMzMgMCAwIDAgMCAw
+IDAgNzIyIDcyMiA3MjIgNzIyIDY2NiA2MTAgNzc3IDcyMiAyNzcgNTU2IDAgNjEwIDgzMyA3MjIg
+Nzc3IDY2NiA3NzcgNzIyIDY2NiA2MTAgNzIyIDY2NiAwIDAgMCAwIDAgMCAwIDAgMCAwIDU1NiA2
+MTAgNTU2IDYxMCA1NTYgMzMzIDYxMCA2MTAgMjc3IDAgMCAyNzcgODg5IDYxMCA2MTAgNjEwIDYx
+MCAzODkgNTU2IDMzMyA2MTAgNTU2IDAgNTU2IDAgNTAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAw
+IDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAg
+MCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAw
+IDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAg
+MCAwIDAgMCAwIDU1NiA1NTYgNTU2IDAgMCAwIDU1NiAwIDU1NiAwIDAgMCAyNzcgMCAwIDAgMCAw
+IDYxMCAwIDAgMCAwIDAgMCA2MTBdPj4KZW5kb2JqCjE3IDAgb2JqCjw8L0Rlc2NlbnQgLTIxMC9D
+YXBIZWlnaHQgNjk5L1N0ZW1WIDgwL1R5cGUvRm9udERlc2NyaXB0b3IvRmxhZ3MgMzIvRm9udEJC
+b3hbLTQ1IC0yMTAgMTAwMCA4OTZdL0ZvbnROYW1lL0FyaWFsTVQvSXRhbGljQW5nbGUgMC9Bc2Nl
+bnQgNzI4Pj4KZW5kb2JqCjQgMCBvYmoKPDwvU3VidHlwZS9UcnVlVHlwZS9GaXJzdENoYXIgMzIv
+VHlwZS9Gb250L0Jhc2VGb250L0FyaWFsTVQvRm9udERlc2NyaXB0b3IgMTcgMCBSL0VuY29kaW5n
+L1dpbkFuc2lFbmNvZGluZy9MYXN0Q2hhciAyMzEvV2lkdGhzWzI3NyAwIDAgMCA1NTYgMCAwIDAg
+MzMzIDMzMyAzODkgMCAyNzcgMzMzIDI3NyAyNzcgNTU2IDU1NiA1NTYgNTU2IDU1NiA1NTYgNTU2
+IDU1NiA1NTYgNTU2IDI3NyAwIDAgMCAwIDAgMCA2NjYgNjY2IDcyMiA3MjIgNjY2IDYxMCA3Nzcg
+NzIyIDI3NyA1MDAgNjY2IDU1NiA4MzMgNzIyIDc3NyA2NjYgNzc3IDcyMiA2NjYgNjEwIDcyMiA2
+NjYgOTQzIDY2NiA2NjYgNjEwIDAgMCAwIDAgMCAwIDU1NiAwIDUwMCA1NTYgNTU2IDAgMCAwIDIy
+MiAwIDAgMjIyIDgzMyA1NTYgNTU2IDU1NiAwIDMzMyA1MDAgMjc3IDU1NiAwIDAgMCAwIDAgMCAw
+IDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAg
+MCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDM5OSAwIDAgMCAw
+IDAgMCAwIDAgMCAzNjUgMCAwIDAgMCAwIDAgNjY2IDAgNjY2IDAgMCAwIDcyMiAwIDY2NiAwIDAg
+MCAyNzcgMCAwIDAgMCAwIDAgMCA3NzcgMCAwIDAgMCAwIDAgMCAwIDAgMCAwIDU1NiAwIDU1NiAw
+IDAgMCA1MDBdPj4KZW5kb2JqCjExIDAgb2JqCjw8L0tpZHNbMSAwIFIgMTIgMCBSXS9UeXBlL1Bh
+Z2VzL0NvdW50IDIvSVRYVCgyLjEuNyk+PgplbmRvYmoKMTggMCBvYmoKPDwvTmFtZXNbKEpSX1BB
+R0VfQU5DSE9SXzBfMSkgMTQgMCBSKEpSX1BBR0VfQU5DSE9SXzBfMikgMTUgMCBSXT4+CmVuZG9i
+agoxOSAwIG9iago8PC9EZXN0cyAxOCAwIFI+PgplbmRvYmoKMjAgMCBvYmoKPDwvTmFtZXMgMTkg
+MCBSL1R5cGUvQ2F0YWxvZy9QYWdlcyAxMSAwIFIvVmlld2VyUHJlZmVyZW5jZXM8PC9QcmludFNj
+YWxpbmcvQXBwRGVmYXVsdD4+Pj4KZW5kb2JqCjIxIDAgb2JqCjw8L01vZERhdGUoRDoyMDI0MTIx
+MzE1NDAxNC0wMycwMCcpL0NyZWF0b3IoSmFzcGVyUmVwb3J0cyBcKEVtcGVuaG9cKSkvQ3JlYXRp
+b25EYXRlKEQ6MjAyNDEyMTMxNTQwMTQtMDMnMDAnKS9Qcm9kdWNlcihpVGV4dCAyLjEuNyBieSAx
+VDNYVCk+PgplbmRvYmoKeHJlZgowIDIyCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAxNzE1NCAw
+MDAwMCBuIAowMDAwMDIwNjIwIDAwMDAwIG4gCjAwMDAwMjA4NzMgMDAwMDAgbiAKMDAwMDAyMTcz
+MyAwMDAwMCBuIAowMDAwMDAwMDE1IDAwMDAwIG4gCjAwMDAwMDAzNjYgMDAwMDAgbiAKMDAwMDAw
+MzA1MCAwMDAwMCBuIAowMDAwMDA4NjI4IDAwMDAwIG4gCjAwMDAwMTIyNzMgMDAwMDAgbiAKMDAw
+MDAxNDg2OSAwMDAwMCBuIAowMDAwMDIyNDIwIDAwMDAwIG4gCjAwMDAwMjAyMzYgMDAwMDAgbiAK
+MDAwMDAxNzQ2NCAwMDAwMCBuIAowMDAwMDIwNTQ3IDAwMDAwIG4gCjAwMDAwMjA1ODMgMDAwMDAg
+biAKMDAwMDAyMDcwOCAwMDAwMCBuIAowMDAwMDIxNTc3IDAwMDAwIG4gCjAwMDAwMjI0OTEgMDAw
+MDAgbiAKMDAwMDAyMjU3NCAwMDAwMCBuIAowMDAwMDIyNjA4IDAwMDAwIG4gCjAwMDAwMjI3MTQg
+MDAwMDAgbiAKdHJhaWxlcgo8PC9JbmZvIDIxIDAgUi9JRCBbPDM5OGE2OWZiN2M4NDEwMzFjODBk
+ODMxNGRmNzZlNzkzPjwwNjZhYjg4YzI1ZGU4YzMxNTYyYTM1MjJhY2M5NWJiMz5dL1Jvb3QgMjAg
+MCBSL1NpemUgMjI+PgpzdGFydHhyZWYKMjI4NzIKJSVFT0YK
+--000000000000a5fd5e0629611ae0--
